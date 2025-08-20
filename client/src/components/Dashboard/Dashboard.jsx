@@ -6,9 +6,11 @@ export default function Dashboard() {
     return (
         <>
             <Navbar />
-            <LeftComponent />
-            <CenterComponent />
-            <RightComponent />
+            <div className='grid grid-cols-3 gap-4 p-4'>
+                <LeftComponent />
+                <CenterComponent />
+                <RightComponent />
+            </div>
 
         </>
     )
