@@ -1,9 +1,6 @@
 import './App.css'
 import Header from './components/Header'
-import Navbar from './components/Navbar'
-import LeftComponent from './components/LeftComponent'
-import CenterComponent from './components/CenterComponent'
-import RightComponent from './components/RightComponent'
+import Dashboard from './components/Dashboard/Dashboard'
 
 function App() {
 
@@ -11,10 +8,7 @@ function App() {
    
     <>
       <Header />
-      <Navbar />
-      <LeftComponent />
-      <CenterComponent />
-      <RightComponent />
+      <Dashboard />
 
     </>
   )
