@@ -2,7 +2,6 @@
 import './App.css'
 function App() {
 
-
   return (
     <div className = 'flex items-center justify-center h-screen bg-green-100'>
       <div className='bg-white p-6 rounded-2xl shadow-lg text-center'>
