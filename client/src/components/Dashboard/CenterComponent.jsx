@@ -1,6 +1,7 @@
 import Text from "../Reusable/Text";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import { RiExpandUpDownFill } from "react-icons/ri";
 export default function CenterComponent() {
     // Example dynamic data (later you can pass as props or from API)
     const carInfo = {
@@ -65,27 +66,36 @@ export default function CenterComponent() {
                 <div className="h-10 border-2 border-[#211DA6] bg-[#211DA6]"></div>
             </div>
 
-            {/* Price Grid */}
-            <div className="grid grid-cols-6 text-center items-center px-2">
-                {priceSteps.map((price, i) => (
-                    <div
-                        key={i}
-                        className={`px-2 py-2 border border-gray-300 ${price === selectedPrice
-                            ? "bg-white text-black font-bold"
-                            : "bg-gray-900"
-                            }`}
-                    >
-                        {price}
-                    </div>
-                ))}
+            {/* Price Grid with Expand Icon */}
+            <div className="flex items-center px-2">
+                {/* Price Grid */}
+                <div className="grid grid-cols-6 text-center flex-1">
+                    {priceSteps.map((price, i) => (
+                        <div
+                            key={i}
+                            className={`px-2 border border-gray-300 ${price === selectedPrice
+                                    ? "bg-white text-black font-bold"
+                                    : "bg-gray-900"
+                                }`}
+                        >
+                            {price}
+                        </div>
+                    ))}
+                </div>
+
+                {/* Expand Icon */}
+                <button className="ml-1 text-lg">
+                    <RiExpandUpDownFill />
+                </button>
             </div>
+
 
 
             <div className="grid grid-cols-6 mt-1 px-2">
                 {bidIncrements.map((inc, i) => (
                     <button
                         key={i}
-                        className={`bg-gray-900 py-2 w-full ${inc === "$100" ? "border-2 border-white" : ""
+                        className={`bg-gray-900 py-1 w-full ${inc === "$100" ? "border-2 border-white" : ""
                             }`}
                     >
                         {inc}
@@ -94,11 +104,11 @@ export default function CenterComponent() {
             </div>
 
             {/* Current Price + Lot */}
-            <div className="grid grid-cols-2 gap-2 items-center text-center py-2 px-2 rounded mt-2 bg-gray-900">
+            <div className="grid grid-cols-2 gap-2 items-center text-center py-1 px-2 rounded mt-1">
                 {/* Selected Price */}
                 <Text
                     variant="p"
-                    className="font-bold p-2 text-white text-lg bg-gray-800 rounded"
+                    className="font-bold p-1 text-white bg-gray-500 rounded"
                 >
                     {selectedPrice}
                 </Text>
@@ -106,7 +116,7 @@ export default function CenterComponent() {
                 {/* Lot Navigation */}
                 <Text
                     variant="p"
-                    className="p-2 text-white font-bold flex justify-center items-center gap-2 bg-gray-800 rounded"
+                    className="p-1 text-white font-bold flex justify-center items-center gap-2 bg-gray-500 rounded"
                 >
                     <span className="text-xl"><FaAngleDoubleLeft /></span>
                     {carInfo.lot}
