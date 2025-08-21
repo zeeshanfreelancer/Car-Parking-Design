@@ -20,7 +20,7 @@ export default function RightComponent() {
     return (
         <div className="flex flex-col h-screen bg-gray-900 text-white">
             {/* Cars List */}
-            <div className="flex-1 overflow-y-auto">
+            <div className=" overflow-y-auto">
                 {cars.map((car, index) => (
                     <div
                         key={car.id}
@@ -34,9 +34,9 @@ export default function RightComponent() {
             </div>
 
             {/* History + Chat */}
-            <div className="grid grid-cols-2 divide-x divide-gray-700 bg-gray-800 h-65">
+            <div className="grid grid-cols-2 divide-x divide-gray-700 bg-gray-800 h-60">
                 {/* History */}
-                <div className="flex flex-col h-[33%]">
+                <div className="flex flex-col h-[30%]">
                     <div className="flex items-center gap-2 bg-gray-500 py-1">
                         <MdHistory />
                         <Text variant="small" className="text-white uppercase">
@@ -67,7 +67,7 @@ export default function RightComponent() {
                     <div className="text-gray-300 text-center border-b border-gray-300">
                         <Text variant="small" className="font-semibold text-center text-white">Global Message</Text>
                     </div>
-                    <div className="overflow-y-auto h-[23%] ps-2 pe-2">
+                    <div className="overflow-y-auto h-[23%] ps-2">
                         <Text variant="small" className="text-white">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
