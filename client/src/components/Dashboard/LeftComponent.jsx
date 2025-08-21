@@ -12,9 +12,7 @@ export default function LeftComponent() {
         { label: "Interior", value: "Leather" },
         { label: "Fuel", value: "Gasoline" },
         { label: "Sunroof", value: "No" },
-        { label: "Engine", value: "3.60L" },
-        { label: "Trans", value: "Automatic" },
-        { label: "Trim", value: "Laredo" },
+        { label: "Engine", value: "3.60L" }
     ];
 
     return (
@@ -29,12 +27,12 @@ export default function LeftComponent() {
             </div>
 
             {/* Announcements */}
-            <div className="text-center mt-4 bg-gray-300 overflow-y-scroll h-25 p-2">
-                <div className="flex justify-center gap-2 sticky top-0 bg-gray-600 p-1 rounded">
+            <div className="text-center mt-4 bg-gray-300 overflow-y-scroll h-25 ">
+                <div className="flex justify-center gap-2 sticky top-0 bg-gray-600 p-1 ">
                     <TfiAnnouncement className="text-white" />
                     <Text className="text-white text-xs">ANNOUNCEMENTS</Text>
                 </div>
-                <Text className="text-black text-xs text-left">
+                <Text className="text-black text-xs text-left px-2">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
                     laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
                     perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
@@ -48,18 +46,26 @@ export default function LeftComponent() {
                 <IoMdInformationCircleOutline className="text-white" />
                 <Text className="text-white text-xs">VEHICLE DETAILS</Text>
             </div>
-            <div className="bg-gray-900 text-white max-w-md mx-auto rounded-lg shadow-lg overflow-hidden">
+           <div className="bg-gray-900 text-white max-w-md mx-auto rounded-lg shadow-lg overflow-hidden">
                 {carDetails.map((detail, index) => (
                     <div
-                        key={index}
-                        className={`px-4 py-1 border-b border-gray-700`}
+                    key={index}
+                    className="flex items-center px-4 py-1 border-b border-gray-700"
                     >
-                        <Text variant="small" className="text-white">
-                            {detail.label}: {detail.value}
-                        </Text>
+                    {/* Label on left */}
+                    <Text variant="small" className="text-white w-1/3">
+                        {detail.label}
+                    </Text>
+
+                    {/* Value in center */}
+                    <Text variant="small" className="text-white font-medium flex-1 text-center">
+                        {detail.value}
+                    </Text>
                     </div>
                 ))}
-            </div>
+                </div>
+
+
         </div>
     );
 }
