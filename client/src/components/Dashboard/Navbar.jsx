@@ -6,8 +6,8 @@ export default function Navbar() {
     const [selectedLane, setSelectedLane] = useState(null);
 
     return (
-        <div className="w-full">
-            <header className="mt-5 bg-gray-600 text-white flex flex-wrap items-center justify-between px-3 py-0.5 text-sm">
+        <div className="w-full px-4">
+            <header className="bg-gray-600 text-white flex flex-wrap items-center justify-between px-3 text-sm">
                 {/* Left Section */}
                 <div className="flex flex-wrap items-center gap-2">
                     {/* Lane Label */}
@@ -19,7 +19,7 @@ export default function Navbar() {
                     </Text>
 
                     {/* Auction Info */}
-                    <Text className="text-white" variant="p">
+                    <Text className="text-white">
                         Statewide Auto Auction:{" "}
                         <Text variant="p" className="font-semibold inline text-white">August 19, 2025</Text>
                     </Text>
@@ -37,12 +37,12 @@ export default function Navbar() {
                     {/* Simulcast Users */}
                     <div className="flex items-center gap-1">
                         <Text variant="small" className="text-white font-semibold">SIMULCAST <span className="block text-center">USERS</span></Text>
-                        <Text variant="h1" className="text-white">14</Text>
+                        <Text variant="h2" className="text-white">14</Text>
                     </div>
 
                     {/* Settings Icon */}
                     <button>
-                        <IoSettingsSharp className="text-3xl" />
+                        <IoSettingsSharp className="text-2xl" />
                     </button>
 
                     {/* Switch Lane */}

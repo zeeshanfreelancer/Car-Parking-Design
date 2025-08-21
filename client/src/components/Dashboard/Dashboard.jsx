@@ -4,7 +4,7 @@ import CenterComponent from './CenterComponent'
 import RightComponent from './RightComponent'
 export default function Dashboard() {
     return (
-        <>
+        <div className='bg-[#39393B]'>
             <Navbar />
             <div className='grid grid-cols-3 gap-4 p-4'>
                 <LeftComponent />
@@ -12,6 +12,6 @@ export default function Dashboard() {
                 <RightComponent />
             </div>
 
-        </>
+        </div>
     )
 }
