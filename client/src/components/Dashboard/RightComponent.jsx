@@ -19,7 +19,7 @@ export default function RightComponent() {
 
     return (
         <div className="flex flex-col h-screen bg-gray-900 text-white">
-            {/* Scrollable Cars List */}
+            {/* Cars List */}
             <div className="flex-1 overflow-y-auto">
                 {cars.map((car, index) => (
                     <div
@@ -27,55 +27,71 @@ export default function RightComponent() {
                         className={`flex justify-between px-4 py-2 ${index % 2 === 0 ? "bg-gray-700" : "bg-gray-600"
                             }`}
                     >
-                        <span className="font-semibold">
-                            {car.id} {car.model}
-                        </span>
-                        <span>
-                            {car.color} {car.miles}
-                        </span>
+                        <span className="font-semibold">{car.id} {car.model}</span>
+                        <span>{car.color} {car.miles}</span>
                     </div>
                 ))}
             </div>
 
-            {/* History + Chat section */}
-            <div className="grid grid-cols-2 divide-x divide-gray-700 h-60 bg-gray-800">
-                {/* History Box */}
-                <div className="flex flex-col">
-                    <div className="flex items-center gap-2 bg-gray-500 px-3 py-1">
+            {/* History + Chat */}
+            <div className="grid grid-cols-2 divide-x divide-gray-700 bg-gray-800 h-65">
+                {/* History */}
+                <div className="flex flex-col h-[33%]">
+                    <div className="flex items-center gap-2 bg-gray-500 py-1">
                         <MdHistory />
-                        <Text variant="small" className="text-white">
+                        <Text variant="small" className="text-white uppercase">
                             History
                         </Text>
                     </div>
-                    <div className="flex-1 overflow-y-auto p-2 text-gray-400">
-                        {/* History content here */}
+                    <div className="flex-1 overflow-y-auto text-gray-400 ps-2 pe-2">
+                        {/* History Content */}
+                        <Text variant="small" className="text-white">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque? Possimus corrupti nulla id, doloremque, ut similique minus inventore quos exercitationem voluptatum quaerat!
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque? Possimus corrupti nulla id, doloremque, ut similique minus inventore quos exercitationem voluptatum quaerat!
+
+                        </Text>
                     </div>
                 </div>
 
-                {/* Chat Box */}
+                {/* Chat */}
                 <div className="flex flex-col">
-                    {/* Chat header */}
+                    {/* Chat Header */}
                     <div className="flex items-center gap-2 bg-gray-500 px-3 py-1">
                         <IoChatbubble />
-                        <Text variant="small" className="text-white">
+                        <Text variant="small" className="text-white uppercase">
                             Chat
                         </Text>
                     </div>
 
-                    {/* Messages area */}
-                    <div className="flex-1 overflow-y-auto p-2">
-                        <Text variant="small">Global Message</Text>
+                    {/* Chat Messages (scrollable) */}
+                    <div className="text-gray-300 text-center border-b border-gray-300">
+                        <Text variant="small" className="font-semibold text-center text-white">Global Message</Text>
                     </div>
-
-                    {/* Input area fixed at bottom */}
-                    <div className="p-2 border-t border-gray-700">
+                    <div className="overflow-y-auto h-[23%] ps-2 pe-2">
+                        <Text variant="small" className="text-white">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                        </Text>
+                    </div>
+                    {/* Chat Input (fixed at bottom) */}
+                    <div>
                         <div className="flex">
                             <input
                                 type="text"
                                 placeholder="Enter your message here"
-                                className="flex-1 px-2 py-1 text-black rounded-l"
+                                className="flex-1 px-2 py-1 text-black bg-gray-400 text-xs outline-none"
                             />
-                            <button className="px-3 bg-gray-600 text-white rounded-r">
+                            <button className="px-2 bg-gray-600 text-white text-xs">
                                 Submit
                             </button>
                         </div>
