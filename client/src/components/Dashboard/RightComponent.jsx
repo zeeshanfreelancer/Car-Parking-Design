@@ -18,9 +18,9 @@ export default function RightComponent() {
     ];
 
     return (
-        <div className="flex flex-col h-screen bg-gray-900 text-white">
+        <div className="flex flex-col h-full bg-gray-900 text-white">
             {/* Cars List */}
-            <div className=" overflow-y-auto">
+            <div className=" overflow-y-auto h-70">
                 {cars.map((car, index) => (
                     <div
                         key={car.id}
@@ -35,16 +35,16 @@ export default function RightComponent() {
             </div>
 
             {/* History + Chat */}
-            <div className="grid grid-cols-2 divide-x divide-gray-700 bg-gray-800 h-60">
+            <div className="grid grid-cols-2 divide-x divide-gray-700 bg-gray-800 h-46">
                 {/* History */}
-                <div className="flex flex-col h-[30%]">
+                <div className="flex flex-col h-[20%]">
                     <div className="flex items-center justify-center gap-2 bg-gray-500 py-1 ">
                         <MdHistory />
                         <Text variant="small" className="text-white uppercase ">
                             History
                         </Text>
                     </div>
-                    <div className="flex-1 overflow-y-auto text-gray-400 ps-2 pe-2">
+                    <div className=" overflow-y-auto text-gray-400 ps-2 pe-2 ">
                         {/* History Content */}
                         <Text variant="small" className="text-white">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque? Possimus corrupti nulla id, doloremque, ut similique minus inventore quos exercitationem voluptatum quaerat!
@@ -68,7 +68,7 @@ export default function RightComponent() {
                     <div className="text-gray-300 text-center border-b border-gray-300">
                         <Text variant="small" className="font-semibold text-center text-white">Global Message</Text>
                     </div>
-                    <div className="overflow-y-auto h-[22%] ps-2">
+                    <div className="overflow-y-auto h-[12%] ps-2">
                         <Text variant="small" className="text-white">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
