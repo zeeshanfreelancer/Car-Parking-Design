@@ -1,21 +1,22 @@
 import React, { useState } from "react";   // <-- add useState here
 import Text from "./Reusable/Text.jsx";
 import { FaCarAlt, FaSearch } from "react-icons/fa";
-import { RiAddLargeLine } from "react-icons/ri";
-import { IoMdNotificationsOutline } from "react-icons/io"; // bell icon
+import { FaPlus } from "react-icons/fa";
+import { FaBell } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 
 export default function Header() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="bg-gray-900 text-white flex justify-between items-center px-4 py-2">
+        <header className="bg-gray-900 text-white flex justify-between items-center px-4 py-1">
             {/* Left side */}
             <div className="flex items-center gap-6">
                 {/* Logo + Title */}
-                <div className="flex items-center gap-2">
-                    <FaCarAlt className="text-3xl text-cyan-400" />
+                <div className="flex items-center gap-1">
+                    <FaCarAlt className="text-2xl text-cyan-400" />
                     <div className="flex flex-col leading-tight">
-                        <Text variant="h3" className="text-white font-semibold">
+                        <Text variant="h5" className="text-white font-semibold">
                             AUCTIONS
                         </Text>
                     </div>
@@ -28,22 +29,22 @@ export default function Header() {
             </div>
 
             {/* Right side */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1">
                 {/* Search */}
-                <button className="bg-gray-800 p-2 rounded hover:bg-gray-700">
-                    <FaSearch className="text-xl" />
+                <button className="bg-gray-800 p-2 hover:bg-gray-700">
+                    <FaSearch className="text-lg" />
                 </button>
 
                 {/* Add */}
-                <button className="bg-gray-800 p-2 rounded hover:bg-gray-700">
-                    <RiAddLargeLine className="text-xl" />
+                <button className="bg-gray-800 p-2 hover:bg-gray-700">
+                    <FaPlus className="text-lg" />
                 </button>
 
                 {/* Notifications + User */}
                 <div className="relative flex items-center gap-1 bg-gray-800 pe-2">
                     {/* Notification Icon */}
-                    <button className=" p-2 rounded ">
-                        <IoMdNotificationsOutline className="text-xl" />
+                    <button className=" p-2 ">
+                        <FaBell className="" />
                     </button>
 
                     {/* User Dropdown */}
@@ -52,10 +53,10 @@ export default function Header() {
                             onClick={() => setOpen(!open)}
                             className="flex items-center gap-1 text-sm text-white hover:text-gray-300"
                         >
-                            <Text variant="p" className="text-sm text-white">
+                            <Text variant="small" className="text-xs text-white">
                                 Tim Innocente
                             </Text>
-                            <span>▼</span>
+                            <FaAngleDown/>
                         </button>
 
                         {open && (
