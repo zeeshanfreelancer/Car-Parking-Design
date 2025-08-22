@@ -18,87 +18,89 @@ export default function RightComponent() {
     ];
 
     return (
-        <div className="flex flex-col h-full bg-gray-900 text-white">
+        <div className="flex flex-col h-full bg-neutral-800 rounded-2xl text-black">
             {/* Cars List */}
-            <div className=" overflow-y-auto h-70">
+            <div className=" overflow-y-auto h-70 rounded-t-2xl">
                 {cars.map((car, index) => (
                     <div
                         key={car.id}
-                        className={`flex justify-between px-4 py-2 ${index % 2 === 0 ? "bg-gray-700" : "bg-gray-600"
+                        className={`flex justify-between px-4 py-1 ${index % 2 === 0 ? "bg-neutral-300" : "bg-neutral-500"
                             }`}
                     >
-                        <span className="font-bold">{car.id} </span>
-                        <span className="text-sm font-semibold">{car.model}</span>
-                        <span className="text-sm">{car.color} {car.miles}</span>
+                        <Text className="font-bold text-lg">{car.id} </Text>
+                        <Text className="text-xs text-center font-semibold">{car.model}</Text>
+                        <Text className="text-xs text-center font-semibold">{car.color} <span className="block">{car.miles}</span></Text>
                     </div>
                 ))}
             </div>
 
             {/* History + Chat */}
-            <div className="grid grid-cols-2 divide-x divide-gray-700 bg-gray-800 h-46">
+            <div className="grid grid-cols-2 divide-x divide-neutral-700 bg-neutral-800 h-49 rounded-b-2xl ">
                 {/* History */}
-                <div className="flex flex-col h-[20%]">
-                    <div className="flex items-center justify-center gap-2 bg-gray-500 py-1 ">
-                        <MdHistory />
-                        <Text variant="small" className="text-white uppercase ">
-                            History
-                        </Text>
+                <div className="flex flex-col h-[50%]">
+                    {/* History Header */}
+                    <div className="flex items-center justify-center gap-2 bg-neutral-500 py-1">
+                        <MdHistory className="text-white text-xs" />
+                        <Text className="text-white uppercase text-xs">History</Text>
                     </div>
-                    <div className=" overflow-y-auto text-gray-400 ps-2 pe-2 ">
-                        {/* History Content */}
-                        <Text variant="small" className="text-white">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque? Possimus corrupti nulla id, doloremque, ut similique minus inventore quos exercitationem voluptatum quaerat!
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque? Possimus corrupti nulla id, doloremque, ut similique minus inventore quos exercitationem voluptatum quaerat!
 
+                    {/* Scrollable Content */}
+                    <div className="flex-1 overflow-y-scroll text-gray-400 px-2 ">
+                        <Text className="text-white text-xs">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque?
+                            Possimus corrupti nulla id, doloremque, ut similique minus inventore quos exercitationem voluptatum quaerat!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         </Text>
                     </div>
                 </div>
 
                 {/* Chat */}
-                <div className="flex flex-col">
+                <div className="flex flex-col h-[50%]">
                     {/* Chat Header */}
-                    <div className="flex items-center justify-center gap-2 bg-gray-500 px-3 py-1 ms-2">
-                        <IoChatbubble />
-                        <Text variant="small" className="text-white uppercase ">
-                            Chat
+                    <div className="flex items-center justify-center gap-2 bg-neutral-500">
+                        <IoChatbubble className="text-white text-xs" />
+                        <Text className="text-white uppercase text-xs">Chat</Text>
+                    </div>
+
+                    {/* Chat Messages Header */}
+                    <div className="text-gray-300 text-center border-b border-gray-700 py-1">
+                        <Text className="font-semibold text-center text-white text-xs">Global Message</Text>
+                    </div>
+
+                    {/* Scrollable Messages */}
+                    <div className="flex-1 overflow-y-auto px-2">
+                        <Text className="text-white text-xs">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
                         </Text>
                     </div>
 
-                    {/* Chat Messages (scrollable) */}
-                    <div className="text-gray-300 text-center border-b border-gray-300">
-                        <Text variant="small" className="font-semibold text-center text-white">Global Message</Text>
-                    </div>
-                    <div className="overflow-y-auto h-[12%] ps-2">
-                        <Text variant="small" className="text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
-                        </Text>
-                    </div>
-                    {/* Chat Input (fixed at bottom) */}
-                    <div>
-                        <div className="flex">
-                            <input
-                                type="text"
-                                placeholder="Enter your message here"
-                                className="flex-1 px-1 py-1 text-black bg-gray-400 text-xs outline-none"
-                            />
-                            <button className="px-2 bg-gray-600 text-white text-xs">
-                                Submit
-                            </button>
-                        </div>
+                    {/* Input Box (always bottom) */}
+                    <div className="flex border-t border-neutral-700">
+                        <input
+                            type="text"
+                            placeholder="Enter your message here"
+                            className="flex-1 px-1 py-1 text-black bg-neutral-500 text-xs outline-none"
+                        />
+                        <button className="px-1 bg-neutral-600 text-white text-xs rounded-br-1xl">Submit</button>
                     </div>
                 </div>
             </div>
+
+
         </div>
     );
 }

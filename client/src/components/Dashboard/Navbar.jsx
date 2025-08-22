@@ -7,13 +7,13 @@ export default function Navbar() {
 
     return (
         <div className="w-full px-14 pt-1">
-            <header className="bg-gray-600 pe-2 text-white flex flex-wrap items-center justify-between rounded-lg">
+            <header className="bg-neutral-600 pe-2 text-white flex flex-wrap items-center justify-between rounded-lg">
                 {/* Left Section */}
                 <div className="flex flex-wrap items-center gap-2">
                     {/* Lane Label */}
                     <Text
                         variant="small"
-                        className="bg-gray-800 py-2 px-3 rounded-l font-semibold text-white"
+                        className="bg-neutral-800 py-2 px-3 rounded-l font-semibold text-white"
                     >
                         LANE Q
                     </Text>
@@ -28,7 +28,7 @@ export default function Navbar() {
                     <input
                         type="text"
                         placeholder="Auctioneer Name"
-                        className="bg-slate-300 text-black placeholder-gray-800 px-3 py-0.5 text-xs focus:outline-none"
+                        className="bg-neutral-500 text-black placeholder-gray-800 px-3 py-0.5 text-xs focus:outline-none"
                     />
                 </div>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
                     </button>
 
                     {/* Switch Lane */}
-                    <div className="flex flex-col items-center ms-2 bg-neutral-700 px-3">
+                    <div className="flex flex-col items-center ms-2 bg-neutral-800 px-3">
                         <Text className="text-white text-xs">Switch Lane</Text>
                         <div className="flex">
                             {lanes.map((lane) => (

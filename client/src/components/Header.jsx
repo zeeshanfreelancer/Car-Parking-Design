@@ -9,7 +9,7 @@ export default function Header() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="bg-gray-900 text-white flex justify-between items-center px-4 py-1">
+        <header className="bg-neutral-800 text-white flex justify-between items-center">
             {/* Left side */}
             <div className="flex items-center gap-6">
                 {/* Logo + Title */}
@@ -29,19 +29,19 @@ export default function Header() {
             </div>
 
             {/* Right side */}
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5">
                 {/* Search */}
-                <button className="bg-gray-800 p-2 hover:bg-gray-700">
+                <button className="bg-neutral-700 p-2 hover:bg-neutral-500 cursor-pointer">
                     <FaSearch className="text-lg" />
                 </button>
 
                 {/* Add */}
-                <button className="bg-gray-800 p-2 hover:bg-gray-700">
+                <button className="bg-neutral-700 p-2 hover:bg-neutral-500 cursor-pointer">
                     <FaPlus className="text-lg" />
                 </button>
 
                 {/* Notifications + User */}
-                <div className="relative flex items-center gap-1 bg-gray-800 pe-2">
+                <div className="relative flex items-center gap-1 bg-neutral-700 hover:bg-neutral-500 pe-2">
                     {/* Notification Icon */}
                     <button className=" p-2 ">
                         <FaBell className="" />

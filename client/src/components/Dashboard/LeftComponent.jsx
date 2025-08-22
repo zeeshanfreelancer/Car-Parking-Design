@@ -16,7 +16,7 @@ export default function LeftComponent() {
     ];
 
     return (
-        <div className="bg-gray-800 px-4 py-1 rounded-lg shadow-md">
+        <div className="bg-neutral-800 px-1 py-1 rounded-lg shadow-md">
             {/* Image */}
             <div>
                 <img
@@ -28,7 +28,7 @@ export default function LeftComponent() {
 
             {/* Announcements */}
             <div className="text-center mt-2 bg-gray-300 overflow-y-scroll h-20 ">
-                <div className="flex justify-center gap-2 sticky top-0 bg-gray-600 p-1 ">
+                <div className="flex justify-center gap-2 sticky top-0 bg-neutral-500 p-1 ">
                     <TfiAnnouncement className="text-white" />
                     <Text className="text-white text-xs">ANNOUNCEMENTS</Text>
                 </div>
@@ -42,28 +42,28 @@ export default function LeftComponent() {
             </div>
 
             {/* Vehicle Details */}
-            <div className="flex justify-center gap-2 bg-gray-500 items-center">
+            <div className="flex justify-center gap-2 bg-neutral-500 items-center">
                 <IoMdInformationCircleOutline className="text-white" />
                 <Text className="text-white text-xs">VEHICLE DETAILS</Text>
             </div>
-           <div className="bg-gray-900 text-white max-w-md mx-auto rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-neutral-700 text-white max-w-md mx-auto shadow-lg">
                 {carDetails.map((detail, index) => (
                     <div
-                    key={index}
-                    className="flex items-center px-4 py-1 border-b border-gray-700"
+                        key={index}
+                        className="flex items-center px-4 py-1 border-b border-gray-900"
                     >
-                    {/* Label on left */}
-                    <Text className="text-xs text-white w-1/3">
-                        {detail.label}
-                    </Text>
+                        {/* Label on left */}
+                        <Text className="text-xs text-white w-1/3">
+                            {detail.label}
+                        </Text>
 
-                    {/* Value in center */}
-                    <Text className="text-xs text-white flex-1 text-center">
-                        {detail.value}
-                    </Text>
+                        {/* Value in center */}
+                        <Text className="text-xs text-white flex-1 text-center">
+                            {detail.value}
+                        </Text>
                     </div>
                 ))}
-                </div>
+            </div>
 
 
         </div>
