@@ -6,7 +6,7 @@ export default function Dashboard() {
     return (
         <div className='bg-[#39393B]'>
             <Navbar />
-            <div className='grid grid-cols-3 gap-4 p-4'>
+            <div className='grid grid-cols-3 gap-4 px-14 py-2'>
                 <LeftComponent />
                 <CenterComponent />
                 <RightComponent />

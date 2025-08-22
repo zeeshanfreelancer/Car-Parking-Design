@@ -16,18 +16,18 @@ export default function LeftComponent() {
     ];
 
     return (
-        <div className="bg-gray-800 p-4 rounded-lg shadow-md">
+        <div className="bg-gray-800 px-4 py-1 rounded-lg shadow-md">
             {/* Image */}
             <div>
                 <img
                     src="/car.PNG"
                     alt="Car"
-                    className="w-70 h-50 mx-auto"
+                    className="w-70 h-40 mx-auto"
                 />
             </div>
 
             {/* Announcements */}
-            <div className="text-center mt-4 bg-gray-300 overflow-y-scroll h-25 ">
+            <div className="text-center mt-2 bg-gray-300 overflow-y-scroll h-20 ">
                 <div className="flex justify-center gap-2 sticky top-0 bg-gray-600 p-1 ">
                     <TfiAnnouncement className="text-white" />
                     <Text className="text-white text-xs">ANNOUNCEMENTS</Text>
@@ -53,12 +53,12 @@ export default function LeftComponent() {
                     className="flex items-center px-4 py-1 border-b border-gray-700"
                     >
                     {/* Label on left */}
-                    <Text variant="small" className="text-white w-1/3">
+                    <Text className="text-xs text-white w-1/3">
                         {detail.label}
                     </Text>
 
                     {/* Value in center */}
-                    <Text variant="small" className="text-white font-medium flex-1 text-center">
+                    <Text className="text-xs text-white flex-1 text-center">
                         {detail.value}
                     </Text>
                     </div>
