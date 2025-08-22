@@ -36,38 +36,38 @@ export default function CenterComponent() {
     return (
         <div className="bg-gray-800 rounded-lg shadow-lg text-white w-full max-w-2xl mx-auto">
             {/* Lot Header */}
-            <div className="grid grid-cols-4 gap-1 text-center">
-                <Text variant="p" className="bg-black rounded-l-lg text-white">{carInfo.lot}</Text>
-                <Text className="bg-black text-white">{carInfo.grade}</Text>
+            <div className="grid grid-cols-4 gap-1 text-center items-center">
+                <Text className="bg-black rounded-l-lg text-white text-sm py-2">{carInfo.lot}</Text>
+                <Text className="bg-black text-white text-sm py-2">{carInfo.grade}</Text>
                 <div className="bg-black">
-                    <Text variant="p" className="text-white">Mileage</Text>
-                    <Text variant="p" className="text-white">{carInfo.mileage}</Text>
+                    <Text className="text-white text-xs">Mileage</Text>
+                    <Text className="text-white text-sm">{carInfo.mileage}</Text>
                 </div>
-                <p className="bg-black rounded-lg">{carInfo.status}</p>
+                <p className="bg-black rounded-r-lg text-sm py-2">{carInfo.status}</p>
             </div>
 
             {/* Car Details */}
             <div className="items-center justify-center text-center">
-                <Text variant="h4" className="text-white">{carInfo.model}</Text>
-                <Text variant="h5" className="text-white">{carInfo.vin}</Text>
+                <Text variant="h5" className="text-white">{carInfo.model}</Text>
+                <Text className="text-white text-xs">{carInfo.vin}</Text>
             </div>
 
             {/* Summary */}
-            <div className="grid grid-cols-4 gap-1 text-center p-4">
+            <div className="grid grid-cols-4 gap-1 text-center p-2">
                 {summary.map((item, i) => (
                     <div key={i} className="border-[3px] border-black">
-                        <Text variant="p" className="text-white">{item.label}</Text>
-                        {item.value && <Text variant="p" className="text-white">{item.value}</Text>}
+                        <Text className="text-white text-xs">{item.label}</Text>
+                        {item.value && <Text className="text-white text-xs">{item.value}</Text>}
                     </div>
                 ))}
             </div>
 
             {/* Colored bars */}
-            <div className="grid grid-cols-4 gap-2 p-2">
-                <div className="h-10 border-2 border-green-500 bg-gray-700"></div>
-                <div className="h-10 border-2 border-red-600 bg-red-500"></div>
-                <div className="h-10 border-2 border-yellow-500 bg-gray-900"></div>
-                <div className="h-10 border-2 border-[#211DA6] bg-[#211DA6]"></div>
+            <div className="grid grid-cols-4 gap-2 px-2 py-1 mb-2">
+                <div className="h-9 border-2 border-green-500 bg-gray-700"></div>
+                <div className="h-9 border-2 border-red-600 bg-red-500"></div>
+                <div className="h-9 border-2 border-yellow-500 bg-gray-900"></div>
+                <div className="h-9 border-2 border-[#211DA6] bg-[#211DA6]"></div>
             </div>
 
             {/* Price Grid with Expand Icon */}
@@ -76,7 +76,7 @@ export default function CenterComponent() {
                     {priceSteps.map((price, i) => (
                         <div
                             key={i}
-                            className={`px-2 border border-gray-300 ${price === selectedPrice
+                            className={`px-2 py-0.5 border border-gray-300 text-xs ${price === selectedPrice
                                     ? "bg-white text-black font-bold"
                                     : "bg-gray-900"
                                 }`}
@@ -103,7 +103,7 @@ export default function CenterComponent() {
                 {bidIncrements.map((inc, i) => (
                     <button
                         key={i}
-                        className={`bg-gray-900 py-1 w-full ${inc === "$100" ? "border-2 border-white" : ""
+                        className={`text-xs bg-gray-900 py-1 w-full ${inc === "$100" ? "border-1 border-white" : ""
                             }`}
                     >
                         {inc}
@@ -130,7 +130,7 @@ export default function CenterComponent() {
             </div>
 
             {/* Start Vehicle + Controls */}
-            <div className="grid grid-cols-2 gap-2 p-2">
+            <div className="grid grid-cols-2 gap-2 px-2 py-1">
                 <div className="bg-white text-black text-center p-4 font-bold text-lg rounded">
                     Start Vehicle <br /> {selectedPrice}
                 </div>
@@ -145,7 +145,7 @@ export default function CenterComponent() {
             </div>
 
             {/* Final Actions */}
-            <div className="grid grid-cols-3 gap-2 text-center font-bold p-2">
+            <div className="grid grid-cols-3 gap-2 text-center font-bold px-2 py-1">
                 <button className="bg-gray-700 py-3 rounded">NO SALE</button>
                 <button className="bg-gray-700 py-3 rounded">OFFER</button>
                 <button className="bg-gray-700 py-3 rounded">SOLD</button>
