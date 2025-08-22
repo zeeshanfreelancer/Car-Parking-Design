@@ -27,8 +27,9 @@ export default function RightComponent() {
                         className={`flex justify-between px-4 py-2 ${index % 2 === 0 ? "bg-gray-700" : "bg-gray-600"
                             }`}
                     >
-                        <span className="font-semibold">{car.id} {car.model}</span>
-                        <span>{car.color} {car.miles}</span>
+                        <span className="font-bold">{car.id} </span>
+                        <span className="text-sm font-semibold">{car.model}</span>
+                        <span className="text-sm">{car.color} {car.miles}</span>
                     </div>
                 ))}
             </div>
@@ -37,9 +38,9 @@ export default function RightComponent() {
             <div className="grid grid-cols-2 divide-x divide-gray-700 bg-gray-800 h-60">
                 {/* History */}
                 <div className="flex flex-col h-[30%]">
-                    <div className="flex items-center gap-2 bg-gray-500 py-1">
+                    <div className="flex items-center justify-center gap-2 bg-gray-500 py-1 ">
                         <MdHistory />
-                        <Text variant="small" className="text-white uppercase">
+                        <Text variant="small" className="text-white uppercase ">
                             History
                         </Text>
                     </div>
@@ -56,9 +57,9 @@ export default function RightComponent() {
                 {/* Chat */}
                 <div className="flex flex-col">
                     {/* Chat Header */}
-                    <div className="flex items-center gap-2 bg-gray-500 px-3 py-1">
+                    <div className="flex items-center justify-center gap-2 bg-gray-500 px-3 py-1 ms-2">
                         <IoChatbubble />
-                        <Text variant="small" className="text-white uppercase">
+                        <Text variant="small" className="text-white uppercase ">
                             Chat
                         </Text>
                     </div>
@@ -67,7 +68,7 @@ export default function RightComponent() {
                     <div className="text-gray-300 text-center border-b border-gray-300">
                         <Text variant="small" className="font-semibold text-center text-white">Global Message</Text>
                     </div>
-                    <div className="overflow-y-auto h-[23%] ps-2">
+                    <div className="overflow-y-auto h-[22%] ps-2">
                         <Text variant="small" className="text-white">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
@@ -89,7 +90,7 @@ export default function RightComponent() {
                             <input
                                 type="text"
                                 placeholder="Enter your message here"
-                                className="flex-1 px-2 py-1 text-black bg-gray-400 text-xs outline-none"
+                                className="flex-1 px-1 py-1 text-black bg-gray-400 text-xs outline-none"
                             />
                             <button className="px-2 bg-gray-600 text-white text-xs">
                                 Submit
