@@ -1,18 +1,27 @@
 import { useState } from "react";
+import { createRoot } from "react-dom/client";
 import Text from "../Reusable/Text"
 import { IoSettingsSharp } from "react-icons/io5";
 import { CgStack } from "react-icons/cg";
+import AuctionLayout from "./AuctionLayout";
 export default function Navbar() {
     const lanes = ["Q", "R", "S", "T", "U"];
     const [selectedLane, setSelectedLane] = useState(null);
 
     // define click handler
-    const handleClick = () => {
-        window.open(
-            "/auction",
-            "stackWindow",
-        )
+   const handleClick = () => {
+    const newWindow = window.open("", "AuctionWindow", "width=1000,height=500,left=200,top=200");
+
+    if (newWindow) {
+      // Create a div inside the new window
+      const div = newWindow.document.createElement("div");
+      newWindow.document.body.appendChild(div);
+
+      // Render your component inside that div
+      const root = createRoot(div);
+      root.render(<AuctionLayout />);
     }
+  };
     return (
         <div className="w-full px-14 pt-1">
             <header className="bg-neutral-600 pe-2 text-white flex flex-wrap items-center justify-between rounded-lg">
