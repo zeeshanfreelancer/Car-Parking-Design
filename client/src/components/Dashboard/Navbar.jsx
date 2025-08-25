@@ -1,37 +1,54 @@
 import { useState } from "react";
 import Text from "../Reusable/Text"
 import { IoSettingsSharp } from "react-icons/io5";
+import { CgStack } from "react-icons/cg";
 export default function Navbar() {
     const lanes = ["Q", "R", "S", "T", "U"];
     const [selectedLane, setSelectedLane] = useState(null);
 
+    // define click handler
+    const handleClick = () => {
+        window.open(
+            "/auction",
+            "stackWindow",
+        )
+    }
     return (
         <div className="w-full px-14 pt-1">
             <header className="bg-neutral-600 pe-2 text-white flex flex-wrap items-center justify-between rounded-lg">
                 {/* Left Section */}
-                <div className="flex flex-wrap items-center gap-2">
-                    {/* Lane Label */}
-                    <Text
-                        variant="small"
-                        className="bg-neutral-800 py-2 px-3 rounded-l font-semibold text-white"
-                    >
-                        LANE Q
-                    </Text>
+                <div className="flex flex-row flex-wrap gap-5">
+                    <div className="flex items-center gap-1">
+                        {/* Lane Label */}
+                        <Text
+                            variant="small"
+                            className="bg-neutral-800 py-2 px-3 rounded-l font-semibold text-white"
+                        >
+                            LANE Q
+                        </Text>
 
-                    {/* Auction Info */}
-                    <Text className="text-white text-sm">
-                        Statewide Auto Auction:{" "}
-                        <Text variant="small" className="font-bold text-sm inline text-white">August 19, 2025</Text>
-                    </Text>
-
+                        {/* Auction Info */}
+                        <Text className="text-white text-sm">
+                            Statewide Auto Auction:{" "}
+                            <Text variant="small" className="font-bold text-sm inline text-white">August 19, 2025</Text>
+                        </Text>
+                        {/* Stack Icon */}
+                        <button
+                            onClick={handleClick}
+                            className="p-1 cursor-pointer"
+                        >
+                            <CgStack className="text-sm" />
+                        </button>
+                    </div>
                     {/* Auctioneer Input */}
-                    <input
-                        type="text"
-                        placeholder="Auctioneer Name"
-                        className="bg-neutral-500 text-black placeholder-gray-800 px-3 py-0.5 text-xs focus:outline-none"
-                    />
+                    <div className="flex items-center">
+                        <input
+                            type="text"
+                            placeholder="Auctioneer Name"
+                            className="bg-neutral-500 text-black placeholder-gray-800 px-3 py-0.5 text-xs focus:outline-none"
+                        />
+                    </div>
                 </div>
-
                 {/* Right Section */}
                 <div className="flex sm:mt-0">
                     {/* Simulcast Users */}
