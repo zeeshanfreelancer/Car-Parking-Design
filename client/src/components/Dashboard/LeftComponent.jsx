@@ -20,7 +20,7 @@ export default function LeftComponent() {
             {/* Image */}
             <div>
                 <img
-                    src="/car.PNG"
+                    src="/assets/car.PNG"
                     alt="Car"
                     className="w-70 h-40 mx-auto"
                 />

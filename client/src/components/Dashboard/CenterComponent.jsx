@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Text from "../Reusable/Text";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import { RiExpandUpDownFill } from "react-icons/ri";
-import IncrementModel from "./IncrementModel"; // ✅ correct import
+import IncrementModel from "./IncrementModel"; // 
 
 export default function CenterComponent() {
     const [open, setOpen] = useState(false);
@@ -95,7 +95,7 @@ export default function CenterComponent() {
                 </button>
             </div>
 
-            {/* ✅ Increment Model modal */}
+            {/* Increment Model modal */}
             <IncrementModel open={open} onClose={() => setOpen(false)} />
 
             {/* Increments Grid */}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";   // <-- add useState here
+import React, { useState } from "react";   
 import Text from "./Reusable/Text.jsx";
 import { FaCarAlt, FaSearch } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
