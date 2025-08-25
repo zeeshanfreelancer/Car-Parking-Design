@@ -13,24 +13,22 @@ export default function AuctionLayout() {
 
         {/* Top Section */}
         <div className="flex items-center gap-2 mb-2">
-          {/* Left big input box */}
-          <div className="flex-1 bg-neutral-800 h-12 rounded"></div>
+            {/* Left big input box */}
+            <div className="flex-1 bg-neutral-800 h-17 rounded"></div>
 
-          {/* REP button */}
-          <button className="bg-white text-black font-bold px-8 py-2 rounded">
-            REP
-          </button>
+             <div className="grid grid-cols-2 gap-2">
+                <button className="bg-white text-black font-bold px-8 py-2 rounded col-span-2">
+                    REP
+                </button>
+                <button className="border border-white px-4 py-2">RESERVE $</button>
+                <button className="border border-white px-4 py-2">PRE BIDS</button>
+                <button className="border border-white px-4 py-2">WATCHES</button>
+                <button className="border border-white px-4 py-2">VIEWERS</button>
+            </div>
 
-          {/* Reserve, Pre Bids, Watches, Viewers */}
-          <div className="flex gap-2">
-            <button className="border border-white px-4 py-2">RESERVE $</button>
-            <button className="border border-white px-4 py-2">PRE BIDS</button>
-            <button className="border border-white px-4 py-2">WATCHES</button>
-            <button className="border border-white px-4 py-2">VIEWERS</button>
-          </div>
 
-          {/* Rep Chat */}
-          <div className="flex-1 bg-neutral-800 h-12 rounded"></div>
+            {/* Rep Chat */}
+            <div className="flex-1 bg-neutral-800 h-12 rounded"></div>
         </div>
 
         {/* Seller Label */}
