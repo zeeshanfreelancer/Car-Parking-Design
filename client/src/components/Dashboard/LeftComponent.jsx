@@ -12,7 +12,9 @@ export default function LeftComponent() {
         { label: "Interior", value: "Leather" },
         { label: "Fuel", value: "Gasoline" },
         { label: "Sunroof", value: "No" },
-        { label: "Engine", value: "3.60L" }
+        { label: "Engine", value: "3.60L" },
+        { label: "Trans", value: "Automatic" },
+        { label: "Trim", value: "Laredo" }
     ];
 
     return (
@@ -42,28 +44,83 @@ export default function LeftComponent() {
             </div>
 
             {/* Vehicle Details */}
-            <div className="flex justify-center gap-2 bg-neutral-500 items-center">
-                <IoMdInformationCircleOutline className="text-white" />
-                <Text className="text-white text-xs">VEHICLE DETAILS</Text>
-            </div>
-            <div className="bg-neutral-700 text-white max-w-md mx-auto shadow-lg">
-                {carDetails.map((detail, index) => (
-                    <div
-                        key={index}
-                        className="flex items-center px-4 py-1 border-b border-gray-900"
-                    >
-                        {/* Label on left */}
-                        <Text className="text-xs text-white w-1/3">
-                            {detail.label}
-                        </Text>
+            <div className="max-w-md mx-auto shadow-lg">
+                {/* Header */}
+                <div className="flex justify-center gap-2 bg-neutral-500 items-center py-1">
+                    <IoMdInformationCircleOutline className="text-white" />
+                    <Text className="text-white text-xs font-semibold uppercase">
+                        Vehicle Details
+                    </Text>
+                </div>
 
-                        {/* Value in center */}
-                        <Text className="text-xs text-white flex-1 text-center">
-                            {detail.value}
+                {/* Details Grid */}
+                <div className="bg-neutral-700 text-white py-3">
+                    {/* Seller row (full width) */}
+                    <div className="px-4 py-1 border-b border-gray-900 ">
+                        <Text className="text-xs font-semibold text-white">
+                            {carDetails[0].label}:  {carDetails[0].value}
                         </Text>
                     </div>
-                ))}
+
+                    {/* Title / Color */}
+                    <div className="grid grid-cols-2 text-xs">
+                        {carDetails.slice(1, 3).map((detail, index) => (
+                            <div
+                                key={index}
+                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                            >
+                                <Text className="font-semibold text-xs text-white">
+                                    {detail.label}:  {detail.value}
+                                </Text>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Drivetrain / Interior */}
+                    <div className="grid grid-cols-2 text-xs">
+                        {carDetails.slice(3, 5).map((detail, index) => (
+                            <div
+                                key={index}
+                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                            >
+                                <Text className="font-semibold text-xs text-white">
+                                    {detail.label}:  {detail.value}
+                                </Text>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Fuel / Sunroof */}
+                    <div className="grid grid-cols-2 text-xs">
+                        {carDetails.slice(5, 7).map((detail, index) => (
+                            <div
+                                key={index}
+                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                            >
+                                <Text className="font-semibold text-xs text-white">
+                                    {detail.label}:  {detail.value}
+                                </Text>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Engine / Trans / Trim (3 columns in one line) */}
+                    <div className="grid grid-cols-1 text-xs">
+                        {carDetails.slice(7).map((detail, index) => (
+                            <div
+                                key={index}
+                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                            >
+                                <Text className="font-semibold text-xs text-white">
+                                    {detail.label}:  {detail.value}
+                                </Text>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
+
 
 
         </div>

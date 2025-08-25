@@ -64,13 +64,13 @@ export default function RightComponent() {
                 {/* Chat */}
                 <div className="flex flex-col h-[50%]">
                     {/* Chat Header */}
-                    <div className="flex items-center justify-center gap-2 bg-neutral-500">
+                    <div className="flex items-center justify-center gap-2 py-1 bg-neutral-500">
                         <IoChatbubble className="text-white text-xs" />
                         <Text className="text-white uppercase text-xs">Chat</Text>
                     </div>
 
                     {/* Chat Messages Header */}
-                    <div className="text-gray-300 text-center border-b border-gray-700 py-1">
+                    <div className="text-gray-300 text-center border-b border-white py-1">
                         <Text className="font-semibold text-center text-white text-xs">Global Message</Text>
                     </div>
 

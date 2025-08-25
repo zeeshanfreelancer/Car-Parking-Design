@@ -38,7 +38,7 @@ export default function IncrementModel({ open, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
       {/* Modal Box */}
-      <div className="relative bg-neutral-600 w-full max-w-6xl rounded-lg overflow-hidden flex flex-col md:flex-row h-[90vh] shadow-2xl">
+      <div className="relative bg-neutral-600 w-full max-w-6xl overflow-hidden flex flex-col md:flex-row h-[90vh] shadow-2xl">
 
         {/* Close Button */}
         <button
