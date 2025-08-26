@@ -2,7 +2,7 @@ import Text from "../Reusable/Text";
 import { TfiAnnouncement } from "react-icons/tfi";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 
-export default function LeftComponent() {
+export default function LeftComponent({ theme }) {
     // Example car details (can come from props, API, or context later)
     const carDetails = [
         { label: "Seller", value: "Loehmann Blasius Chevrolet Inc" },
@@ -18,7 +18,13 @@ export default function LeftComponent() {
     ];
 
     return (
-        <div className="bg-neutral-800 px-1 py-1 rounded-lg shadow-md">
+        <div
+            className="px-1 py-1 rounded-lg shadow-md"
+            style={{
+                background: "var(--main_field_back)",
+                color: "var(--text_main)",
+            }}
+        >
             {/* Image */}
             <div>
                 <img
@@ -29,12 +35,25 @@ export default function LeftComponent() {
             </div>
 
             {/* Announcements */}
-            <div className="text-center mt-2 bg-gray-300 overflow-y-scroll h-20 ">
-                <div className="flex justify-center gap-2 sticky top-0 bg-neutral-500 p-1 ">
-                    <TfiAnnouncement className="text-white" />
-                    <Text className="text-white text-xs">ANNOUNCEMENTS</Text>
+            <div
+                className="text-center mt-2 overflow-y-scroll h-20"
+                style={{
+                    background: "var(--button_note_back)",
+                    color: "var(--button_note_text)",
+                }}
+            >
+                <div
+                    className="flex justify-center gap-2 sticky top-0 p-1"
+                    style={{
+                        background: "var(--button_update_back)",
+                    }}
+                >
+                    <TfiAnnouncement style={{ color: "var(--button_update_text)" }} />
+                    <Text className="text-xs" style={{ color: "var(--button_update_text)" }}>
+                        ANNOUNCEMENTS
+                    </Text>
                 </div>
-                <Text className="text-black text-xs text-left px-2">
+                <Text className="text-xs text-left px-2" style={{ color: "var(--button_note_text)" }}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
                     laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
                     perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
@@ -46,18 +65,35 @@ export default function LeftComponent() {
             {/* Vehicle Details */}
             <div className="max-w-md mx-auto shadow-lg">
                 {/* Header */}
-                <div className="flex justify-center gap-2 bg-neutral-500 items-center py-1">
-                    <IoMdInformationCircleOutline className="text-white" />
-                    <Text className="text-white text-xs font-semibold uppercase">
+                <div
+                    className="flex justify-center gap-2 items-center py-1"
+                    style={{
+                        background: "var(--button_update_back)",
+                    }}
+                >
+                    <IoMdInformationCircleOutline style={{ color: "var(--button_update_text)" }} />
+                    <Text
+                        className="text-xs font-semibold uppercase"
+                        style={{ color: "var(--button_update_text)" }}
+                    >
                         Vehicle Details
                     </Text>
                 </div>
 
                 {/* Details Grid */}
-                <div className="bg-neutral-700 text-white py-3">
+                <div
+                    className="py-3"
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main)",
+                    }}
+                >
                     {/* Seller row (full width) */}
-                    <div className="px-4 py-1 border-b border-gray-900 ">
-                        <Text className="text-xs font-semibold text-white">
+                    <div
+                        className="px-4 py-1 border-b"
+                        style={{ borderColor: "var(--top_nav_border)" }}
+                    >
+                        <Text className="text-xs font-semibold" style={{ color: "var(--text_main_highlight)" }}>
                             {carDetails[0].label}:  {carDetails[0].value}
                         </Text>
                     </div>
@@ -67,9 +103,10 @@ export default function LeftComponent() {
                         {carDetails.slice(1, 3).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                                className="flex justify-between px-4 py-1 border-b"
+                                style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs text-white">
+                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -81,9 +118,10 @@ export default function LeftComponent() {
                         {carDetails.slice(3, 5).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                                className="flex justify-between px-4 py-1 border-b"
+                                style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs text-white">
+                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -95,34 +133,32 @@ export default function LeftComponent() {
                         {carDetails.slice(5, 7).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                                className="flex justify-between px-4 py-1 border-b"
+                                style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs text-white">
+                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
                         ))}
                     </div>
 
-                    {/* Engine / Trans / Trim (3 columns in one line) */}
+                    {/* Engine / Trans / Trim */}
                     <div className="grid grid-cols-1 text-xs">
                         {carDetails.slice(7).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b border-gray-900"
+                                className="flex justify-between px-4 py-1 border-b"
+                                style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs text-white">
+                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
                         ))}
                     </div>
                 </div>
-
             </div>
-
-
-
         </div>
     );
 }

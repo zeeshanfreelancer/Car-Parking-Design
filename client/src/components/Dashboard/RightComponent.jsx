@@ -2,7 +2,7 @@ import Text from "../Reusable/Text";
 import { MdHistory } from "react-icons/md";
 import { IoChatbubble } from "react-icons/io5";
 
-export default function RightComponent() {
+export default function RightComponent({ theme }) {
     const cars = [
         { id: "Q1", model: "2012 Grand Cherokee", color: "Gray", miles: "143,253" },
         { id: "Q2", model: "2014 Outback", color: "Gray", miles: "140,141" },
@@ -18,14 +18,23 @@ export default function RightComponent() {
     ];
 
     return (
-        <div className="flex flex-col h-full bg-neutral-800 rounded-2xl text-black">
+        <div
+            className="flex flex-col h-full rounded-2xl"
+            style={{
+                background: "var(--main_field_back)",
+                color: "var(--text_main)",
+            }}
+        >
             {/* Cars List */}
-            <div className=" overflow-y-auto h-70 rounded-t-2xl">
+            <div className="overflow-y-auto h-70 rounded-t-2xl">
                 {cars.map((car, index) => (
                     <div
                         key={car.id}
-                        className={`flex justify-between px-4 py-1 ${index % 2 === 0 ? "bg-neutral-300" : "bg-neutral-500"
-                            }`}
+                        className="flex justify-between px-4 py-1"
+                        style={{
+                            background: index % 2 === 0 ? "var(--main_field_inner)" : "var(--main_field_back)",
+                            color: "var(--text_main)",
+                        }}
                     >
                         <Text className="font-bold text-lg">{car.id} </Text>
                         <Text className="text-xs text-center font-semibold">{car.model}</Text>
@@ -35,18 +44,29 @@ export default function RightComponent() {
             </div>
 
             {/* History + Chat */}
-            <div className="grid grid-cols-2 divide-x divide-neutral-700 bg-neutral-800 h-49 rounded-b-2xl ">
+            <div
+                className="grid grid-cols-2 divide-x h-49 rounded-b-2xl"
+                style={{
+                    background: "var(--main_field_back)",
+                    borderColor: "var(--top_nav_border)",
+                }}
+            >
                 {/* History */}
                 <div className="flex flex-col h-[50%]">
                     {/* History Header */}
-                    <div className="flex items-center justify-center gap-2 bg-neutral-500 py-1">
-                        <MdHistory className="text-white text-xs" />
-                        <Text className="text-white uppercase text-xs">History</Text>
+                    <div
+                        className="flex items-center justify-center gap-2 py-1"
+                        style={{
+                            background: "var(--button_update_back)",
+                        }}
+                    >
+                        <MdHistory style={{ color: "var(--button_update_text)" }} className="text-xs" />
+                        <Text className="uppercase text-xs" style={{ color: "var(--button_update_text)" }}>History</Text>
                     </div>
 
                     {/* Scrollable Content */}
-                    <div className="flex-1 overflow-y-scroll text-gray-400 px-2 ">
-                        <Text className="text-white text-xs">
+                    <div className="flex-1 overflow-y-scroll px-2">
+                        <Text className="text-xs" style={{ color: "var(--text_main)" }}>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque?
                             Possimus corrupti nulla id, doloremque, ut similique minus inventore quos exercitationem voluptatum quaerat!
@@ -64,19 +84,29 @@ export default function RightComponent() {
                 {/* Chat */}
                 <div className="flex flex-col h-[50%]">
                     {/* Chat Header */}
-                    <div className="flex items-center justify-center gap-2 py-1 bg-neutral-500">
-                        <IoChatbubble className="text-white text-xs" />
-                        <Text className="text-white uppercase text-xs">Chat</Text>
+                    <div
+                        className="flex items-center justify-center gap-2 py-1"
+                        style={{
+                            background: "var(--button_update_back)",
+                        }}
+                    >
+                        <IoChatbubble style={{ color: "var(--button_update_text)" }} className="text-xs" />
+                        <Text className="uppercase text-xs" style={{ color: "var(--button_update_text)" }}>Chat</Text>
                     </div>
 
                     {/* Chat Messages Header */}
-                    <div className="text-gray-300 text-center border-b border-white py-1">
-                        <Text className="font-semibold text-center text-white text-xs">Global Message</Text>
+                    <div
+                        className="text-center border-b py-1"
+                        style={{
+                            borderColor: "var(--top_nav_border)",
+                        }}
+                    >
+                        <Text className="font-semibold text-center text-xs" style={{ color: "var(--text_main_highlight)" }}>Global Message</Text>
                     </div>
 
                     {/* Scrollable Messages */}
                     <div className="flex-1 overflow-y-auto px-2">
-                        <Text className="text-white text-xs">
+                        <Text className="text-xs" style={{ color: "var(--text_main)" }}>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -89,18 +119,33 @@ export default function RightComponent() {
                     </div>
 
                     {/* Input Box (always bottom) */}
-                    <div className="flex border-t border-neutral-700">
+                    <div
+                        className="flex border-t"
+                        style={{
+                            borderColor: "var(--top_nav_border)",
+                        }}
+                    >
                         <input
                             type="text"
                             placeholder="Enter your message here"
-                            className="flex-1 px-1 py-1 text-black bg-neutral-500 text-xs outline-none"
+                            className="flex-1 px-1 py-1 text-xs outline-none"
+                            style={{
+                                background: "var(--main_field_inner)",
+                                color: "var(--text_main)",
+                            }}
                         />
-                        <button className="px-1 bg-neutral-600 text-white text-xs rounded-br-1xl">Submit</button>
+                        <button
+                            className="px-1 text-xs rounded-br-1xl"
+                            style={{
+                                background: "var(--button_update_back)",
+                                color: "var(--button_update_text)",
+                            }}
+                        >
+                            Submit
+                        </button>
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 }

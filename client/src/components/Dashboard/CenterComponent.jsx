@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Text from "../Reusable/Text";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import { RiExpandUpDownFill } from "react-icons/ri";
-import IncrementModel from "./IncrementModel"; // 
+import IncrementModel from "./IncrementModel";
 
-export default function CenterComponent() {
+export default function CenterComponent({ theme }) {
     const [open, setOpen] = useState(false);
 
     // Example dynamic data (later you can pass as props or from API)
@@ -34,40 +34,80 @@ export default function CenterComponent() {
     const bidIncrements = ["$25", "$50", "$100", "$200", "$250", "$500"];
 
     return (
-        <div className="bg-neutral-800 rounded-lg shadow-lg text-white w-full max-w-2xl mx-auto">
+        <div
+            className="rounded-lg shadow-lg w-full max-w-2xl mx-auto"
+            style={{
+                background: "var(--main_field_back)",
+                color: "var(--text_main)",
+            }}
+        >
             {/* Lot Header */}
             <div className="grid grid-cols-4 gap-1 text-center items-center">
-                <Text className="bg-black rounded-l-lg text-white text-sm py-2">{carInfo.lot}</Text>
-                <Text className="bg-black text-white text-sm py-2">{carInfo.grade}</Text>
-                <div className="bg-black">
-                    <Text className="text-white text-xs">Mileage</Text>
-                    <Text className="text-white text-sm">{carInfo.mileage}</Text>
+                <Text
+                    className="rounded-l-lg text-sm py-2"
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main_highlight)",
+                    }}
+                >
+                    {carInfo.lot}
+                </Text>
+                <Text
+                    className="text-sm py-2"
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main_highlight)",
+                    }}
+                >
+                    {carInfo.grade}
+                </Text>
+                <div
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main)",
+                    }}
+                >
+                    <Text className="text-xs">Mileage</Text>
+                    <Text className="text-sm">{carInfo.mileage}</Text>
                 </div>
-                <Text variant="small" className="bg-black text-white rounded-r-lg py-2">{carInfo.status}</Text>
+                <Text
+                    variant="small"
+                    className="rounded-r-lg py-2"
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main_highlight)",
+                    }}
+                >
+                    {carInfo.status}
+                </Text>
             </div>
 
             {/* Car Details */}
             <div className="items-center justify-center text-center">
-                <Text variant="h5" className="text-white font-bold">{carInfo.model}</Text>
-                <Text className="text-white text-xs">{carInfo.vin}</Text>
+                <Text variant="h5" className="font-bold" style={{ color: "var(--text_main_highlight)" }}>
+                    {carInfo.model}
+                </Text>
+                <Text className="text-xs" style={{ color: "var(--text_main)" }}>
+                    {carInfo.vin}
+                </Text>
             </div>
 
             {/* Summary */}
             <div className="grid grid-cols-4 gap-1 text-center p-2">
                 {summary.map((item, i) => (
-                    <div key={i} className="border-[2px] border-black">
-                        <Text className="text-white text-xs">{item.label}</Text>
-                        {item.value && <Text className="text-white text-xs font-bold">{item.value}</Text>}
+                    <div key={i} style={{ border: "2px solid var(--top_nav_border)" }}>
+                        <Text className="text-xs" style={{ color: "var(--text_main)" }}>{item.label}</Text>
+                        {item.value && <Text className="text-xs font-bold" style={{ color: "var(--text_main_highlight)" }}>{item.value}</Text>}
                     </div>
                 ))}
             </div>
 
             {/* Colored bars */}
             <div className="grid grid-cols-4 gap-2 px-2 py-2 mb-2">
-                <div className="h-9 border-2 border-green-500 bg-gray-700"></div>
-                <div className="h-9 border-2 border-red-600 bg-red-500"></div>
-                <div className="h-9 border-2 border-yellow-500 bg-gray-900"></div>
-                <div className="h-9 border-2 border-[#211DA6] bg-[#211DA6]"></div>
+                <div style={{ height: "2.25rem", border: "2px solid var(--bar_green)", background: "var(--bar_green_back)" }}></div>
+                <div style={{ height: "2.25rem", border: "2px solid var(--bar_red)", background: "var(--bar_red_back)" }}></div>
+                <div style={{ height: "2.25rem", border: "2px solid var(--bar_yellow)", background: "var(--bar_yellow_back)" }}></div>
+                <div style={{ height: "2.25rem", border: "2px solid var(--bar_blue)", background: "var(--bar_blue_back)" }}></div>
             </div>
 
             {/* Price Grid with Expand Icon */}
@@ -76,10 +116,13 @@ export default function CenterComponent() {
                     {priceSteps.map((price, i) => (
                         <div
                             key={i}
-                            className={`px-2 py-0.5 border border-gray-300 text-xs ${price === selectedPrice
-                                    ? "bg-white text-black font-bold"
-                                    : "bg-neutral-900"
-                                }`}
+                            className="px-2 py-0.5 border text-xs"
+                            style={{
+                                borderColor: "var(--top_nav_border)",
+                                background: price === selectedPrice ? "var(--button_update_back)" : "var(--main_field_inner)",
+                                color: price === selectedPrice ? "var(--button_update_text)" : "var(--text_main)",
+                                fontWeight: price === selectedPrice ? "bold" : "normal",
+                            }}
                         >
                             {price}
                         </div>
@@ -90,6 +133,7 @@ export default function CenterComponent() {
                 <button
                     className="ml-1 text-lg"
                     onClick={() => setOpen(true)}
+                    style={{ color: "var(--text_main_highlight)" }}
                 >
                     <RiExpandUpDownFill />
                 </button>
@@ -103,8 +147,11 @@ export default function CenterComponent() {
                 {bidIncrements.map((inc, i) => (
                     <button
                         key={i}
-                        className={`text-xs bg-transparent py-1 w-full ${inc === "$100" ? "border-1 border-white" : ""
-                            }`}
+                        className="text-xs bg-transparent py-1 w-full"
+                        style={{
+                            border: inc === "$100" ? "1px solid var(--top_nav_border)" : "none",
+                            color: "var(--text_main_highlight)",
+                        }}
                     >
                         {inc}
                     </button>
@@ -115,13 +162,21 @@ export default function CenterComponent() {
             <div className="grid grid-cols-2 gap-1 items-center text-center py-1 px-2 rounded mt-1">
                 <Text
                     variant="p"
-                    className="font-bold p-1 text-white bg-neutral-700"
+                    className="font-bold p-1"
+                    style={{
+                        color: "var(--button_update_text)",
+                        background: "var(--button_update_back)",
+                    }}
                 >
                     {selectedPrice}
                 </Text>
                 <Text
                     variant="p"
-                    className="p-1 text-white font-bold flex justify-center items-center gap-2 bg-neutral-700"
+                    className="p-1 font-bold flex justify-center items-center gap-2"
+                    style={{
+                        color: "var(--text_main_highlight)",
+                        background: "var(--main_field_inner)",
+                    }}
                 >
                     <span className="text-xl"><FaAngleDoubleLeft /></span>
                     {carInfo.lot}
@@ -131,26 +186,87 @@ export default function CenterComponent() {
 
             {/* Start Vehicle + Controls */}
             <div className="grid grid-cols-2 gap-1 px-2 py-1">
-                <div className="bg-white text-black text-center p-4 font-bold text-sm">
+                <div
+                    className="text-center p-4 font-bold text-sm"
+                    style={{
+                        background: "var(--button_update_back)",
+                        color: "var(--button_update_text)",
+                    }}
+                >
                     Start Vehicle
                     <span className="block font-extrabold">{selectedPrice}</span>
                 </div>
                 <div className="grid grid-cols-3 gap-1">
                     <div className="col-span-3 grid grid-cols-2 gap-1">
-                        <button className="bg-neutral-500 py-2 w-full text-xs cursor-pointer">Reset</button>
-                        <button className="bg-neutral-500 py-2  w-full text-xs cursor-pointer">Undo</button>
+                        <button
+                            className="py-2 w-full text-xs cursor-pointer"
+                            style={{
+                                background: "var(--button_secondary_back)",
+                                color: "var(--button_secondary_text)",
+                            }}
+                        >
+                            Reset
+                        </button>
+                        <button
+                            className="py-2 w-full text-xs cursor-pointer"
+                            style={{
+                                background: "var(--button_secondary_back)",
+                                color: "var(--button_secondary_text)",
+                            }}
+                        >
+                            Undo
+                        </button>
                     </div>
-                    <button className="bg-neutral-700 py-1 text-xs col-span-2 cursor-pointer">Online <span className="block">Override</span></button>
-                    <button className="bg-red-700 py-1 text-xs font-bold cursor-pointer">X</button>
+                    <button
+                        className="py-1 text-xs col-span-2 cursor-pointer"
+                        style={{
+                            background: "var(--main_field_inner)",
+                            color: "var(--text_main_highlight)",
+                        }}
+                    >
+                        Online <span className="block">Override</span>
+                    </button>
+                    <button
+                        className="py-1 text-xs font-bold cursor-pointer"
+                        style={{
+                            background: "var(--button_note_back)",
+                            color: "var(--button_note_text)",
+                        }}
+                    >
+                        X
+                    </button>
                 </div>
             </div>
 
             {/* Final Actions */}
             <div className="grid grid-cols-3 gap-1 text-center px-2 py-1">
-                <button className="bg-neutral-700 py-2 text-xs">NO <span className="block">SALE</span>
+                <button
+                    className="py-2 text-xs"
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main_highlight)",
+                    }}
+                >
+                    NO <span className="block">SALE</span>
                 </button>
-                <button className="bg-neutral-700 text-xs">OFFER</button>
-                <button className="bg-neutral-700 text-xs">SOLD</button>
+                <button
+                    className="text-xs"
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main_highlight)",
+                    }}
+                >
+                    OFFER
+                </button>
+                <button
+                    className="text-xs"
+                    style={{
+                        background: "var(--main_field_inner)",
+                        color: "var(--text_main_highlight)",
+                    }}
+                >
+                    SOLD
+                </button>
             </div>
         </div>
     );
