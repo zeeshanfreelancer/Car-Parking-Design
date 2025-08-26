@@ -2,7 +2,9 @@ import { useState } from "react";
 import Text from "../Reusable/Text";
 import { IoSettingsSharp } from "react-icons/io5";
 import { CgStack } from "react-icons/cg";
-export default function Navbar() {
+import { themes } from "../../useTheme";
+
+export default function Navbar({ theme, onThemeChange }) {
     const lanes = ["Q", "R", "S", "T", "U"];
     const [selectedLane, setSelectedLane] = useState(null);
 
@@ -12,26 +14,39 @@ export default function Navbar() {
         const url = `${window.location.origin}/auction?id=${auctionId}`;
         window.open(url, "_blank", "width=1000,height=500,left=200,top=200");
     };
-    
+
     return (
         <div className="w-full px-14 pt-1">
-            <header className="bg-neutral-600 pe-2 text-white flex flex-wrap items-center justify-between rounded-lg">
+            <header
+                className="flex flex-wrap items-center justify-between rounded-lg"
+                style={{
+                    background: "var(--top_nav_background)",
+                    color: "var(--top_nav_text)",
+                    boxShadow: `0 2px 4px 0 var(--top_nav_shadow)`,
+                    borderBottom: `1px solid var(--top_nav_border)`,
+                }}
+            >
                 {/* Left Section */}
                 <div className="flex flex-row flex-wrap gap-5">
                     <div className="flex items-center gap-1">
                         {/* Lane Label */}
                         <Text
                             variant="small"
-                            className="bg-neutral-800 py-2 px-3 rounded-l font-semibold text-white"
+                            className="py-2 px-3 rounded-l font-semibold"
+                            style={{
+                                background: "var(--main_field_back)",
+                                color: "var(--top_nav_text)",
+                            }}
                         >
                             LANE Q
                         </Text>
                         {/* Auction Info */}
-                        <Text className="text-white text-sm">
+                        <Text className="text-sm" style={{ color: "var(--text_main)" }}>
                             Statewide Auto Auction:{" "}
                             <Text
                                 variant="small"
-                                className="font-bold text-sm inline text-white"
+                                className="font-bold text-sm inline"
+                                style={{ color: "var(--text_main_highlight)" }}
                             >
                                 August 19, 2025
                             </Text>
@@ -46,18 +61,23 @@ export default function Navbar() {
                         <input
                             type="text"
                             placeholder="Auctioneer Name"
-                            className="bg-neutral-500 text-black placeholder-gray-800 px-3 py-0.5 text-xs focus:outline-none"
+                            className="px-3 py-0.5 text-xs focus:outline-none"
+                            style={{
+                                background: "var(--button_secondary_back)",
+                                color: "var(--text_inverted)",
+                                border: "var(--button_secondary_border)",
+                            }}
                         />
                     </div>
                 </div>
                 {/* Right Section */}
-                <div className="flex sm:mt-0">
+                <div className="flex sm:mt-0 items-center gap-4">
                     {/* Simulcast Users */}
                     <div className="flex items-center gap-2">
-                        <Text className="text-white font-semibold text-xs">
+                        <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
                             SIMULCAST <span className="block text-center">USERS</span>
                         </Text>
-                        <Text variant="h3" className="text-white">
+                        <Text variant="h3" style={{ color: "var(--text_main_highlight)" }}>
                             14
                         </Text>
                     </div>
@@ -66,34 +86,70 @@ export default function Navbar() {
                         <IoSettingsSharp className="text-xl" />
                     </button>
                     {/* Switch Lane */}
-                    <div className="flex flex-col items-center ms-2 bg-neutral-800 px-3">
-                        <Text className="text-white text-xs">Switch Lane</Text>
+                    <div className="flex flex-col items-center ms-2 px-3"
+                        style={{ background: "var(--main_field_back)" }}>
+                        <Text className="text-xs" style={{ color: "var(--text_main_highlight)" }}>Switch Lane</Text>
                         <div className="flex">
                             {lanes.map((lane) => (
                                 <button
                                     key={lane}
                                     onClick={() => setSelectedLane(lane)}
-                                    className={`px-0.5 text-xs
-                    hover:border hover:border-white
-                    ${selectedLane === lane
-                                            ? "border border-white"
-                                            : "border border-transparent"
-                                        }
-                    text-white transition`}
+                                    className={`px-0.5 text-xs transition`}
+                                    style={{
+                                        border: selectedLane === lane
+                                            ? "1px solid var(--tab_underline)"
+                                            : "1px solid transparent",
+                                        color: "var(--text_main_highlight)",
+                                    }}
                                 >
                                     {lane}
                                 </button>
                             ))}
                         </div>
                     </div>
+                    {/* Theme Switch Dropdown */}
+                    <div className="flex flex-col items-center ms-2 px-3"
+                        style={{ background: "var(--main_field_back)" }}>
+                        <Text className="text-xs" style={{ color: "var(--text_main_highlight)" }}>Theme</Text>
+                        <select
+                            value={theme}
+                            onChange={onThemeChange}
+                            className="text-xs px-2 py-2 rounded"
+                            style={{
+                                background: "var(--button_secondary_back)",
+                                color: "var(--text_main_highlight)",
+                                border: "var(--button_secondary_border)",
+                            }}
+                        >
+                            {themes.map((t) => (
+                                <option key={t.value} value={t.value}>
+                                    {t.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
                     {/* Lane Countdown */}
                     <div className="flex gap-1">
-                        <Text className="bg-yellow-300 text-black px-2 text-xs font-bold">
+                        <Text
+                            className="px-2 text-xs font-bold"
+                            style={{
+                                background: "var(--button_note_back)",
+                                color: "var(--button_note_text)",
+                                border: "var(--button_note_border)",
+                            }}
+                        >
                             Lane Starts
                             <span className="block text-center">04:52:58</span>
                         </Text>
                         {/* Start Button */}
-                        <Text className="bg-green-600 px-3 text-xs font-bold">
+                        <Text
+                            className="px-3 text-xs font-bold"
+                            style={{
+                                background: "var(--button_update_back)",
+                                color: "var(--button_update_text)",
+                                border: "var(--button_update_border)",
+                            }}
+                        >
                             Start
                             <span className="block text-center">Lane</span>
                         </Text>

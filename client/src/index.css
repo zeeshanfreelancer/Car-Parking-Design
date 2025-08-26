@@ -2,1050 +2,1050 @@
 
 /* Official Client Theme Variables - Default: Dark Theme */
 :root {
-    --background_image: url(/assets/bgImages/hex_dark.png);
+        --background_image: url(/assets/bgImages/hex_dark.png);
 
-    /* TOP BAR */
-    --top_nav_background: rgb(0, 0, 0, 0.3);
-    --top_nav_text: #ffffff;
-    --top_nav_border: #231f20;
-    --top_nav_shadow: #000000;
+        /* TOP BAR */
+        --top_nav_background: rgb(0, 0, 0, 0.3);
+        --top_nav_text: #ffffff;
+        --top_nav_border: #231f20;
+        --top_nav_shadow: #000000;
 
-    /* TEXT */
-    --text_main: #d8d8d8;
-    --text_main_highlight: #ffffff;
-    --text_main_disabled: #808285;
-    --text_secondary: #dddddd;
-    --text_secondary_highlight: #c2c2c2;
-    --text_secondary_disabled: #999999;
-    --text_inverted: #070707;
+        /* TEXT */
+        --text_main: #d8d8d8;
+        --text_main_highlight: #ffffff;
+        --text_main_disabled: #808285;
+        --text_secondary: #dddddd;
+        --text_secondary_highlight: #c2c2c2;
+        --text_secondary_disabled: #999999;
+        --text_inverted: #070707;
 
-    /* SCROLLBARS */
-    --custom_scroll_thumb: #000000;
-    --custom_scroll_track: rgba(0, 0, 0, 0.1);
+        /* SCROLLBARS */
+        --custom_scroll_thumb: #000000;
+        --custom_scroll_track: rgba(0, 0, 0, 0.1);
 
-    /* BUTTONS */
-    --button_update_back: #181819;
-    --button_update_border: solid 2pt #181819;
-    --button_update_text: #ffffff;
-    --button_update_font: Usual;
-    --button_update_shadow: none;
-    --button_update_disabled: #58595b;
-    --button_update_disabled_border: solid 2pt #58595b;
-    --button_update_disabled_text: #808285;
-    --button_update_hover: #000000;
-    --button_update_hover_border: solid 2pt #000000;
-    --button_update_hover_text: #ffffff;
+        /* BUTTONS */
+        --button_update_back: #181819;
+        --button_update_border: solid 2pt #181819;
+        --button_update_text: #ffffff;
+        --button_update_font: Usual;
+        --button_update_shadow: none;
+        --button_update_disabled: #58595b;
+        --button_update_disabled_border: solid 2pt #58595b;
+        --button_update_disabled_text: #808285;
+        --button_update_hover: #000000;
+        --button_update_hover_border: solid 2pt #000000;
+        --button_update_hover_text: #ffffff;
 
-    --button_note_back: transparent;
-    --button_note_border: solid 2pt #d8d8d8;
-    --button_note_text: #d8d8d8;
-    --button_note_font: Usual;
-    --button_note_shadow: none;
-    --button_note_disabled: transparent;
-    --button_note_disabled_border: solid 2pt #58595b;
-    --button_note_disabled_text: #58595b;
-    --button_note_hover: transparent;
-    --button_note_hover_border: solid 2pt #ffffff;
-    --button_note_hover_text: #ffffff;
+        --button_note_back: transparent;
+        --button_note_border: solid 2pt #d8d8d8;
+        --button_note_text: #d8d8d8;
+        --button_note_font: Usual;
+        --button_note_shadow: none;
+        --button_note_disabled: transparent;
+        --button_note_disabled_border: solid 2pt #58595b;
+        --button_note_disabled_text: #58595b;
+        --button_note_hover: transparent;
+        --button_note_hover_border: solid 2pt #ffffff;
+        --button_note_hover_text: #ffffff;
 
-    --button_back: #181819;
-    --button_border: solid 2pt #181819;
-    --button_text: #ffffff;
-    --button_font: Usual;
-    --button_shadow: none;
-    --button_disabled: #58595b;
-    --button_disabled_border: solid 2pt #58585b;
-    --button_disabled_text: #808285;
-    --button_hover: #000000;
-    --button_hover_border: solid 2pt #000000;
-    --button_hover_text: #ffffff;
+        --button_back: #181819;
+        --button_border: solid 2pt #181819;
+        --button_text: #ffffff;
+        --button_font: Usual;
+        --button_shadow: none;
+        --button_disabled: #58595b;
+        --button_disabled_border: solid 2pt #58585b;
+        --button_disabled_text: #808285;
+        --button_hover: #000000;
+        --button_hover_border: solid 2pt #000000;
+        --button_hover_text: #ffffff;
 
-    --button_secondary_back: transparent;
-    --button_secondary_border: solid 2pt #d8d8d8;
-    --button_secondary_text: #d8d8d8;
-    --button_secondary_font: Usual;
-    --button_secondary_shadow: none;
-    --button_secondary_disabled: transparent;
-    --button_secondary_disabled_border: solid 2pt #58595b;
-    --button_secondary_disabled_text: #58595b;
-    --button_secondary_hover: transparent;
-    --button_secondary_hover_border: solid 2pt #ffffff;
-    --button_secondary_hover_text: #ffffff;
+        --button_secondary_back: transparent;
+        --button_secondary_border: solid 2pt #d8d8d8;
+        --button_secondary_text: #d8d8d8;
+        --button_secondary_font: Usual;
+        --button_secondary_shadow: none;
+        --button_secondary_disabled: transparent;
+        --button_secondary_disabled_border: solid 2pt #58595b;
+        --button_secondary_disabled_text: #58595b;
+        --button_secondary_hover: transparent;
+        --button_secondary_hover_border: solid 2pt #ffffff;
+        --button_secondary_hover_text: #ffffff;
 
-    --button2_back: #ffffff;
-    --button2_border: solid 2pt #ffffff;
-    --button2_text: #181819;
-    --button2_font: Usual;
-    --button2_shadow: none;
-    --button2_disabled: #58595b;
-    --button2_disabled_border: solid 2pt #58585b;
-    --button2_disabled_text: #808285;
-    --button2_hover: #000000;
-    --button2_hover_border: solid 2pt #000000;
-    --button2_hover_text: #ffffff;
+        --button2_back: #ffffff;
+        --button2_border: solid 2pt #ffffff;
+        --button2_text: #181819;
+        --button2_font: Usual;
+        --button2_shadow: none;
+        --button2_disabled: #58595b;
+        --button2_disabled_border: solid 2pt #58585b;
+        --button2_disabled_text: #808285;
+        --button2_hover: #000000;
+        --button2_hover_border: solid 2pt #000000;
+        --button2_hover_text: #ffffff;
 
-    /* example --> clerk screen buttons */
-    --button3_back: #333333;
-    --button3_text: #ffffff;
-    --button3_font: Usual;
-    --button3_shadow: none;
-    --button3_disabled: #58595b;
-    --button3_disabled_text: #808285;
-    --button3_hover: #000000;
-    --button3_hover_text: #ffffff;
+        /* example --> clerk screen buttons */
+        --button3_back: #333333;
+        --button3_text: #ffffff;
+        --button3_font: Usual;
+        --button3_shadow: none;
+        --button3_disabled: #58595b;
+        --button3_disabled_text: #808285;
+        --button3_hover: #000000;
+        --button3_hover_text: #ffffff;
 
-    /* LINK BUTTONS */
-    --link_button_image: url(/assets/bgImages/hex_dark_frosted.png);
-    --link_button_back: linear-gradient(-60deg,
-            rgb(29, 29, 30, 0.8),
-            rgb(29, 29, 30, 0.2),
-            rgb(24, 24, 24, 0.9));
-    --link_button_shadow: #000000;
-    --link_button_text: #808285;
-    --link_button_back_active: linear-gradient(-60deg,
-            rgb(29, 29, 30, 0.8),
-            rgb(29, 29, 30, 0.2),
-            rgb(24, 24, 24, 0.9));
-    --link_button_text_active: #ffffff;
+        /* LINK BUTTONS */
+        --link_button_image: url(/assets/bgImages/hex_dark_frosted.png);
+        --link_button_back: linear-gradient(-60deg,
+                        rgb(29, 29, 30, 0.8),
+                        rgb(29, 29, 30, 0.2),
+                        rgb(24, 24, 24, 0.9));
+        --link_button_shadow: #000000;
+        --link_button_text: #808285;
+        --link_button_back_active: linear-gradient(-60deg,
+                        rgb(29, 29, 30, 0.8),
+                        rgb(29, 29, 30, 0.2),
+                        rgb(24, 24, 24, 0.9));
+        --link_button_text_active: #ffffff;
 
-    /* PAGE HEADER */
-    --top_header_back: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.3));
-    --top_header_shadow: none;
-    --top_header_text: #ffffff;
-    --top_header_spacer: #231f20;
+        /* PAGE HEADER */
+        --top_header_back: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0.3));
+        --top_header_shadow: none;
+        --top_header_text: #ffffff;
+        --top_header_spacer: #231f20;
 
-    /* MENUS */
-    --menu_back: #181819;
-    --menu_back_hover: #000000;
-    --menu_text: #ffffff;
+        /* MENUS */
+        --menu_back: #181819;
+        --menu_back_hover: #000000;
+        --menu_text: #ffffff;
 
-    /* NAVIGATION TABS */
-    --tab_text: #808285;
-    --tab_active: #ffffff;
-    --tab_text_active: #000000;
-    --tab_hover: #ffffff;
-    --tab_underline: #ffffff;
-    --tab_secondary_text: #808285;
-    --tab_secondary_active: #181819;
-    --tab_secondary_text_active: #ffffff;
-    --tab_secondary_hover: #ffffff;
+        /* NAVIGATION TABS */
+        --tab_text: #808285;
+        --tab_active: #ffffff;
+        --tab_text_active: #000000;
+        --tab_hover: #ffffff;
+        --tab_underline: #ffffff;
+        --tab_secondary_text: #808285;
+        --tab_secondary_active: #181819;
+        --tab_secondary_text_active: #ffffff;
+        --tab_secondary_hover: #ffffff;
 
-    /* PAGE SECTION - SOLID */
-    --main_field_image: url(/assets/bgImages/hex_dark_frosted.png);
-    --main_field_back: linear-gradient(-60deg,
-            rgb(29, 29, 30, 0.8),
-            rgb(29, 29, 30, 0.2),
-            rgb(24, 24, 24, 0.9));
-    --main_field_shadow: rgb(0, 0, 0, 0.75);
-    --main_field_text: #ffffff;
-    --main_field_hr: #231f20;
+        /* PAGE SECTION - SOLID */
+        --main_field_image: url(/assets/bgImages/hex_dark_frosted.png);
+        --main_field_back: linear-gradient(-60deg,
+                        rgb(29, 29, 30, 0.8),
+                        rgb(29, 29, 30, 0.2),
+                        rgb(24, 24, 24, 0.9));
+        --main_field_shadow: rgb(0, 0, 0, 0.75);
+        --main_field_text: #ffffff;
+        --main_field_hr: #231f20;
 
-    /* PAGE SECTION - OUTLINE ONLY */
-    --fieldset2_border: solid 2pt #181819;
-    --fieldset2_color: #ffffff;
+        /* PAGE SECTION - OUTLINE ONLY */
+        --fieldset2_border: solid 2pt #181819;
+        --fieldset2_color: #ffffff;
 
-    /* SUB-SECTIONS */
-    --sub_section_header: #636466;
-    --sub_section_text: #ffffff;
-    --sub_section1: #b3b3b3;
-    --sub_section2: #181819;
-    --sub_section3: #2d2d2d;
-    --sub_section4: #808285;
+        /* SUB-SECTIONS */
+        --sub_section_header: #636466;
+        --sub_section_text: #ffffff;
+        --sub_section1: #b3b3b3;
+        --sub_section2: #181819;
+        --sub_section3: #2d2d2d;
+        --sub_section4: #808285;
 
-    /* POPUP WINDOWS */
-    --popup_field_back: #464646;
-    --popup_field_text: #ffffff;
-    --popup_field_shadow: #000000;
+        /* POPUP WINDOWS */
+        --popup_field_back: #464646;
+        --popup_field_text: #ffffff;
+        --popup_field_shadow: #000000;
 
-    /* INPUT/SELECT/ETC.. FIELDS */
-    --input_background: #59595b;
-    --input_back: #59595b;
-    --input_back_hover: #ffffff;
-    --input_back_active: #ffffff;
-    --input_border: #ffffff;
-    --input_text: #ffffff;
-    --input_text_hover: #ffffff;
-    --input_text_active: #ffffff;
-    --input_placeholder: #cccccc;
+        /* INPUT/SELECT/ETC.. FIELDS */
+        --input_background: #59595b;
+        --input_back: #59595b;
+        --input_back_hover: #ffffff;
+        --input_back_active: #ffffff;
+        --input_border: #ffffff;
+        --input_text: #ffffff;
+        --input_text_hover: #ffffff;
+        --input_text_active: #ffffff;
+        --input_placeholder: #cccccc;
 
-    /* CHECKBOXES */
-    --checkbox_back: transparent;
-    --checkbox_back2: #dddddd;
-    --checkbox_border: solid 2pt #181819;
-    --checkbox_cross: #bf000a;
-    --checkbox_check: #009245;
-    --checkbox_disabled: #808285;
+        /* CHECKBOXES */
+        --checkbox_back: transparent;
+        --checkbox_back2: #dddddd;
+        --checkbox_border: solid 2pt #181819;
+        --checkbox_cross: #bf000a;
+        --checkbox_check: #009245;
+        --checkbox_disabled: #808285;
 
-    /* SWITCHES */
-    --switch_back: transparent;
-    --switch_back_active: #444444;
-    --switch_button: #000000;
-    --switch_active: #009245;
-    --switch_inactive: #9f282d;
+        /* SWITCHES */
+        --switch_back: transparent;
+        --switch_back_active: #444444;
+        --switch_button: #000000;
+        --switch_active: #009245;
+        --switch_inactive: #9f282d;
 
-    /* ACCORDIONS */
-    --accordion_head_image: url(/assets/bgImages/hex_dark_frosted.png);
-    --accordion_head_back: linear-gradient(-60deg,
-            rgb(29, 29, 30, 0.8),
-            rgb(29, 29, 30, 0.2),
-            rgb(24, 24, 24, 0.9));
-    --accordion_head_text: #ffffff;
-    --accordion_head_hover_image: url(/assets/bgImages/hex_light_frosted.png);
-    --accordion_head_hover: linear-gradient(-60deg,
-            rgb(230, 231, 232, 0.8),
-            rgb(255, 255, 255, 0.7),
-            rgb(209, 211, 212, 0.9));
-    --accordion_head_hover_text: #181819;
-    --accordion_content_back: #181819;
-    --accordion_content_text: #ffffff;
+        /* ACCORDIONS */
+        --accordion_head_image: url(/assets/bgImages/hex_dark_frosted.png);
+        --accordion_head_back: linear-gradient(-60deg,
+                        rgb(29, 29, 30, 0.8),
+                        rgb(29, 29, 30, 0.2),
+                        rgb(24, 24, 24, 0.9));
+        --accordion_head_text: #ffffff;
+        --accordion_head_hover_image: url(/assets/bgImages/hex_light_frosted.png);
+        --accordion_head_hover: linear-gradient(-60deg,
+                        rgb(230, 231, 232, 0.8),
+                        rgb(255, 255, 255, 0.7),
+                        rgb(209, 211, 212, 0.9));
+        --accordion_head_hover_text: #181819;
+        --accordion_content_back: #181819;
+        --accordion_content_text: #ffffff;
 
-    /* TABLES */
-    --table_head_text: #ffffff;
-    --table_scroll_header: #ffffff;
-    --table_scroll_header_text: #000000;
-    --table_scroll_header_border: #181819;
-    --table_underline: solid 2px #ffffff;
-    --table_row_image: url(/assets/bgImages/hex_dark_frosted.png);
-    --table_row: linear-gradient(-60deg,
-            rgb(29, 29, 30, 0.8),
-            rgb(29, 29, 30, 0.2),
-            rgb(24, 24, 24, 0.9));
-    --table_text: #ffffff;
-    --table_row_hover_image: url(/assets/bgImages/hex_light_frosted.png);
-    --table_row_hover: linear-gradient(-60deg,
-            rgb(230, 231, 232, 0.8),
-            rgb(255, 255, 255, 0.7),
-            rgb(209, 211, 212, 0.9));
-    --table_row_hover_text: #181819;
-    --table_row_shadow: rgb(0, 0, 0, 0.75);
-    --table_row_inner_content: #181819;
-    --table_row_inner_text: #ffffff;
+        /* TABLES */
+        --table_head_text: #ffffff;
+        --table_scroll_header: #ffffff;
+        --table_scroll_header_text: #000000;
+        --table_scroll_header_border: #181819;
+        --table_underline: solid 2px #ffffff;
+        --table_row_image: url(/assets/bgImages/hex_dark_frosted.png);
+        --table_row: linear-gradient(-60deg,
+                        rgb(29, 29, 30, 0.8),
+                        rgb(29, 29, 30, 0.2),
+                        rgb(24, 24, 24, 0.9));
+        --table_text: #ffffff;
+        --table_row_hover_image: url(/assets/bgImages/hex_light_frosted.png);
+        --table_row_hover: linear-gradient(-60deg,
+                        rgb(230, 231, 232, 0.8),
+                        rgb(255, 255, 255, 0.7),
+                        rgb(209, 211, 212, 0.9));
+        --table_row_hover_text: #181819;
+        --table_row_shadow: rgb(0, 0, 0, 0.75);
+        --table_row_inner_content: #181819;
+        --table_row_inner_text: #ffffff;
 
-    /* LISTS */
-    --list1_back: #636466;
-    --list1_active: #181819;
-    --list1_separator: #181819;
+        /* LISTS */
+        --list1_back: #636466;
+        --list1_active: #181819;
+        --list1_separator: #181819;
 
-    /* MISC */
-    --vin_color1: #ffffff;
-    --vin_color2: #ed1c24;
-    --vin_color3: #ffffff;
-    --vin_color4: #009444;
+        /* MISC */
+        --vin_color1: #ffffff;
+        --vin_color2: #ed1c24;
+        --vin_color3: #ffffff;
+        --vin_color4: #009444;
 
-    --psi_color: #177e89;
-    --arb_color: #81356a;
+        --psi_color: #177e89;
+        --arb_color: #81356a;
 
-    --good_color: #009444;
-    --bad_color: #ed1c24;
-    --conditional_color: #f2e21d;
+        --good_color: #009444;
+        --bad_color: #ed1c24;
+        --conditional_color: #f2e21d;
 
-    /* Additional variables for LaneBar */
-    --secondary_text: #dddddd;
-    --text_main_disabled: #808285;
-    --text_inverted: #000000;
-    --button2_back: #ffffff;
-    --button3_back: #666666;
-    --button_note_hover: rgba(255, 255, 255, 0.1);
-    --announce_back_set: #f2e21d;
-    --sub_section1: #1e1e1e;
+        /* Additional variables for LaneBar */
+        --secondary_text: #dddddd;
+        --text_main_disabled: #808285;
+        --text_inverted: #000000;
+        --button2_back: #ffffff;
+        --button3_back: #666666;
+        --button_note_hover: rgba(255, 255, 255, 0.1);
+        --announce_back_set: #f2e21d;
+        --sub_section1: #1e1e1e;
 }
 
 /* Light Theme */
 [data-theme="light"] {
-    --background_image: url(/assets/bgImages/hex_light.png);
+        --background_image: url(/assets/bgImages/hex_light.png);
 
-    /* TOP BAR */
-    --top_nav_background: rgb(250, 250, 250, 0.3);
-    --top_nav_text: #000000;
-    --top_nav_border: #cfcfcf;
-    --top_nav_shadow: #000000;
+        /* TOP BAR */
+        --top_nav_background: rgb(250, 250, 250, 0.3);
+        --top_nav_text: #000000;
+        --top_nav_border: #cfcfcf;
+        --top_nav_shadow: #000000;
 
-    /* TEXT */
-    --text_main: #000000;
-    --text_main_highlight: #ffffff;
-    --text_main_disabled: #dddddd;
-    --text_secondary: #999999;
-    --text_secondary_highlight: #ffffff;
-    --text_secondary_disabled: #dddddd;
-    --text_inverted: #ffffff;
+        /* TEXT */
+        --text_main: #000000;
+        --text_main_highlight: #ffffff;
+        --text_main_disabled: #dddddd;
+        --text_secondary: #999999;
+        --text_secondary_highlight: #ffffff;
+        --text_secondary_disabled: #dddddd;
+        --text_inverted: #ffffff;
 
-    /* SCROLLBARS */
-    --custom_scroll_thumb: #000000;
-    --custom_scroll_track: rgba(0, 0, 0, 0.1);
+        /* SCROLLBARS */
+        --custom_scroll_thumb: #000000;
+        --custom_scroll_track: rgba(0, 0, 0, 0.1);
 
-    /* BUTTONS */
-    --button_update_back: #515151;
-    --button_update_border: solid 2pt #515151;
-    --button_update_text: #ffffff;
-    --button_update_font: Usual;
-    --button_update_shadow: none;
-    --button_update_disabled: #b7b7b7;
-    --button_update_disabled_border: solid 2pt #b7b7b7;
-    --button_update_disabled_text: #939393;
-    --button_update_hover: #b5b5b5;
-    --button_update_hover_border: solid 2pt #b5b5b5;
-    --button_update_hover_text: #ffffff;
+        /* BUTTONS */
+        --button_update_back: #515151;
+        --button_update_border: solid 2pt #515151;
+        --button_update_text: #ffffff;
+        --button_update_font: Usual;
+        --button_update_shadow: none;
+        --button_update_disabled: #b7b7b7;
+        --button_update_disabled_border: solid 2pt #b7b7b7;
+        --button_update_disabled_text: #939393;
+        --button_update_hover: #b5b5b5;
+        --button_update_hover_border: solid 2pt #b5b5b5;
+        --button_update_hover_text: #ffffff;
 
-    --button_note_back: transparent;
-    --button_note_border: solid 2pt #828282;
-    --button_note_text: #828282;
-    --button_note_font: Usual;
-    --button_note_shadow: none;
-    --button_note_disabled: transparent;
-    --button_note_disabled_border: solid 2pt #b7b7b7;
-    --button_note_disabled_text: #b7b7b7;
-    --button_note_hover: transparent;
-    --button_note_hover_border: solid 2pt #515151;
-    --button_note_hover_text: #515151;
+        --button_note_back: transparent;
+        --button_note_border: solid 2pt #828282;
+        --button_note_text: #828282;
+        --button_note_font: Usual;
+        --button_note_shadow: none;
+        --button_note_disabled: transparent;
+        --button_note_disabled_border: solid 2pt #b7b7b7;
+        --button_note_disabled_text: #b7b7b7;
+        --button_note_hover: transparent;
+        --button_note_hover_border: solid 2pt #515151;
+        --button_note_hover_text: #515151;
 
-    --button_back: #515151;
-    --button_border: solid 2pt #515151;
-    --button_text: #ffffff;
-    --button_font: Usual;
-    --button_shadow: none;
-    --button_disabled: #b7b7b7;
-    --button_disabled_border: solid 2pt #b7b7b7;
-    --button_disabled_text: #939393;
-    --button_hover: #b5b5b5;
-    --button_hover_border: solid 2pt #b5b5b5;
-    --button_hover_text: #ffffff;
+        --button_back: #515151;
+        --button_border: solid 2pt #515151;
+        --button_text: #ffffff;
+        --button_font: Usual;
+        --button_shadow: none;
+        --button_disabled: #b7b7b7;
+        --button_disabled_border: solid 2pt #b7b7b7;
+        --button_disabled_text: #939393;
+        --button_hover: #b5b5b5;
+        --button_hover_border: solid 2pt #b5b5b5;
+        --button_hover_text: #ffffff;
 
-    --button_secondary_back: transparent;
-    --button_secondary_border: solid 2pt #828282;
-    --button_secondary_text: #828282;
-    --button_secondary_font: Usual;
-    --button_secondary_shadow: none;
-    --button_secondary_disabled: transparent;
-    --button_secondary_disabled_border: solid 2pt #b7b7b7;
-    --button_secondary_disabled_text: #b7b7b7;
-    --button_secondary_hover: transparent;
-    --button_secondary_hover_border: solid 2pt #515151;
-    --button_secondary_hover_text: #515151;
+        --button_secondary_back: transparent;
+        --button_secondary_border: solid 2pt #828282;
+        --button_secondary_text: #828282;
+        --button_secondary_font: Usual;
+        --button_secondary_shadow: none;
+        --button_secondary_disabled: transparent;
+        --button_secondary_disabled_border: solid 2pt #b7b7b7;
+        --button_secondary_disabled_text: #b7b7b7;
+        --button_secondary_hover: transparent;
+        --button_secondary_hover_border: solid 2pt #515151;
+        --button_secondary_hover_text: #515151;
 
-    --button2_back: #ffffff;
-    --button2_border: solid 2pt #ffffff;
-    --button2_text: #181819;
-    --button2_font: Usual;
-    --button2_shadow: none;
-    --button2_disabled: #58595b;
-    --button2_disabled_border: solid 2pt #58585b;
-    --button2_disabled_text: #808285;
-    --button2_hover: #000000;
-    --button2_hover_border: solid 2pt #000000;
-    --button2_hover_text: #ffffff;
+        --button2_back: #ffffff;
+        --button2_border: solid 2pt #ffffff;
+        --button2_text: #181819;
+        --button2_font: Usual;
+        --button2_shadow: none;
+        --button2_disabled: #58595b;
+        --button2_disabled_border: solid 2pt #58585b;
+        --button2_disabled_text: #808285;
+        --button2_hover: #000000;
+        --button2_hover_border: solid 2pt #000000;
+        --button2_hover_text: #ffffff;
 
-    /* example --> clerk screen buttons */
-    --button3_back: #333333;
-    --button3_text: #ffffff;
-    --button3_font: Usual;
-    --button3_shadow: none;
-    --button3_disabled: #58595b;
-    --button3_disabled_text: #808285;
-    --button3_hover: #000000;
-    --button3_hover_text: #ffffff;
+        /* example --> clerk screen buttons */
+        --button3_back: #333333;
+        --button3_text: #ffffff;
+        --button3_font: Usual;
+        --button3_shadow: none;
+        --button3_disabled: #58595b;
+        --button3_disabled_text: #808285;
+        --button3_hover: #000000;
+        --button3_hover_text: #ffffff;
 
-    /* LINK BUTTONS */
-    --link_button_image: url(/assets/bgImages/hex_light_frosted.png);
-    --link_button_back: linear-gradient(-60deg,
-            rgb(230, 231, 232, 0.8),
-            rgb(255, 255, 255, 0.2),
-            rgb(209, 211, 212, 0.9));
-    --link_button_shadow: #000000;
-    --link_button_text: #000000;
-    --link_button_back_active: linear-gradient(-60deg,
-            rgb(230, 231, 232, 0.8),
-            rgb(255, 255, 255, 0.2),
-            rgb(209, 211, 212, 0.9));
-    --link_button_text_active: #999999;
+        /* LINK BUTTONS */
+        --link_button_image: url(/assets/bgImages/hex_light_frosted.png);
+        --link_button_back: linear-gradient(-60deg,
+                        rgb(230, 231, 232, 0.8),
+                        rgb(255, 255, 255, 0.2),
+                        rgb(209, 211, 212, 0.9));
+        --link_button_shadow: #000000;
+        --link_button_text: #000000;
+        --link_button_back_active: linear-gradient(-60deg,
+                        rgb(230, 231, 232, 0.8),
+                        rgb(255, 255, 255, 0.2),
+                        rgb(209, 211, 212, 0.9));
+        --link_button_text_active: #999999;
 
-    /* PAGE HEADER */
-    --top_header_back: linear-gradient(rgb(218, 219, 220, 0),
-            rgb(218, 219, 220, 0.3));
-    --top_header_shadow: none;
-    --top_header_text: #000000;
-    --top_header_spacer: #bbbbbb;
+        /* PAGE HEADER */
+        --top_header_back: linear-gradient(rgb(218, 219, 220, 0),
+                        rgb(218, 219, 220, 0.3));
+        --top_header_shadow: none;
+        --top_header_text: #000000;
+        --top_header_spacer: #bbbbbb;
 
-    /* MENUS */
-    --menu_back: #a1a1a1;
-    --menu_back_hover: #ffffff;
-    --menu_text: #000000;
+        /* MENUS */
+        --menu_back: #a1a1a1;
+        --menu_back_hover: #ffffff;
+        --menu_text: #000000;
 
-    /* NAVIGATION TABS */
-    --tab_text: #828282;
-    --tab_active: #515151;
-    --tab_text_active: #ffffff;
-    --tab_hover: #000000;
-    --tab_underline: #515151;
-    --tab_secondary_text: #000000;
-    --tab_secondary_active: #000000;
-    --tab_secondary_text_active: #ffffff;
-    --tab_secondary_hover: #828282;
+        /* NAVIGATION TABS */
+        --tab_text: #828282;
+        --tab_active: #515151;
+        --tab_text_active: #ffffff;
+        --tab_hover: #000000;
+        --tab_underline: #515151;
+        --tab_secondary_text: #000000;
+        --tab_secondary_active: #000000;
+        --tab_secondary_text_active: #ffffff;
+        --tab_secondary_hover: #828282;
 
-    /* PAGE SECTION - SOLID */
-    --main_field_image: url(/assets/bgImages/hex_light_frosted.png);
-    --main_field_back: linear-gradient(-60deg,
-            rgb(230, 231, 232, 0.8),
-            rgb(255, 255, 255, 0.2),
-            rgb(209, 211, 212, 0.9));
-    --main_field_shadow: rgb(0, 0, 0, 0.75);
-    --main_field_text: #000000;
-    --main_field_hr: #515151;
+        /* PAGE SECTION - SOLID */
+        --main_field_image: url(/assets/bgImages/hex_light_frosted.png);
+        --main_field_back: linear-gradient(-60deg,
+                        rgb(230, 231, 232, 0.8),
+                        rgb(255, 255, 255, 0.2),
+                        rgb(209, 211, 212, 0.9));
+        --main_field_shadow: rgb(0, 0, 0, 0.75);
+        --main_field_text: #000000;
+        --main_field_hr: #515151;
 
-    /* PAGE SECTION - OUTLINE ONLY */
-    --fieldset2_border: solid 2pt #ffffff;
-    --fieldset2_color: #000000;
+        /* PAGE SECTION - OUTLINE ONLY */
+        --fieldset2_border: solid 2pt #ffffff;
+        --fieldset2_color: #000000;
 
-    /* SUB-SECTIONS */
-    --item_back: transparent;
-    --item_text: #000000;
-    --item_back_active: #b5b5b5;
-    --sub_section_header: #181819;
-    --sub_section_text: #000000;
-    --sub_section1: #464646;
-    --sub_section2: #ffffff;
-    --sub_section3: #d2d2d2;
-    --sub_section4: #000000;
+        /* SUB-SECTIONS */
+        --item_back: transparent;
+        --item_text: #000000;
+        --item_back_active: #b5b5b5;
+        --sub_section_header: #181819;
+        --sub_section_text: #000000;
+        --sub_section1: #464646;
+        --sub_section2: #ffffff;
+        --sub_section3: #d2d2d2;
+        --sub_section4: #000000;
 
-    /* POPUP WINDOWS */
-    --popup_field_back: #e4e4e4;
-    --popup_field_text: #000000;
-    --popup_field_shadow: #dddddd;
+        /* POPUP WINDOWS */
+        --popup_field_back: #e4e4e4;
+        --popup_field_text: #000000;
+        --popup_field_shadow: #dddddd;
 
-    /* INPUT/SELECT/ETC.. FIELDS */
-    --input_background: #ffffff;
-    --input_back: #b7b7b7;
-    --input_back_hover: #ffffff;
-    --input_back_active: #ffffff;
-    --input_border: #000000;
-    --input_text: #000000;
-    --input_text_hover: #000000;
-    --input_text_active: #000000;
-    --input_placeholder: #666666;
+        /* INPUT/SELECT/ETC.. FIELDS */
+        --input_background: #ffffff;
+        --input_back: #b7b7b7;
+        --input_back_hover: #ffffff;
+        --input_back_active: #ffffff;
+        --input_border: #000000;
+        --input_text: #000000;
+        --input_text_hover: #000000;
+        --input_text_active: #000000;
+        --input_placeholder: #666666;
 
-    /* Additional variables for LaneBar */
-    --secondary_text: #666666;
-    --text_main_disabled: #cccccc;
-    --text_inverted: #000000;
-    --button2_back: #ffffff;
-    --button3_back: #e0e0e0;
-    --button_note_hover: rgba(0, 0, 0, 0.1);
-    --announce_back_set: #f2e21d;
-    --sub_section1: #f5f5f5;
+        /* Additional variables for LaneBar */
+        --secondary_text: #666666;
+        --text_main_disabled: #cccccc;
+        --text_inverted: #000000;
+        --button2_back: #ffffff;
+        --button3_back: #e0e0e0;
+        --button_note_hover: rgba(0, 0, 0, 0.1);
+        --announce_back_set: #f2e21d;
+        --sub_section1: #f5f5f5;
 
-    /* CHECKBOXES */
-    --checkbox_back: transparent;
-    --checkbox_back2: #dddddd;
-    --checkbox_border: solid 2pt #000000;
-    --checkbox_cross: #bf000a;
-    --checkbox_check: #009245;
-    --checkbox_disabled: #808285;
+        /* CHECKBOXES */
+        --checkbox_back: transparent;
+        --checkbox_back2: #dddddd;
+        --checkbox_border: solid 2pt #000000;
+        --checkbox_cross: #bf000a;
+        --checkbox_check: #009245;
+        --checkbox_disabled: #808285;
 
-    /* SWITCHES */
-    --switch_back: transparent;
-    --switch_back_active: #444444;
-    --switch_button: #000000;
-    --switch_active: #009245;
-    --switch_inactive: #9f282d;
+        /* SWITCHES */
+        --switch_back: transparent;
+        --switch_back_active: #444444;
+        --switch_button: #000000;
+        --switch_active: #009245;
+        --switch_inactive: #9f282d;
 
-    /* ACCORDIONS */
-    --accordion_hover_image: url(/assets/bgImages/hex_light_frosted.png);
-    --accordion_hover_back: linear-gradient(-60deg,
-            rgb(230, 231, 232, 0.8),
-            rgb(255, 255, 255, 0.2),
-            rgb(209, 211, 212, 0.9));
-    --accordion_head_text: #000000;
-    --accordion_head_hover_image: url(/assets/bgImages/hex_dark_frosted.png);
-    --accordion_head_hover: linear-gradient(-60deg,
-            rgb(29, 29, 30, 0.8),
-            rgb(29, 29, 30, 0.7),
-            rgb(24, 24, 24, 0.9));
-    --accordion_head_hover_text: #ffffff;
-    --accordion_content_back: #a1a1a1;
-    --accordion_content_text: #000000;
+        /* ACCORDIONS */
+        --accordion_hover_image: url(/assets/bgImages/hex_light_frosted.png);
+        --accordion_hover_back: linear-gradient(-60deg,
+                        rgb(230, 231, 232, 0.8),
+                        rgb(255, 255, 255, 0.2),
+                        rgb(209, 211, 212, 0.9));
+        --accordion_head_text: #000000;
+        --accordion_head_hover_image: url(/assets/bgImages/hex_dark_frosted.png);
+        --accordion_head_hover: linear-gradient(-60deg,
+                        rgb(29, 29, 30, 0.8),
+                        rgb(29, 29, 30, 0.7),
+                        rgb(24, 24, 24, 0.9));
+        --accordion_head_hover_text: #ffffff;
+        --accordion_content_back: #a1a1a1;
+        --accordion_content_text: #000000;
 
-    /* TABLES */
-    --table_head_text: #000000;
-    --table_scroll_header: #181819;
-    --table_scroll_header_text: #ffffff;
-    --table_scroll_header_border: #000000;
-    --table_underline: solid 2px #000000;
-    --table_row_image: url(/assets/bgImages/hex_light_frosted.png);
-    --table_row: linear-gradient(-60deg,
-            rgb(230, 231, 232, 0.8),
-            rgb(255, 255, 255, 0.2),
-            rgb(209, 211, 212, 0.9));
-    --table_text: #000000;
-    --table_row_hover_image: url(/assets/bgImages/hex_dark_frosted.png);
-    --table_row_hover: linear-gradient(-60deg,
-            rgb(29, 29, 30, 0.8),
-            rgb(29, 29, 30, 0.7),
-            rgb(24, 24, 24, 0.9));
-    --table_row_hover_text: #ffffff;
-    --table_row_shadow: rgb(0, 0, 0, 0.75);
-    --table_row_inner_content: #a1a1a1;
-    --table_row_inner_text: #000000;
+        /* TABLES */
+        --table_head_text: #000000;
+        --table_scroll_header: #181819;
+        --table_scroll_header_text: #ffffff;
+        --table_scroll_header_border: #000000;
+        --table_underline: solid 2px #000000;
+        --table_row_image: url(/assets/bgImages/hex_light_frosted.png);
+        --table_row: linear-gradient(-60deg,
+                        rgb(230, 231, 232, 0.8),
+                        rgb(255, 255, 255, 0.2),
+                        rgb(209, 211, 212, 0.9));
+        --table_text: #000000;
+        --table_row_hover_image: url(/assets/bgImages/hex_dark_frosted.png);
+        --table_row_hover: linear-gradient(-60deg,
+                        rgb(29, 29, 30, 0.8),
+                        rgb(29, 29, 30, 0.7),
+                        rgb(24, 24, 24, 0.9));
+        --table_row_hover_text: #ffffff;
+        --table_row_shadow: rgb(0, 0, 0, 0.75);
+        --table_row_inner_content: #a1a1a1;
+        --table_row_inner_text: #000000;
 
-    /* LISTS */
-    --list1_back: #181819;
-    --list1_active: #ffffff;
-    --list1_separator: #ffffff;
+        /* LISTS */
+        --list1_back: #181819;
+        --list1_active: #ffffff;
+        --list1_separator: #ffffff;
 
-    /* MISC */
-    --vin_color1: #ffffff;
-    --vin_color2: #ed1c24;
-    --vin_color3: #ffffff;
-    --vin_color4: #009444;
+        /* MISC */
+        --vin_color1: #ffffff;
+        --vin_color2: #ed1c24;
+        --vin_color3: #ffffff;
+        --vin_color4: #009444;
 
-    --psi_color: #177e89;
-    --arb_color: #81356a;
+        --psi_color: #177e89;
+        --arb_color: #81356a;
 
-    --good_color: #009444;
-    --bad_color: #ed1c24;
-    --conditional_color: #f2e21d;
+        --good_color: #009444;
+        --bad_color: #ed1c24;
+        --conditional_color: #f2e21d;
 }
 
 /* Light Blue Theme */
 [data-theme="light-blue"] {
-    --background_image: url(/assets/bgImages/Otocore_Dashboard_Lt_Blue_Hex_v.7.png);
+        --background_image: url(/assets/bgImages/Otocore_Dashboard_Lt_Blue_Hex_v.7.png);
 
-    /* TOP BAR */
-    --top_nav_background: transparent;
-    --top_nav_text: #0f1342;
-    --top_nav_border: #a2b3c8;
-    --top_nav_shadow: #708bb2;
+        /* TOP BAR */
+        --top_nav_background: transparent;
+        --top_nav_text: #0f1342;
+        --top_nav_border: #a2b3c8;
+        --top_nav_shadow: #708bb2;
 
-    /* TEXT */
-    --text_main: #0f1342;
-    --text_main_highlight: #000000;
-    --text_main_disabled: #5676a9;
-    --text_secondary: #5676a9;
-    --text_secondary_highlight: #0f1342;
-    --text_secondary_disabled: #899fbb;
-    --text_inverted: #0f1342;
+        /* TEXT */
+        --text_main: #0f1342;
+        --text_main_highlight: #000000;
+        --text_main_disabled: #5676a9;
+        --text_secondary: #5676a9;
+        --text_secondary_highlight: #0f1342;
+        --text_secondary_disabled: #899fbb;
+        --text_inverted: #0f1342;
 
-    /* SCROLLBARS */
-    --custom_scroll_thumb: #000000;
-    --custom_scroll_track: rgba(112, 139, 178, 0.1);
+        /* SCROLLBARS */
+        --custom_scroll_thumb: #000000;
+        --custom_scroll_track: rgba(112, 139, 178, 0.1);
 
-    /* BUTTONS */
-    --button_update_back: #1e265f;
-    --button_update_border: solid 2pt #1e265f;
-    --button_update_text: #ffffff;
-    --button_update_font: Usual;
-    --button_update_shadow: none;
-    --button_update_disabled: #b0c1d5;
-    --button_update_disabled_border: solid 2pt #b0c1d5;
-    --button_update_disabled_text: #c5d5e8;
-    --button_update_hover: #354484;
-    --button_update_hover_border: solid 2pt #354484;
-    --button_update_hover_text: #ffffff;
+        /* BUTTONS */
+        --button_update_back: #1e265f;
+        --button_update_border: solid 2pt #1e265f;
+        --button_update_text: #ffffff;
+        --button_update_font: Usual;
+        --button_update_shadow: none;
+        --button_update_disabled: #b0c1d5;
+        --button_update_disabled_border: solid 2pt #b0c1d5;
+        --button_update_disabled_text: #c5d5e8;
+        --button_update_hover: #354484;
+        --button_update_hover_border: solid 2pt #354484;
+        --button_update_hover_text: #ffffff;
 
-    --button_note_back: transparent;
-    --button_note_border: solid 2pt #1e265f;
-    --button_note_text: #1e265f;
-    --button_note_font: Usual;
-    --button_note_shadow: none;
-    --button_note_disabled: transparent;
-    --button_note_disabled_border: solid 2pt #b0c1d5;
-    --button_note_disabled_text: #b0c1d5;
-    --button_note_hover: transparent;
-    --button_note_hover_border: solid 2pt #354484;
-    --button_note_hover_text: #354484;
+        --button_note_back: transparent;
+        --button_note_border: solid 2pt #1e265f;
+        --button_note_text: #1e265f;
+        --button_note_font: Usual;
+        --button_note_shadow: none;
+        --button_note_disabled: transparent;
+        --button_note_disabled_border: solid 2pt #b0c1d5;
+        --button_note_disabled_text: #b0c1d5;
+        --button_note_hover: transparent;
+        --button_note_hover_border: solid 2pt #354484;
+        --button_note_hover_text: #354484;
 
-    --button_back: #1e265f;
-    --button_border: solid 2pt #1e265f;
-    --button_text: #ffffff;
-    --button_font: Usual;
-    --button_shadow: none;
-    --button_disabled: #b0c1d5;
-    --button_disabled_border: solid 2pt #b0c1d5;
-    --button_disabled_text: #41578c;
-    --button_hover: #354484;
-    --button_hover_border: solid 2pt #354484;
-    --button_hover_text: #ffffff;
+        --button_back: #1e265f;
+        --button_border: solid 2pt #1e265f;
+        --button_text: #ffffff;
+        --button_font: Usual;
+        --button_shadow: none;
+        --button_disabled: #b0c1d5;
+        --button_disabled_border: solid 2pt #b0c1d5;
+        --button_disabled_text: #41578c;
+        --button_hover: #354484;
+        --button_hover_border: solid 2pt #354484;
+        --button_hover_text: #ffffff;
 
-    --button_secondary_back: transparent;
-    --button_secondary_border: solid 2pt #1e265f;
-    --button_secondary_text: #1e265f;
-    --button_secondary_font: Usual;
-    --button_secondary_shadow: none;
-    --button_secondary_disabled: transparent;
-    --button_secondary_disabled_border: solid 2pt #b0c1d5;
-    --button_secondary_disabled_text: #b0c1d5;
-    --button_secondary_hover: transparent;
-    --button_secondary_hover_border: solid 2pt #354484;
-    --button_secondary_hover_text: #354484;
+        --button_secondary_back: transparent;
+        --button_secondary_border: solid 2pt #1e265f;
+        --button_secondary_text: #1e265f;
+        --button_secondary_font: Usual;
+        --button_secondary_shadow: none;
+        --button_secondary_disabled: transparent;
+        --button_secondary_disabled_border: solid 2pt #b0c1d5;
+        --button_secondary_disabled_text: #b0c1d5;
+        --button_secondary_hover: transparent;
+        --button_secondary_hover_border: solid 2pt #354484;
+        --button_secondary_hover_text: #354484;
 
-    --button2_back: #ffffff;
-    --button2_border: solid 2pt #ffffff;
-    --button2_text: #0f1342;
-    --button2_font: Usual;
-    --button2_shadow: none;
-    --button2_disabled: #d9e6f6;
-    --button2_disabled_border: solid 2pt #d9e6f6;
-    --button2_disabled_text: #b7c7db;
-    --button2_hover: #f4f8fd;
-    --button2_hover_border: solid 2pt #f4f8fd;
-    --button2_hover_text: #0f1342;
+        --button2_back: #ffffff;
+        --button2_border: solid 2pt #ffffff;
+        --button2_text: #0f1342;
+        --button2_font: Usual;
+        --button2_shadow: none;
+        --button2_disabled: #d9e6f6;
+        --button2_disabled_border: solid 2pt #d9e6f6;
+        --button2_disabled_text: #b7c7db;
+        --button2_hover: #f4f8fd;
+        --button2_hover_border: solid 2pt #f4f8fd;
+        --button2_hover_text: #0f1342;
 
-    --button3_back: #41578c;
-    --button3_text: #ffffff;
-    --button3_font: Usual;
-    --button3_shadow: none;
-    --button3_disabled: #a9bace;
-    --button3_disabled_text: #92a6be;
-    --button3_hover: #1e265f;
-    --button3_hover_text: #ffffff;
+        --button3_back: #41578c;
+        --button3_text: #ffffff;
+        --button3_font: Usual;
+        --button3_shadow: none;
+        --button3_disabled: #a9bace;
+        --button3_disabled_text: #92a6be;
+        --button3_hover: #1e265f;
+        --button3_hover_text: #ffffff;
 
-    /* LINK BUTTONS */
-    --link_button_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
-    --link_button_back: linear-gradient(-60deg,
-            rgb(154, 172, 193, 0.3),
-            rgb(211, 226, 244, 0.3),
-            rgb(162, 179, 200, 0.3));
-    --link_button_shadow: #92a6be;
-    --link_button_text: #0f1342;
-    --link_button_back_active: linear-gradient(-60deg,
-            rgb(154, 172, 193, 0.3),
-            rgb(211, 226, 244, 0.3),
-            rgb(162, 179, 200, 0.3));
-    --link_button_text_active: #2c376f;
+        /* LINK BUTTONS */
+        --link_button_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
+        --link_button_back: linear-gradient(-60deg,
+                        rgb(154, 172, 193, 0.3),
+                        rgb(211, 226, 244, 0.3),
+                        rgb(162, 179, 200, 0.3));
+        --link_button_shadow: #92a6be;
+        --link_button_text: #0f1342;
+        --link_button_back_active: linear-gradient(-60deg,
+                        rgb(154, 172, 193, 0.3),
+                        rgb(211, 226, 244, 0.3),
+                        rgb(162, 179, 200, 0.3));
+        --link_button_text_active: #2c376f;
 
-    /* PAGE HEADERS */
-    --top_header_back: linear-gradient(rgb(112, 139, 178, 0),
-            rgb(112, 139, 178, 0.3));
-    --top_header_shadow: none;
-    --top_header_text: #0f1342;
-    --top_header_spacer: #a2b3c8;
+        /* PAGE HEADERS */
+        --top_header_back: linear-gradient(rgb(112, 139, 178, 0),
+                        rgb(112, 139, 178, 0.3));
+        --top_header_shadow: none;
+        --top_header_text: #0f1342;
+        --top_header_spacer: #a2b3c8;
 
-    /* MENUS */
-    --menu_back: #0f1342;
-    --menu_back_hover: #19205c;
-    --menu_text: #ffffff;
+        /* MENUS */
+        --menu_back: #0f1342;
+        --menu_back_hover: #19205c;
+        --menu_text: #ffffff;
 
-    /* NAVIGATION TABS */
-    --tab_text: #5676a9;
-    --tab_active: #5676a9;
-    --tab_text_active: #ffffff;
-    --tab_hover: #5676a9;
-    --tab_underline: #5676a9;
-    --tab_secondary_text: #5676a9;
-    --tab_secondary_active: #deeaf7;
-    --tab_secondary_text_active: #5676a9;
-    --tab_secondary_hover: #0f1342;
+        /* NAVIGATION TABS */
+        --tab_text: #5676a9;
+        --tab_active: #5676a9;
+        --tab_text_active: #ffffff;
+        --tab_hover: #5676a9;
+        --tab_underline: #5676a9;
+        --tab_secondary_text: #5676a9;
+        --tab_secondary_active: #deeaf7;
+        --tab_secondary_text_active: #5676a9;
+        --tab_secondary_hover: #0f1342;
 
-    /* PAGE SECTION - SOLID */
-    --main_field_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
-    --main_field_back: linear-gradient(-60deg,
-            rgb(154, 172, 193, 0.3),
-            rgb(211, 226, 244, 0.3),
-            rgb(162, 179, 200, 0.3));
-    --main_field_shadow: rgb(146, 166, 190, 0.75);
-    --main_field_text: #0f1342;
-    --main_field_hr: #a2b3c8;
+        /* PAGE SECTION - SOLID */
+        --main_field_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
+        --main_field_back: linear-gradient(-60deg,
+                        rgb(154, 172, 193, 0.3),
+                        rgb(211, 226, 244, 0.3),
+                        rgb(162, 179, 200, 0.3));
+        --main_field_shadow: rgb(146, 166, 190, 0.75);
+        --main_field_text: #0f1342;
+        --main_field_hr: #a2b3c8;
 
-    /* PAGE SECTION - OUTLINE ONLY */
-    --fieldset2_border: solid 2pt #1e265f;
-    --fieldset2_color: #1e265f;
+        /* PAGE SECTION - OUTLINE ONLY */
+        --fieldset2_border: solid 2pt #1e265f;
+        --fieldset2_color: #1e265f;
 
-    /* SUB-SECTIONS */
-    --sub_section_header: #708bb2;
-    --sub_section_text: #ffffff;
-    --sub_section1: #d9e6f6;
-    --sub_section2: #c5d5e8;
-    --sub_section3: #a2b3c8;
-    --sub_section4: #d9e6f6;
+        /* SUB-SECTIONS */
+        --sub_section_header: #708bb2;
+        --sub_section_text: #ffffff;
+        --sub_section1: #d9e6f6;
+        --sub_section2: #c5d5e8;
+        --sub_section3: #a2b3c8;
+        --sub_section4: #d9e6f6;
 
-    /* POPUP WINDOWS */
-    --popup_field_back: #ffffff;
-    --popup_field_text: #0f1342;
-    --popup_field_shadow: #a2b3c8;
+        /* POPUP WINDOWS */
+        --popup_field_back: #ffffff;
+        --popup_field_text: #0f1342;
+        --popup_field_shadow: #a2b3c8;
 
-    /* INPUT/SELECT/ETC.. FIELDS */
-    --input_background: #e9f1fa;
-    --input_back: #e9f1fa;
-    --input_back_hover: #ffffff;
-    --input_back_active: #ffffff;
-    --input_border: none;
-    --input_text: #b0c1d5;
-    --input_text_hover: #0f1342;
-    --input_text_active: #0f1342;
-    --input_text_disabled: #deeaf7;
-    --input_placeholder: #b0c1d5;
+        /* INPUT/SELECT/ETC.. FIELDS */
+        --input_background: #e9f1fa;
+        --input_back: #e9f1fa;
+        --input_back_hover: #ffffff;
+        --input_back_active: #ffffff;
+        --input_border: none;
+        --input_text: #b0c1d5;
+        --input_text_hover: #0f1342;
+        --input_text_active: #0f1342;
+        --input_text_disabled: #deeaf7;
+        --input_placeholder: #b0c1d5;
 
-    /* CHECKBOXES */
-    --checkbox_back: transparent;
-    --checkbox_back2: transparent;
-    --checkbox_border: solid 2pt #141958;
-    --checkbox_cross: #ed1c24;
-    --checkbox_check: #009245;
-    --checkbox_disabled: #b0c1d5;
+        /* CHECKBOXES */
+        --checkbox_back: transparent;
+        --checkbox_back2: transparent;
+        --checkbox_border: solid 2pt #141958;
+        --checkbox_cross: #ed1c24;
+        --checkbox_check: #009245;
+        --checkbox_disabled: #b0c1d5;
 
-    /* SWITCHES */
-    --switch_back: #9aacc1;
-    --switch_back_active: #e4eef9;
-    --switch_button: #a9bace;
-    --switch_active: #009245;
-    --switch_inactive: #ed1c24;
+        /* SWITCHES */
+        --switch_back: #9aacc1;
+        --switch_back_active: #e4eef9;
+        --switch_button: #a9bace;
+        --switch_active: #009245;
+        --switch_inactive: #ed1c24;
 
-    /* ACCORDIONS */
-    --accordion_head_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
-    --accordion_head_back: linear-gradient(-60deg,
-            rgb(154, 172, 193, 0.3),
-            rgb(211, 226, 244, 0.3),
-            rgb(162, 179, 200, 0.3));
-    --accordion_head_text: #0f1342;
-    --accordion_head_hover_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
-    --accordion_head_hover: linear-gradient(-60deg,
-            rgb(20, 25, 80, 0.6),
-            rgb(20, 25, 80, 0.3),
-            rgb(20, 25, 80, 0.6));
-    --accordion_head_hover_text: #ffffff;
-    --accordion_content_back: #92a6be;
-    --accordion_content_text: #0f1342;
+        /* ACCORDIONS */
+        --accordion_head_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
+        --accordion_head_back: linear-gradient(-60deg,
+                        rgb(154, 172, 193, 0.3),
+                        rgb(211, 226, 244, 0.3),
+                        rgb(162, 179, 200, 0.3));
+        --accordion_head_text: #0f1342;
+        --accordion_head_hover_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
+        --accordion_head_hover: linear-gradient(-60deg,
+                        rgb(20, 25, 80, 0.6),
+                        rgb(20, 25, 80, 0.3),
+                        rgb(20, 25, 80, 0.6));
+        --accordion_head_hover_text: #ffffff;
+        --accordion_content_back: #92a6be;
+        --accordion_content_text: #0f1342;
 
-    /* TABLES */
-    --table_head_text: #0f1342;
-    --table_scroll_header: #0f1342;
-    --table_scroll_header_text: #ffffff;
-    --table_scroll_header_border: #0f1342;
-    --table_underline: solid 2px #0f1342;
-    --table_row_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
-    --table_row: linear-gradient(-60deg,
-            rgb(154, 172, 193, 0.3),
-            rgb(211, 226, 244, 0.3),
-            rgb(162, 179, 200, 0.3));
-    --table_text: #0f1342;
-    --table_row_hover_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
-    --table_row_hover: linear-gradient(-60deg,
-            rgb(20, 25, 80, 0.6),
-            rgb(20, 25, 80, 0.3),
-            rgb(20, 25, 80, 0.6));
-    --table_row_hover_text: #ffffff;
-    --table_row_shadow: rgb(146, 166, 190, 0.75);
-    --table_row_inner_content: #92a6be;
-    --table_row_inner_text: #0f1342;
+        /* TABLES */
+        --table_head_text: #0f1342;
+        --table_scroll_header: #0f1342;
+        --table_scroll_header_text: #ffffff;
+        --table_scroll_header_border: #0f1342;
+        --table_underline: solid 2px #0f1342;
+        --table_row_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
+        --table_row: linear-gradient(-60deg,
+                        rgb(154, 172, 193, 0.3),
+                        rgb(211, 226, 244, 0.3),
+                        rgb(162, 179, 200, 0.3));
+        --table_text: #0f1342;
+        --table_row_hover_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
+        --table_row_hover: linear-gradient(-60deg,
+                        rgb(20, 25, 80, 0.6),
+                        rgb(20, 25, 80, 0.3),
+                        rgb(20, 25, 80, 0.6));
+        --table_row_hover_text: #ffffff;
+        --table_row_shadow: rgb(146, 166, 190, 0.75);
+        --table_row_inner_content: #92a6be;
+        --table_row_inner_text: #0f1342;
 
-    /* LISTS */
-    --list1_back: #708bb2;
-    --list1_active: #1e265f;
-    --list1_separator: #1e265f;
+        /* LISTS */
+        --list1_back: #708bb2;
+        --list1_active: #1e265f;
+        --list1_separator: #1e265f;
 
-    /* MISC */
-    --vin_color1: #0f1342;
-    --vin_color2: #ed1c24;
-    --vin_color3: #0f1342;
-    --vin_color4: #009245;
+        /* MISC */
+        --vin_color1: #0f1342;
+        --vin_color2: #ed1c24;
+        --vin_color3: #0f1342;
+        --vin_color4: #009245;
 
-    --psi_color: #177e89;
-    --arb_color: #81356a;
+        --psi_color: #177e89;
+        --arb_color: #81356a;
 
-    --good_color: #009245;
-    --bad_color: #ed1c24;
-    --conditional_color: #f2e21d;
+        --good_color: #009245;
+        --bad_color: #ed1c24;
+        --conditional_color: #f2e21d;
 
-    /* Additional variables for LaneBar */
-    --secondary_text: #5676a9;
-    --text_main_disabled: #899fbb;
-    --button2_back: #ffffff;
-    --button3_back: #41578c;
-    --button_note_hover: rgba(30, 38, 95, 0.1);
-    --announce_back_set: #f2e21d;
-    --sub_section1: #d9e6f6;
+        /* Additional variables for LaneBar */
+        --secondary_text: #5676a9;
+        --text_main_disabled: #899fbb;
+        --button2_back: #ffffff;
+        --button3_back: #41578c;
+        --button_note_hover: rgba(30, 38, 95, 0.1);
+        --announce_back_set: #f2e21d;
+        --sub_section1: #d9e6f6;
 
-    /* Additional missing variables for complete compatibility */
-    --input_background: #e9f1fa;
-    --input_placeholder: #b0c1d5;
-    --checkbox_cross: #ed1c24;
-    --checkbox_check: #009245;
-    --switch_inactive: #ed1c24;
-    --accordion_head_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
-    --accordion_head_back: linear-gradient(-60deg,
-            rgb(154, 172, 193, 0.3),
-            rgb(211, 226, 244, 0.3),
-            rgb(162, 179, 200, 0.3));
-    --list1_back: #708bb2;
-    --list1_active: #1e265f;
-    --list1_separator: #1e265f;
-    --table_row_inner_content: #92a6be;
-    --table_row_inner_text: #0f1342;
+        /* Additional missing variables for complete compatibility */
+        --input_background: #e9f1fa;
+        --input_placeholder: #b0c1d5;
+        --checkbox_cross: #ed1c24;
+        --checkbox_check: #009245;
+        --switch_inactive: #ed1c24;
+        --accordion_head_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
+        --accordion_head_back: linear-gradient(-60deg,
+                        rgb(154, 172, 193, 0.3),
+                        rgb(211, 226, 244, 0.3),
+                        rgb(162, 179, 200, 0.3));
+        --list1_back: #708bb2;
+        --list1_active: #1e265f;
+        --list1_separator: #1e265f;
+        --table_row_inner_content: #92a6be;
+        --table_row_inner_text: #0f1342;
 }
 
 /* Dark Blue Theme */
 [data-theme="dark-blue"] {
-    --background_image: url(/assets/bgImages/Otocore_Dashboard_DarkBlue_Hex_v.7.png);
-    --top_nav_background: transparent;
-    --top_nav_text: #ffffff;
-    --top_nav_border: #2c376f;
-    --top_nav_shadow: #141958;
-    --text_main: #ffffff;
-    --text_main_highlight: #ffffff;
-    --text_main_disabled: #5676a9;
-    --text_secondary: #6b96c6;
-    --text_secondary_highlight: #accfed;
-    --text_secondary_disabled: #999999;
-    --text_inverted: #1e265f;
-    --custom_scroll_thumb: #000000;
-    --custom_scroll_track: rgba(30, 38, 95, 0.1);
-    --button_update_back: #1e265f;
-    --button_update_border: solid 2pt #1e265f;
-    --button_update_text: #ffffff;
-    --button_update_font: Usual;
-    --button_update_shadow: none;
-    --button_update_disabled: #354484;
-    --button_update_disabled_border: solid 2pt #354484;
-    --button_update_disabled_text: #41578c;
-    --button_update_hover: #ffffff;
-    --button_update_hover_border: solid 2pt #ffffff;
-    --button_update_hover_text: #1e265f;
-    --button_note_back: transparent;
-    --button_note_border: solid 2pt #cde2f4;
-    --button_note_text: #cde2f4;
-    --button_note_font: Usual;
-    --button_note_shadow: none;
-    --button_note_disabled: transparent;
-    --button_note_disabled_border: solid 2pt #354484;
-    --button_note_disabled_text: #354484;
-    --button_note_hover: transparent;
-    --button_note_hover_border: solid 2pt #ffffff;
-    --button_note_hover_text: #ffffff;
-    --button_back: #1e265f;
-    --button_border: solid 2pt #1e265f;
-    --button_text: #ffffff;
-    --button_font: Usual;
-    --button_shadow: none;
-    --button_disabled: #354484;
-    --button_disabled_border: solid 2pt #354484;
-    --button_disabled_text: #41578c;
-    --button_hover: #ffffff;
-    --button_hover_border: solid 2pt #ffffff;
-    --button_hover_text: #1e265f;
-    --button_secondary_back: transparent;
-    --button_secondary_border: solid 2pt #cde2f4;
-    --button_secondary_text: #cde2f4;
-    --button_secondary_font: Usual;
-    --button_secondary_shadow: none;
-    --button_secondary_disabled: transparent;
-    --button_secondary_disabled_border: solid 2pt #354484;
-    --button_secondary_disabled_text: #354484;
-    --button_secondary_hover: transparent;
-    --button_secondary_hover_border: solid 2pt #ffffff;
-    --button_secondary_hover_text: #ffffff;
-    --button2_back: #2d346b;
-    --button2_border: solid 2pt #2d346b;
-    --button2_text: #ffffff;
-    --button2_font: Usual;
-    --button2_shadow: none;
-    --button2_disabled: #1e265f;
-    --button2_disabled_border: solid 2pt #1e265f;
-    --button2_disabled_text: #5676a9;
-    --button2_hover: #41578c;
-    --button2_hover_border: solid 2pt #41578c;
-    --button2_hover_text: #ffffff;
-    --button3_back: #41578c;
-    --button3_text: #ffffff;
-    --button3_font: Usual;
-    --button3_shadow: none;
-    --button3_disabled: #1e265f;
-    --button3_disabled_text: #2c376f;
-    --button3_hover: #ffffff;
-    --button3_hover_text: #0f1342;
-    --link_button_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
-    --link_button_back: linear-gradient(-60deg,
-            rgb(20, 25, 88, 0.6),
-            rgb(20, 25, 88, 0.3),
-            rgb(20, 25, 88, 0.6));
-    --link_button_shadow: rgba(30, 38, 95, 0.75);
-    --link_button_text: #c5d5e8;
-    --link_button_back_active: linear-gradient(-60deg,
-            rgb(20, 25, 88, 0.6),
-            rgb(20, 25, 88, 0.3),
-            rgb(20, 25, 88, 0.6));
-    --link_button_text_active: #ffffff;
-    --top_header_back: linear-gradient(rgb(20, 25, 88, 0), rgb(20, 25, 88, 0.3));
-    --top_header_shadow: none;
-    --top_header_text: #ffffff;
-    --top_header_spacer: #2c376f;
-    --menu_back: #0f1342;
-    --menu_back_hover: #19205c;
-    --menu_text: #ffffff;
-    --tab_text: #5676a9;
-    --tab_active: #ffffff;
-    --tab_text_active: #1e265f;
-    --tab_hover: #ffffff;
-    --tab_underline: #ffffff;
-    --tab_secondary_text: #6b96c6;
-    --tab_secondary_active: #1e265f;
-    --tab_secondary_text_active: #ffffff;
-    --tab_secondary_hover: #1e265f;
-    --main_field_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
-    --main_field_back: linear-gradient(-60deg,
-            rgb(20, 25, 88, 0.6),
-            rgb(20, 25, 88, 0.3),
-            rgb(20, 25, 88, 0.6));
-    --main_field_shadow: rgb(30, 38, 95, 0.75);
-    --main_field_text: #ffffff;
-    --main_field_hr: #1e265f;
-    --fieldset2_border: solid 2pt #1e265f;
-    --fieldset2_color: #ffffff;
-    --sub_section_header: #41578c;
-    --sub_section_text: #ffffff;
-    --sub_section1: #1e265f;
-    --sub_section2: #141958;
-    --sub_section3: #2d346b;
-    --sub_section4: #accfed;
-    --popup_field_back: #1e265f;
-    --popup_field_text: #ffffff;
-    --popup_field_shadow: rgb(30, 38, 95, 0.75);
-    --input_back: #354484;
-    --input_back_hover: #ffffff;
-    --input_back_active: #1e265f;
-    --input_border: none;
-    --input_text: #ffffff;
-    --input_text_hover: #ffffff;
-    --input_text_active: #ffffff;
-    --input_text_disabled: #2c376f;
-    --checkbox_back: transparent;
-    --checkbox_back2: transparent;
-    --checkbox_border: solid 2pt #141958;
-    --switch_back: #141958;
-    --switch_back_active: #41578c;
-    --switch_button: #41578c;
-    --switch_active: #009245;
-    --table_head_text: #ffffff;
-    --table_scroll_header: #ffffff;
-    --table_scroll_header_text: #1e265f;
-    --table_scroll_header_border: #ffffff;
-    --table_underline: solid 2px #ffffff;
-    --table_row_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
-    --table_row: linear-gradient(-60deg,
-            rgb(20, 25, 88, 0.6),
-            rgb(20, 25, 88, 0.3),
-            rgb(20, 25, 88, 0.6));
-    --table_text: #ffffff;
-    --table_row_hover_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
-    --table_row_hover: linear-gradient(-60deg,
-            rgb(154, 172, 193, 0.3),
-            rgb(211, 226, 244, 0.2),
-            rgb(162, 179, 200, 0.3));
-    --table_row_hover_text: #0f1342;
-    --table_row_shadow: rgb(30, 38, 95, 0.75);
-    --accordion_content_back: #0f1342;
-    --accordion_content_text: #ffffff;
-    --vin_color1: #ffffff;
-    --vin_color2: #ed1c24;
-    --vin_color3: #ffffff;
-    --vin_color4: #009245;
-    --psi_color: #177e89;
-    --arb_color: #81356a;
-    --good_color: #009245;
-    --bad_color: #ed1c24;
-    --conditional_color: #f2e21d;
+        --background_image: url(/assets/bgImages/Otocore_Dashboard_DarkBlue_Hex_v.7.png);
+        --top_nav_background: transparent;
+        --top_nav_text: #ffffff;
+        --top_nav_border: #2c376f;
+        --top_nav_shadow: #141958;
+        --text_main: #ffffff;
+        --text_main_highlight: #ffffff;
+        --text_main_disabled: #5676a9;
+        --text_secondary: #6b96c6;
+        --text_secondary_highlight: #accfed;
+        --text_secondary_disabled: #999999;
+        --text_inverted: #1e265f;
+        --custom_scroll_thumb: #000000;
+        --custom_scroll_track: rgba(30, 38, 95, 0.1);
+        --button_update_back: #1e265f;
+        --button_update_border: solid 2pt #1e265f;
+        --button_update_text: #ffffff;
+        --button_update_font: Usual;
+        --button_update_shadow: none;
+        --button_update_disabled: #354484;
+        --button_update_disabled_border: solid 2pt #354484;
+        --button_update_disabled_text: #41578c;
+        --button_update_hover: #ffffff;
+        --button_update_hover_border: solid 2pt #ffffff;
+        --button_update_hover_text: #1e265f;
+        --button_note_back: transparent;
+        --button_note_border: solid 2pt #cde2f4;
+        --button_note_text: #cde2f4;
+        --button_note_font: Usual;
+        --button_note_shadow: none;
+        --button_note_disabled: transparent;
+        --button_note_disabled_border: solid 2pt #354484;
+        --button_note_disabled_text: #354484;
+        --button_note_hover: transparent;
+        --button_note_hover_border: solid 2pt #ffffff;
+        --button_note_hover_text: #ffffff;
+        --button_back: #1e265f;
+        --button_border: solid 2pt #1e265f;
+        --button_text: #ffffff;
+        --button_font: Usual;
+        --button_shadow: none;
+        --button_disabled: #354484;
+        --button_disabled_border: solid 2pt #354484;
+        --button_disabled_text: #41578c;
+        --button_hover: #ffffff;
+        --button_hover_border: solid 2pt #ffffff;
+        --button_hover_text: #1e265f;
+        --button_secondary_back: transparent;
+        --button_secondary_border: solid 2pt #cde2f4;
+        --button_secondary_text: #cde2f4;
+        --button_secondary_font: Usual;
+        --button_secondary_shadow: none;
+        --button_secondary_disabled: transparent;
+        --button_secondary_disabled_border: solid 2pt #354484;
+        --button_secondary_disabled_text: #354484;
+        --button_secondary_hover: transparent;
+        --button_secondary_hover_border: solid 2pt #ffffff;
+        --button_secondary_hover_text: #ffffff;
+        --button2_back: #2d346b;
+        --button2_border: solid 2pt #2d346b;
+        --button2_text: #ffffff;
+        --button2_font: Usual;
+        --button2_shadow: none;
+        --button2_disabled: #1e265f;
+        --button2_disabled_border: solid 2pt #1e265f;
+        --button2_disabled_text: #5676a9;
+        --button2_hover: #41578c;
+        --button2_hover_border: solid 2pt #41578c;
+        --button2_hover_text: #ffffff;
+        --button3_back: #41578c;
+        --button3_text: #ffffff;
+        --button3_font: Usual;
+        --button3_shadow: none;
+        --button3_disabled: #1e265f;
+        --button3_disabled_text: #2c376f;
+        --button3_hover: #ffffff;
+        --button3_hover_text: #0f1342;
+        --link_button_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
+        --link_button_back: linear-gradient(-60deg,
+                        rgb(20, 25, 88, 0.6),
+                        rgb(20, 25, 88, 0.3),
+                        rgb(20, 25, 88, 0.6));
+        --link_button_shadow: rgba(30, 38, 95, 0.75);
+        --link_button_text: #c5d5e8;
+        --link_button_back_active: linear-gradient(-60deg,
+                        rgb(20, 25, 88, 0.6),
+                        rgb(20, 25, 88, 0.3),
+                        rgb(20, 25, 88, 0.6));
+        --link_button_text_active: #ffffff;
+        --top_header_back: linear-gradient(rgb(20, 25, 88, 0), rgb(20, 25, 88, 0.3));
+        --top_header_shadow: none;
+        --top_header_text: #ffffff;
+        --top_header_spacer: #2c376f;
+        --menu_back: #0f1342;
+        --menu_back_hover: #19205c;
+        --menu_text: #ffffff;
+        --tab_text: #5676a9;
+        --tab_active: #ffffff;
+        --tab_text_active: #1e265f;
+        --tab_hover: #ffffff;
+        --tab_underline: #ffffff;
+        --tab_secondary_text: #6b96c6;
+        --tab_secondary_active: #1e265f;
+        --tab_secondary_text_active: #ffffff;
+        --tab_secondary_hover: #1e265f;
+        --main_field_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
+        --main_field_back: linear-gradient(-60deg,
+                        rgb(20, 25, 88, 0.6),
+                        rgb(20, 25, 88, 0.3),
+                        rgb(20, 25, 88, 0.6));
+        --main_field_shadow: rgb(30, 38, 95, 0.75);
+        --main_field_text: #ffffff;
+        --main_field_hr: #1e265f;
+        --fieldset2_border: solid 2pt #1e265f;
+        --fieldset2_color: #ffffff;
+        --sub_section_header: #41578c;
+        --sub_section_text: #ffffff;
+        --sub_section1: #1e265f;
+        --sub_section2: #141958;
+        --sub_section3: #2d346b;
+        --sub_section4: #accfed;
+        --popup_field_back: #1e265f;
+        --popup_field_text: #ffffff;
+        --popup_field_shadow: rgb(30, 38, 95, 0.75);
+        --input_back: #354484;
+        --input_back_hover: #ffffff;
+        --input_back_active: #1e265f;
+        --input_border: none;
+        --input_text: #ffffff;
+        --input_text_hover: #ffffff;
+        --input_text_active: #ffffff;
+        --input_text_disabled: #2c376f;
+        --checkbox_back: transparent;
+        --checkbox_back2: transparent;
+        --checkbox_border: solid 2pt #141958;
+        --switch_back: #141958;
+        --switch_back_active: #41578c;
+        --switch_button: #41578c;
+        --switch_active: #009245;
+        --table_head_text: #ffffff;
+        --table_scroll_header: #ffffff;
+        --table_scroll_header_text: #1e265f;
+        --table_scroll_header_border: #ffffff;
+        --table_underline: solid 2px #ffffff;
+        --table_row_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
+        --table_row: linear-gradient(-60deg,
+                        rgb(20, 25, 88, 0.6),
+                        rgb(20, 25, 88, 0.3),
+                        rgb(20, 25, 88, 0.6));
+        --table_text: #ffffff;
+        --table_row_hover_image: url(/assets/bgImages/Otocore_Dashboard_FrostedLtBlue_Hex_v.7.png);
+        --table_row_hover: linear-gradient(-60deg,
+                        rgb(154, 172, 193, 0.3),
+                        rgb(211, 226, 244, 0.2),
+                        rgb(162, 179, 200, 0.3));
+        --table_row_hover_text: #0f1342;
+        --table_row_shadow: rgb(30, 38, 95, 0.75);
+        --accordion_content_back: #0f1342;
+        --accordion_content_text: #ffffff;
+        --vin_color1: #ffffff;
+        --vin_color2: #ed1c24;
+        --vin_color3: #ffffff;
+        --vin_color4: #009245;
+        --psi_color: #177e89;
+        --arb_color: #81356a;
+        --good_color: #009245;
+        --bad_color: #ed1c24;
+        --conditional_color: #f2e21d;
 
-    /* Additional variables for LaneBar */
-    --secondary_text: #6b96c6;
-    --text_main_disabled: #5676a9;
-    --text_inverted: #ffffff;
-    --button3_back: #41578c;
-    --button_note_hover: rgba(205, 226, 244, 0.1);
-    --announce_back_set: #f2e21d;
-    --sub_section1: #1e265f;
+        /* Additional variables for LaneBar */
+        --secondary_text: #6b96c6;
+        --text_main_disabled: #5676a9;
+        --text_inverted: #ffffff;
+        --button3_back: #41578c;
+        --button_note_hover: rgba(205, 226, 244, 0.1);
+        --announce_back_set: #f2e21d;
+        --sub_section1: #1e265f;
 
-    /* Additional missing variables for complete compatibility */
-    --input_background: #354484;
-    --input_placeholder: #c5d5e8;
-    --checkbox_cross: #ed1c24;
-    --checkbox_check: #009245;
-    --switch_inactive: #ed1c24;
-    --accordion_head_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
-    --accordion_head_back: linear-gradient(-60deg,
-            rgb(20, 25, 88, 0.6),
-            rgb(20, 25, 88, 0.3),
-            rgb(20, 25, 88, 0.6));
-    --list1_back: #41578c;
-    --list1_active: #1e265f;
-    --list1_separator: #1e265f;
-    --table_row_inner_content: #0f1342;
-    --table_row_inner_text: #ffffff;
+        /* Additional missing variables for complete compatibility */
+        --input_background: #354484;
+        --input_placeholder: #c5d5e8;
+        --checkbox_cross: #ed1c24;
+        --checkbox_check: #009245;
+        --switch_inactive: #ed1c24;
+        --accordion_head_image: url(/assets/bgImages/Otocore_Dashboard_FrostedDarkBlue_Hex_v.7.png);
+        --accordion_head_back: linear-gradient(-60deg,
+                        rgb(20, 25, 88, 0.6),
+                        rgb(20, 25, 88, 0.3),
+                        rgb(20, 25, 88, 0.6));
+        --list1_back: #41578c;
+        --list1_active: #1e265f;
+        --list1_separator: #1e265f;
+        --table_row_inner_content: #0f1342;
+        --table_row_inner_text: #ffffff;
 }
 
 /* Background and Body Styling */
 body {
-    background: var(--background_image) no-repeat center center fixed;
-    background-size: cover;
-    color: var(--text_main);
-    transition: background 0.5s ease;
-    position: relative;
+        background: var(--background_image) no-repeat center center fixed;
+        background-size: cover;
+        color: var(--text_main);
+        transition: background 0.5s ease;
+        position: relative;
 }
 
 /* Input placeholder styling */
 input::placeholder {
-    color: var(--input_placeholder);
-    opacity: 1;
+        color: var(--input_placeholder);
+        opacity: 1;
 }
 
 input::-webkit-input-placeholder {
-    color: var(--input_placeholder);
-    opacity: 1;
+        color: var(--input_placeholder);
+        opacity: 1;
 }
 
 input::-moz-placeholder {
-    color: var(--input_placeholder);
-    opacity: 1;
+        color: var(--input_placeholder);
+        opacity: 1;
 }
 
 body {
-    overflow: hidden;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+        overflow: hidden;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
 }
 
 /* MAIN FIELD */
 .main_field {
-    min-height: 60px;
-    height: auto;
-    position: relative;
-    width: 100%;
+        min-height: 60px;
+        height: auto;
+        position: relative;
+        width: 100%;
 }
 
 .main_field--back {
-    background-image: var(--main_field_image);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    border-radius: 1vw;
-    box-shadow: 0px 0px 15px 5px var(--main_field_shadow);
-    height: 100%;
-    opacity: 55%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+        background-image: var(--main_field_image);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        border-radius: 1vw;
+        box-shadow: 0px 0px 15px 5px var(--main_field_shadow);
+        height: 100%;
+        opacity: 55%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
 }
 
 .main_field--inner {
-    background-image: var(--main_field_back);
-    color: var(--main_field_text);
-    height: 100%;
-    opacity: 1;
-    padding: 1vw;
-    position: relative;
-    width: 100%;
-    border-radius: 1vw;
+        background-image: var(--main_field_back);
+        color: var(--main_field_text);
+        height: 100%;
+        opacity: 1;
+        padding: 1vw;
+        position: relative;
+        width: 100%;
+        border-radius: 1vw;
 }
 
 .noselect {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 }
 
 .clerk_grid {
-    text-align: center;
-    padding: 10px 5%;
-    height: auto;
-    min-height: 60px;
+        text-align: center;
+        padding: 10px 5%;
+        height: auto;
+        min-height: 60px;
 }
