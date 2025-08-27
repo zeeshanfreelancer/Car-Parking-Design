@@ -2,7 +2,7 @@ import Text from "../Reusable/Text";
 import { TfiAnnouncement } from "react-icons/tfi";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 
-export default function LeftComponent({ theme }) {
+export default function LeftComponent() {
     // Example car details (can come from props, API, or context later)
     const carDetails = [
         { label: "Seller", value: "Loehmann Blasius Chevrolet Inc" },
@@ -40,16 +40,17 @@ export default function LeftComponent({ theme }) {
                 style={{
                     background: "var(--button_note_back)",
                     color: "var(--button_note_text)",
+                    border: "1px solid var(--button_note_border)",
                 }}
             >
                 <div
                     className="flex justify-center gap-2 sticky top-0 p-1"
                     style={{
-                        background: "var(--button_update_back)",
+                        background: "var(--main_field_hr)"
                     }}
                 >
                     <TfiAnnouncement style={{ color: "var(--button_update_text)" }} />
-                    <Text className="text-xs" style={{ color: "var(--button_update_text)" }}>
+                    <Text className="text-xs" style={{ color: "var(--text_main_highlight)" }}>
                         ANNOUNCEMENTS
                     </Text>
                 </div>
@@ -63,37 +64,38 @@ export default function LeftComponent({ theme }) {
             </div>
 
             {/* Vehicle Details */}
-            <div className="max-w-md mx-auto shadow-lg">
+            <div
+                className="max-w-md mx-auto shadow-lg"
+                style={{
+                    background: "var(--main_field_inner, transparent)",
+                    color: "var(--table_head_text)",
+                    border: "1px solid var(--main_field_hr)",
+                }}
+            >
                 {/* Header */}
                 <div
                     className="flex justify-center gap-2 items-center py-1"
                     style={{
-                        background: "var(--button_update_back)",
+                        background: "var(--main_field_hr)"
                     }}
                 >
                     <IoMdInformationCircleOutline style={{ color: "var(--button_update_text)" }} />
                     <Text
                         className="text-xs font-semibold uppercase"
-                        style={{ color: "var(--button_update_text)" }}
+                        style={{ color: "var(--text_main_highlight)" }}
                     >
                         Vehicle Details
                     </Text>
                 </div>
 
                 {/* Details Grid */}
-                <div
-                    className="py-3"
-                    style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main)",
-                    }}
-                >
+                <div className="py-3">
                     {/* Seller row (full width) */}
                     <div
-                        className="px-4 py-1 border-b"
+                        className="flex justify-between px-4 border-b"
                         style={{ borderColor: "var(--top_nav_border)" }}
                     >
-                        <Text className="text-xs font-semibold" style={{ color: "var(--text_main_highlight)" }}>
+                        <Text className="text-xs font-semibold" style={{ color: "var(--table_head_text)" }}>
                             {carDetails[0].label}:  {carDetails[0].value}
                         </Text>
                     </div>
@@ -106,7 +108,7 @@ export default function LeftComponent({ theme }) {
                                 className="flex justify-between px-4 py-1 border-b"
                                 style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
+                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -121,7 +123,7 @@ export default function LeftComponent({ theme }) {
                                 className="flex justify-between px-4 py-1 border-b"
                                 style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
+                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -136,7 +138,7 @@ export default function LeftComponent({ theme }) {
                                 className="flex justify-between px-4 py-1 border-b"
                                 style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
+                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -151,7 +153,7 @@ export default function LeftComponent({ theme }) {
                                 className="flex justify-between px-4 py-1 border-b"
                                 style={{ borderColor: "var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--text_main_highlight)" }}>
+                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
