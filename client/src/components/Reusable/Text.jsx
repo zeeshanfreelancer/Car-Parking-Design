@@ -1,8 +1,6 @@
 import React from "react";
 
-const Text = ({ children, variant = "p", className = "" }) => {
-    const baseStyles = "text-gray-800";
-
+const Text = ({ children, variant = "p", className = "", style = {} }) => {
     const variants = {
         h1: "text-4xl",
         h2: "text-3xl font-semibold",
@@ -12,10 +10,10 @@ const Text = ({ children, variant = "p", className = "" }) => {
         small: "text-sm text-gray-600",
     };
 
-    const Component = variant; //  dynamic tag (h1, h2, p, etc.)
+    const Component = variant; // dynamic tag (h1, h2, p, etc.)
 
     return (
-        <Component className={`${baseStyles} ${variants[variant]} ${className}`}>
+        <Component className={`${variants[variant]} ${className}`} style={style}>
             {children}
         </Component>
     );

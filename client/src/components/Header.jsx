@@ -1,74 +1,111 @@
-import React, { useState } from "react";   
-import Text from "./Reusable/Text.jsx";
-import { FaCarAlt, FaSearch } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
-import { FaBell } from "react-icons/fa";
-import { FaAngleDown } from "react-icons/fa";
+import React, { useState } from "react";
+import Text from "./Reusable/Text";
+import { FaCarAlt, FaSearch, FaPlus, FaBell, FaAngleDown } from "react-icons/fa";
 
-export default function Header() {
+export default function Header({ theme }) {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="bg-neutral-800 text-white flex justify-between items-center">
+        <header
+            className="flex justify-between items-center px-6 py-1"
+            style={{
+                background: "var(--top_nav_background)",
+                color: "var(--top_nav_text)",
+
+            }}
+        >
             {/* Left side */}
             <div className="flex items-center gap-6">
-                {/* Logo + Title */}
                 <div className="flex items-center gap-1">
-                    <FaCarAlt className="text-2xl text-cyan-400" />
+                    <FaCarAlt className="text-2xl" style={{ color: "var(--icon_main, var(--top_nav_text))" }} />
                     <div className="flex flex-col leading-tight">
-                        <Text variant="h5" className="text-white font-semibold">
+                        <Text
+                            variant="h5"
+                            className="font-semibold"
+                        // style={{ color: "var(--top_nav_text)" }}
+                        >
                             AUCTIONS
                         </Text>
                     </div>
                 </div>
-
-                {/* Subtitle */}
-                <Text variant="p" className="text-white text-sm">
+                <Text
+                    variant="p"
+                    className="text-sm"
+                    style={{ color: "var(--top_nav_text)" }}
+                >
                     Statewide Auto Auction
                 </Text>
             </div>
 
             {/* Right side */}
-            <div className="flex items-center gap-0.5">
-                {/* Search */}
-                <button className="bg-neutral-700 p-2 hover:bg-neutral-500 cursor-pointer">
+            <div className="flex items-center gap-2">
+                {/* Search button */}
+                <button
+                    className="p-2 rounded hover:opacity-80 cursor-pointer"
+                    style={{
+                        background: "var(--button_secondary_back)",
+                        color: "var(--button_secondary_text)",
+                    }}
+                >
                     <FaSearch className="text-lg" />
                 </button>
 
-                {/* Add */}
-                <button className="bg-neutral-700 p-2 hover:bg-neutral-500 cursor-pointer">
+                {/* Add button */}
+                <button
+                    className="p-2 rounded hover:opacity-80 cursor-pointer"
+                    style={{
+                        background: "var(--button_secondary_back)",
+                        color: "var(--button_secondary_text)",
+                    }}
+                >
                     <FaPlus className="text-lg" />
                 </button>
 
-                {/* Notifications + User */}
-                <div className="relative flex items-center gap-1 bg-neutral-700 hover:bg-neutral-500 pe-2">
-                    {/* Notification Icon */}
-                    <button className=" p-2 ">
-                        <FaBell className="" />
+                {/* Notification + User dropdown */}
+                <div
+                    className="relative flex items-center gap-1 pe-2 rounded"
+                    style={{
+                        background: "var(--button_secondary_back)",
+                        color: "var(--button_secondary_text)",
+                    }}
+                >
+                    <button className="p-2">
+                        <FaBell />
                     </button>
 
-                    {/* User Dropdown */}
+                    {/* User dropdown */}
                     <div className="relative">
                         <button
                             onClick={() => setOpen(!open)}
-                            className="flex items-center gap-1 text-sm text-white hover:text-gray-300"
+                            className="flex items-center gap-1 text-sm hover:opacity-80"
+                            style={{ color: "var(--top_nav_text)" }}
                         >
-                            <Text variant="small" className="text-xs text-white">
+                            <Text
+                                variant="small"
+                                className="text-xs"
+                                style={{ color: "var(--top_nav_text)" }}
+                            >
                                 Tim Innocente
                             </Text>
-                            <FaAngleDown/>
+                            <FaAngleDown />
                         </button>
 
                         {open && (
-                            <div className="absolute right-0 mt-2 w-40 bg-white text-gray-800 rounded shadow-lg">
+                            <div
+                                className="absolute right-0 mt-2 w-40 rounded shadow-lg z-10"
+                                style={{
+                                    background: "var(--main_field_inner, var(--main_field_back))",
+                                    color: "var(--text_main)",
+                                }}
+                            >
                                 <ul className="text-sm">
-                                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <li className="px-4 py-1 hover:opacity-80 cursor-pointer">
                                         Profile
                                     </li>
-                                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <li className="px-4 py-1 hover:opacity-80 cursor-pointer">
                                         Settings
                                     </li>
-                                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                    <li className="px-4 py-1 hover:opacity-80 cursor-pointer">
                                         Logout
                                     </li>
                                 </ul>

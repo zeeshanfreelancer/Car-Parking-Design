@@ -8,10 +8,14 @@ export const themes = [
 ];
 
 export default function useTheme(initialTheme = "") {
-    const [theme, setTheme] = useState(initialTheme);
+    const [theme, setTheme] = useState(() => {
+        // check localStorage pehle
+        return localStorage.getItem("app-theme") || initialTheme;
+    });
 
     useEffect(() => {
         document.body.setAttribute("data-theme", theme);
+        localStorage.setItem("app-theme", theme); // save to localStorage
     }, [theme]);
 
     const handleThemeChange = (e) => {
