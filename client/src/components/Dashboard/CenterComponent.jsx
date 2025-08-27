@@ -42,49 +42,54 @@ export default function CenterComponent({ theme }) {
             }}
         >
             {/* Lot Header */}
-            <div className="grid grid-cols-4 gap-1 text-center items-center">
+            <div className="grid grid-cols-4 gap-1 text-center items-stretch">
                 <Text
-                    className="rounded-l-lg text-sm py-2"
+                    className="rounded-l-lg text-sm flex items-center justify-center"
                     style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main_highlight)",
+                        background: "var(--menu_back)",
+                        color: "var(--menu_text)",
                     }}
                 >
                     {carInfo.lot}
                 </Text>
+
                 <Text
-                    className="text-sm py-2"
+                    className="text-sm flex items-center justify-center"
                     style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main_highlight)",
+                        background: "var(--menu_back)",
+                        color: "var(--menu_text)",
                     }}
                 >
                     {carInfo.grade}
                 </Text>
+
                 <div
+                    className="flex flex-col items-center justify-center"
                     style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main)",
+                        background: "var(--menu_back)",
+                        color: "var(--menu_text)",
                     }}
                 >
-                    <Text className="text-xs">Mileage</Text>
-                    <Text className="text-sm">{carInfo.mileage}</Text>
+                    <Text variant="small" style={{ color: "var(----menu_text)" }}>Mileage</Text>
+                    <span className="text-sm" style={{ color: "var(----menu_text)" }}>{carInfo.mileage}</span>
                 </div>
+
                 <Text
                     variant="small"
-                    className="rounded-r-lg py-2"
+                    className="rounded-r-lg flex items-center justify-center"
                     style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main_highlight)",
+                        background: "var(--menu_back)",
+                        color: "var(--menu_text)",
                     }}
                 >
                     {carInfo.status}
                 </Text>
             </div>
 
+
             {/* Car Details */}
             <div className="items-center justify-center text-center">
-                <Text variant="h5" className="font-bold" style={{ color: "var(--text_main_highlight)" }}>
+                <Text variant="h5" className="font-bold" style={{ color: "var(--text_main)" }}>
                     {carInfo.model}
                 </Text>
                 <Text className="text-xs" style={{ color: "var(--text_main)" }}>
@@ -95,19 +100,55 @@ export default function CenterComponent({ theme }) {
             {/* Summary */}
             <div className="grid grid-cols-4 gap-1 text-center p-2">
                 {summary.map((item, i) => (
-                    <div key={i} style={{ border: "2px solid var(--top_nav_border)" }}>
+                    <div key={i} style={{ border: "var(--button_border)" }}>
                         <Text className="text-xs" style={{ color: "var(--text_main)" }}>{item.label}</Text>
-                        {item.value && <Text className="text-xs font-bold" style={{ color: "var(--text_main_highlight)" }}>{item.value}</Text>}
+                        {item.value && <Text className="text-xs font-bold" style={{ color: "var(--top_nav_text)" }}>{item.value}</Text>}
                     </div>
                 ))}
             </div>
 
-            {/* Colored bars */}
+            {/* Colored bars as buttons */}
             <div className="grid grid-cols-4 gap-2 px-2 py-2 mb-2">
-                <div style={{ height: "2.25rem", border: "2px solid var(--bar_green)", background: "var(--bar_green_back)" }}></div>
-                <div style={{ height: "2.25rem", border: "2px solid var(--bar_red)", background: "var(--bar_red_back)" }}></div>
-                <div style={{ height: "2.25rem", border: "2px solid var(--bar_yellow)", background: "var(--bar_yellow_back)" }}></div>
-                <div style={{ height: "2.25rem", border: "2px solid var(--bar_blue)", background: "var(--bar_blue_back)" }}></div>
+                <button
+                    style={{
+                        height: "2.25rem",
+                        border: "2px solid var(--good_color)",
+                        // background: "var(--bar_green_back)",
+                        width: "100%",
+                        cursor: "pointer",
+                    }}
+                    aria-label="Green Bar"
+                />
+                <button
+                    style={{
+                        height: "2.25rem",
+                        // border: "2px solid var(--bar_red)",
+                        background: "var(--bad_color)",
+                        width: "100%",
+                        cursor: "pointer",
+                    }}
+                    aria-label="Red Bar"
+                />
+                <button
+                    style={{
+                        height: "2.25rem",
+                        border: "2px solid var(--conditional_color)",
+                        background: "var(--black_color)",
+                        width: "100%",
+                        cursor: "pointer",
+                    }}
+                    aria-label="Yellow Bar"
+                />
+                <button
+                    style={{
+                        height: "2.25rem",
+                        // border: "2px solid var(--bar_blue)",
+                        background: "var(--dark_blue)",
+                        width: "100%",
+                        cursor: "pointer",
+                    }}
+                    aria-label="Blue Bar"
+                />
             </div>
 
             {/* Price Grid with Expand Icon */}
@@ -118,9 +159,13 @@ export default function CenterComponent({ theme }) {
                             key={i}
                             className="px-2 py-0.5 border text-xs"
                             style={{
-                                borderColor: "var(--top_nav_border)",
-                                background: price === selectedPrice ? "var(--button_update_back)" : "var(--main_field_inner)",
-                                color: price === selectedPrice ? "var(--button_update_text)" : "var(--text_main)",
+                                borderColor: "var(--button_note_border)",
+                                background: price === selectedPrice
+                                    ? "var(--button_update_back)"
+                                    : "var(--main_field_inner)",
+                                color: price === selectedPrice
+                                    ? "var(--button_update_text)"
+                                    : "var(--text_main)",
                                 fontWeight: price === selectedPrice ? "bold" : "normal",
                             }}
                         >
@@ -129,11 +174,15 @@ export default function CenterComponent({ theme }) {
                     ))}
                 </div>
 
-                {/* Expand Icon */}
+                {/* Expand Icon styled as a button */}
                 <button
-                    className="ml-1 text-lg"
+                    className="text-lg cursor-pointer"
                     onClick={() => setOpen(true)}
-                    style={{ color: "var(--text_main_highlight)" }}
+                    style={{
+                        color: "var(--text_main_highlight)",
+                        fontWeight: "bold",
+                    }}
+                    aria-label="Expand Price Grid"
                 >
                     <RiExpandUpDownFill />
                 </button>
@@ -143,14 +192,14 @@ export default function CenterComponent({ theme }) {
             <IncrementModel open={open} onClose={() => setOpen(false)} />
 
             {/* Increments Grid */}
-            <div className="grid grid-cols-6 mt-1 px-2">
+            <div className="grid grid-cols-6 mt-1 px-3">
                 {bidIncrements.map((inc, i) => (
                     <button
                         key={i}
                         className="text-xs bg-transparent py-1 w-full"
                         style={{
-                            border: inc === "$100" ? "1px solid var(--top_nav_border)" : "none",
-                            color: "var(--text_main_highlight)",
+                            border: inc === "$100" ? "var(--button_note_border)" : "none",
+                            color: "var(--top_nav_text)",
                         }}
                     >
                         {inc}
@@ -164,8 +213,8 @@ export default function CenterComponent({ theme }) {
                     variant="p"
                     className="font-bold p-1"
                     style={{
-                        color: "var(--button_update_text)",
-                        background: "var(--button_update_back)",
+                        color: "var(--button_text)",
+                        background: "var(--button_back)",
                     }}
                 >
                     {selectedPrice}
@@ -174,8 +223,8 @@ export default function CenterComponent({ theme }) {
                     variant="p"
                     className="p-1 font-bold flex justify-center items-center gap-2"
                     style={{
-                        color: "var(--text_main_highlight)",
-                        background: "var(--main_field_inner)",
+                        color: "var(--button_text)",
+                        background: "var(--button_back)",
                     }}
                 >
                     <span className="text-xl"><FaAngleDoubleLeft /></span>
@@ -189,8 +238,8 @@ export default function CenterComponent({ theme }) {
                 <div
                     className="text-center p-4 font-bold text-sm"
                     style={{
-                        background: "var(--button_update_back)",
-                        color: "var(--button_update_text)",
+                        background: "var(--button2_back)",
+                        color: "var(--button2_text)",
                     }}
                 >
                     Start Vehicle
@@ -201,8 +250,8 @@ export default function CenterComponent({ theme }) {
                         <button
                             className="py-2 w-full text-xs cursor-pointer"
                             style={{
-                                background: "var(--button_secondary_back)",
-                                color: "var(--button_secondary_text)",
+                                color: "var(--top_nav_text)",
+                                background: "var(--button_disabled)",
                             }}
                         >
                             Reset
@@ -210,8 +259,8 @@ export default function CenterComponent({ theme }) {
                         <button
                             className="py-2 w-full text-xs cursor-pointer"
                             style={{
-                                background: "var(--button_secondary_back)",
-                                color: "var(--button_secondary_text)",
+                                color: "var(--top_nav_text)",
+                                background: "var(--button_disabled)",
                             }}
                         >
                             Undo
@@ -220,17 +269,17 @@ export default function CenterComponent({ theme }) {
                     <button
                         className="py-1 text-xs col-span-2 cursor-pointer"
                         style={{
-                            background: "var(--main_field_inner)",
-                            color: "var(--text_main_highlight)",
-                        }}
+                        color: "var(--button_text)",
+                        background: "var(--button_back)",
+                    }}
                     >
                         Online <span className="block">Override</span>
                     </button>
                     <button
                         className="py-1 text-xs font-bold cursor-pointer"
                         style={{
-                            background: "var(--button_note_back)",
-                            color: "var(--button_note_text)",
+                            background: "var(--bad_color)",
+                            color: "var(--button3_text)",
                         }}
                     >
                         X
@@ -243,8 +292,8 @@ export default function CenterComponent({ theme }) {
                 <button
                     className="py-2 text-xs"
                     style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main_highlight)",
+                        color: "var(--button_text)",
+                        background: "var(--button_back)",
                     }}
                 >
                     NO <span className="block">SALE</span>
@@ -252,8 +301,8 @@ export default function CenterComponent({ theme }) {
                 <button
                     className="text-xs"
                     style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main_highlight)",
+                        color: "var(--button_text)",
+                        background: "var(--button_back)",
                     }}
                 >
                     OFFER
@@ -261,8 +310,8 @@ export default function CenterComponent({ theme }) {
                 <button
                     className="text-xs"
                     style={{
-                        background: "var(--main_field_inner)",
-                        color: "var(--text_main_highlight)",
+                        color: "var(--button_text)",
+                        background: "var(--button_back)",
                     }}
                 >
                     SOLD

@@ -37,7 +37,7 @@
         --button_update_hover_text: #ffffff;
 
         --button_note_back: transparent;
-        --button_note_border: solid 2pt #d8d8d8;
+        --button_note_border: solid 1pt #d8d8d8;
         --button_note_text: #d8d8d8;
         --button_note_font: Usual;
         --button_note_shadow: none;
@@ -123,6 +123,7 @@
         --tab_text: #808285;
         --tab_active: #ffffff;
         --tab_text_active: #000000;
+        --tab_hover: #ffffff;
         --tab_hover: #ffffff;
         --tab_underline: #ffffff;
         --tab_secondary_text: #808285;
@@ -231,15 +232,15 @@
         --vin_color2: #ed1c24;
         --vin_color3: #ffffff;
         --vin_color4: #009444;
-
         --psi_color: #177e89;
         --arb_color: #81356a;
-
         --good_color: #009444;
         --bad_color: #ed1c24;
         --conditional_color: #f2e21d;
-
-        /* Additional variables for LaneBar */
+        /* Add Custom Colors Below */
+        --dark_blue: #0a369d;
+        --black_color:#000000;
+                /* Additional variables for LaneBar */
         --secondary_text: #dddddd;
         --text_main_disabled: #808285;
         --text_inverted: #000000;
@@ -502,6 +503,9 @@
         --good_color: #009444;
         --bad_color: #ed1c24;
         --conditional_color: #f2e21d;
+         /* Add Custom Colors Below */
+        --dark_blue: #0a369d;
+        --black_color:#000000
 }
 
 /* Light Blue Theme */
@@ -743,6 +747,9 @@
         --good_color: #009245;
         --bad_color: #ed1c24;
         --conditional_color: #f2e21d;
+         /* Add Custom Colors Below */
+        --dark_blue: #0a369d;
+        --black_color:#000000;
 
         /* Additional variables for LaneBar */
         --secondary_text: #5676a9;
@@ -941,6 +948,9 @@
         --good_color: #009245;
         --bad_color: #ed1c24;
         --conditional_color: #f2e21d;
+         /* Add Custom Colors Below */
+        --dark_blue: #0a369d;
+        --black_color:#000000;
 
         /* Additional variables for LaneBar */
         --secondary_text: #6b96c6;

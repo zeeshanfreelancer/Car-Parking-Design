@@ -65,7 +65,7 @@ export default function Navbar({ theme, onThemeChange }) {
                     </div>
                 </div>
                 {/* Right Section */}
-                <div className="flex sm:mt-0 items-center gap-4">
+                <div className="flex sm:mt-0 items-center gap-3">
                     {/* Simulcast Users */}
                     <div className="flex items-center gap-2">
                         <Text className="font-semibold text-xs" style={{ color: "var(--text_nav_text)" }}>
@@ -76,11 +76,11 @@ export default function Navbar({ theme, onThemeChange }) {
                         </Text>
                     </div>
                     {/* Settings Icon */}
-                    <button className="ps-6">
+                    <button className="ps-5">
                         <IoSettingsSharp style={{ color: "var(--top_nav_text)" }} className="text-xl" />
                     </button>
                     {/* Switch Lane */}
-                    <div className="flex flex-col items-center ms-2 px-3"
+                    <div className="flex flex-col items-center ms-2 px-2"
                         style={{ background: "var(--main_field_back)" }}>
                         <Text className="text-xs" style={{ color: "var(--text_nav_text)" }}>Switch Lane</Text>
                         <div className="flex">
@@ -106,16 +106,16 @@ export default function Navbar({ theme, onThemeChange }) {
                     </div>
                     {/* Theme Switch Dropdown */}
                     <div
-                        className="flex flex-col items-center ms-2 px-3 py-1"
-                        style={{ background: "var(--main_field_back)" }}
+                        className="px-1 flex items-center"
+                        // style={{ background: "var(--input_background)" }}
                     >
                         <select
                             value={theme}
                             onChange={onThemeChange}
-                            className="text-xs px-2 rounded py-1 outline-none border-none"
+                            className="text-xs px-2 py-2 outline-none border-none"
                             style={{
-                                background: "var(--button_secondary_back)",
-                                color: "var(--text_main_highlight)",
+                                background: "var(--input_background)",
+                                color: "var(--top_nav_text)",
                             }}
                         >
                             {themes.map((t) => (
@@ -127,13 +127,12 @@ export default function Navbar({ theme, onThemeChange }) {
                     </div>
 
                     {/* Lane Countdown */}
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 pe-1">
                         <Text
                             className="px-2 text-xs font-bold"
                             style={{
-                                background: "var(--button_note_back)",
-                                color: "var(--button_note_text)",
-                                border: "var(--button_note_border)",
+                                background: "var(--conditional_color)",
+                                color: "var(--text_inverted)",
                             }}
                         >
                             Lane Starts
@@ -143,9 +142,8 @@ export default function Navbar({ theme, onThemeChange }) {
                         <Text
                             className="px-3 text-xs font-bold"
                             style={{
-                                background: "var(--button_update_back)",
-                                color: "var(--button_update_text)",
-                                border: "var(--button_update_border)",
+                                background: "var(--good_color)",
+                                color: "var(--text_inverted)",
                             }}
                         >
                             Start
