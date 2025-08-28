@@ -26,11 +26,11 @@ export default function LeftComponent() {
             }}
         >
             {/* Image */}
-            <div className="w-[100%] h-[50%]">
+            <div className="mx-auto w-[90%] h-[45%]">
                 <img
                     src="/assets/car.PNG"
                     alt="Car"
-                    className="mx-auto"
+                    className="mx-auto h-full object-contain"
                 />
             </div>
 
@@ -79,6 +79,9 @@ export default function LeftComponent() {
                     border: "1px solid var(--main_field_hr)",
                 }}
             >
+
+                <div 
+                    className="h-full">
                 {/* Header */}
                 <div
                     className="flex justify-center gap-2 items-center py-1"
@@ -167,6 +170,7 @@ export default function LeftComponent() {
                         ))}
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );
