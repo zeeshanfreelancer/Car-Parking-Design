@@ -1,8 +1,11 @@
+import React, { useState } from "react";
 import Text from "../Reusable/Text";
 import { MdHistory } from "react-icons/md";
 import { IoChatbubble } from "react-icons/io5";
 
 export default function RightComponent({ theme }) {
+    const [selectedCarId, setSelectedCarId] = useState("Q1");
+
     const cars = [
         { id: "Q1", model: "2012 Grand Cherokee", color: "Gray", miles: "143,253" },
         { id: "Q2", model: "2014 Outback", color: "Gray", miles: "140,141" },
@@ -19,7 +22,7 @@ export default function RightComponent({ theme }) {
 
     return (
         <div
-            className="flex flex-col h-full rounded-2xl"
+            className="flex flex-col rounded-2xl"
             style={{
                 background: "var(--main_field_back)",
                 color: "var(--text_main)",
@@ -27,20 +30,31 @@ export default function RightComponent({ theme }) {
         >
             {/* Cars List */}
             <div className="overflow-y-auto h-70 rounded-t-2xl">
-                {cars.map((car, index) => (
-                    <div
-                        key={car.id}
-                        className="flex justify-between px-4 py-1"
-                        style={{
-                            background: index % 2 === 0 ? "var(--main_field_inner)" : "var(--main_field_back)",
-                            color: "var(--text_main)",
-                        }}
-                    >
-                        <Text className="font-bold text-lg">{car.id} </Text>
-                        <Text className="text-xs text-center font-semibold">{car.model}</Text>
-                        <Text className="text-xs text-center font-semibold">{car.color} <span className="block">{car.miles}</span></Text>
-                    </div>
-                ))}
+                {cars.map((car, index) => {
+                    const isSelected = selectedCarId === car.id;
+                    return (
+                        <div
+                            key={car.id}
+                            className="flex justify-between px-4 py-1 cursor-pointer"
+                            onClick={() => setSelectedCarId(car.id)}
+                            style={{
+                                background: isSelected
+                                    ? "var(--button_back)"
+                                    : index % 2 === 0
+                                        ? "var(--main_field_back)"
+                                        : "var(--main_field_inner)",
+                                color: isSelected
+                                    ? "var(--button_text)"
+                                    : "var(--text_main)",
+                                transition: "background 0.2s, color 0.2s",
+                            }}
+                        >
+                            <Text className="font-bold text-lg">{car.id} </Text>
+                            <Text className="text-xs flex justify-center items-center font-semibold">{car.model}</Text>
+                            <Text className="text-xs text-center font-semibold">{car.color} <span className="block">{car.miles}</span></Text>
+                        </div>
+                    );
+                })}
             </div>
 
             {/* History + Chat */}
@@ -57,11 +71,11 @@ export default function RightComponent({ theme }) {
                     <div
                         className="flex items-center justify-center gap-2 py-1"
                         style={{
-                            background: "var(--button_update_back)",
+                            background: "var(--button_disabled)",
                         }}
                     >
-                        <MdHistory style={{ color: "var(--button_update_text)" }} className="text-xs" />
-                        <Text className="uppercase text-xs" style={{ color: "var(--button_update_text)" }}>History</Text>
+                        <MdHistory style={{ color: "var(--top_nav_text)" }} className="text-xs" />
+                        <Text className="uppercase text-xs" style={{ color: "var(--top_nav_text)" }}>History</Text>
                     </div>
 
                     {/* Scrollable Content */}
@@ -87,11 +101,11 @@ export default function RightComponent({ theme }) {
                     <div
                         className="flex items-center justify-center gap-2 py-1"
                         style={{
-                            background: "var(--button_update_back)",
+                            background: "var(--button_disabled)",
                         }}
                     >
-                        <IoChatbubble style={{ color: "var(--button_update_text)" }} className="text-xs" />
-                        <Text className="uppercase text-xs" style={{ color: "var(--button_update_text)" }}>Chat</Text>
+                        <IoChatbubble style={{ color: "var(--top_nav_text)" }} className="text-xs" />
+                        <Text className="uppercase text-xs" style={{ color: "var(--top_nav_text)" }}>Chat</Text>
                     </div>
 
                     {/* Chat Messages Header */}
@@ -101,7 +115,7 @@ export default function RightComponent({ theme }) {
                             borderColor: "var(--top_nav_border)",
                         }}
                     >
-                        <Text className="font-semibold text-center text-xs" style={{ color: "var(--text_main_highlight)" }}>Global Message</Text>
+                        <Text className="font-semibold text-center text-xs" style={{ color: "var(--top_nav_text)" }}>Global Message</Text>
                     </div>
 
                     {/* Scrollable Messages */}
@@ -130,7 +144,7 @@ export default function RightComponent({ theme }) {
                             placeholder="Enter your message here"
                             className="flex-1 px-1 py-1 text-xs outline-none"
                             style={{
-                                background: "var(--main_field_inner)",
+                                background: "var(--input_background)",
                                 color: "var(--text_main)",
                             }}
                         />

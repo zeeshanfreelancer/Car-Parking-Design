@@ -19,7 +19,7 @@ export default function LeftComponent() {
 
     return (
         <div
-            className="px-1 py-1 rounded-lg shadow-md"
+            className="px-1 py-1 rounded-lg shadow-md h-[95%]"
             style={{
                 background: "var(--main_field_back)",
                 color: "var(--text_main)",
@@ -30,13 +30,13 @@ export default function LeftComponent() {
                 <img
                     src="/assets/car.PNG"
                     alt="Car"
-                    className="w-70 h-40 mx-auto"
+                    className="w-[60%] h-[50%] mx-auto"
                 />
             </div>
 
             {/* Announcements */}
             <div
-                className="text-center mt-2 overflow-y-scroll h-20"
+                className="text-center mt-2 overflow-y-scroll h-[15%]"
                 style={{
                     background: "var(--button_note_back)",
                     color: "var(--button_note_text)",
@@ -58,14 +58,21 @@ export default function LeftComponent() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
                     laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
                     perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
-                    <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor perspiciatis unde eum...
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
+                    laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
+                    perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
+                    laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
+                    perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
+                    laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
+                    perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
                 </Text>
             </div>
 
             {/* Vehicle Details */}
             <div
-                className="max-w-md mx-auto shadow-lg"
+                className="drop-shadow-lg"
                 style={{
                     background: "var(--main_field_inner, transparent)",
                     color: "var(--table_head_text)",
