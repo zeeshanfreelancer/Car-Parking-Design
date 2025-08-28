@@ -35,7 +35,7 @@ export default function CenterComponent({ theme }) {
 
     return (
         <div
-            className="rounded-lg shadow-lg w-full mx-auto h-[100%]"
+            className="rounded-lg shadow-lg w-full mx-auto h-[80vh]"
             style={{
                 background: "var(--main_field_back)",
                 color: "var(--text_main)",

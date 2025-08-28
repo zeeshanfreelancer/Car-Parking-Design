@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import Text from "../Reusable/Text";
 import { MdHistory } from "react-icons/md";
 import { IoChatbubble } from "react-icons/io5";
-
 export default function RightComponent({ theme }) {
     const [selectedCarId, setSelectedCarId] = useState("Q1");
-
     const cars = [
         { id: "Q1", model: "2012 Grand Cherokee", color: "Gray", miles: "143,253" },
         { id: "Q2", model: "2014 Outback", color: "Gray", miles: "140,141" },
@@ -19,10 +17,9 @@ export default function RightComponent({ theme }) {
         { id: "Q10", model: "2017 Grand Cherokee", color: "Black", miles: "129,331" },
         { id: "Q11", model: "2018 F-150", color: "White", miles: "148,193" },
     ];
-
     return (
         <div
-            className="flex flex-col rounded-2xl"
+            className="flex flex-col rounded-2xl h-[80vh]"
             style={{
                 background: "var(--main_field_back)",
                 color: "var(--text_main)",
@@ -56,7 +53,6 @@ export default function RightComponent({ theme }) {
                     );
                 })}
             </div>
-
             {/* History + Chat */}
             <div
                 className="grid grid-cols-2 divide-x h-49 rounded-b-2xl"
@@ -77,7 +73,6 @@ export default function RightComponent({ theme }) {
                         <MdHistory style={{ color: "var(--top_nav_text)" }} className="text-xs" />
                         <Text className="uppercase text-xs" style={{ color: "var(--top_nav_text)" }}>History</Text>
                     </div>
-
                     {/* Scrollable Content */}
                     <div className="flex-1 overflow-y-scroll px-2">
                         <Text className="text-xs" style={{ color: "var(--text_main)" }}>
@@ -94,7 +89,6 @@ export default function RightComponent({ theme }) {
                         </Text>
                     </div>
                 </div>
-
                 {/* Chat */}
                 <div className="flex flex-col h-[50%]">
                     {/* Chat Header */}
@@ -107,7 +101,6 @@ export default function RightComponent({ theme }) {
                         <IoChatbubble style={{ color: "var(--top_nav_text)" }} className="text-xs" />
                         <Text className="uppercase text-xs" style={{ color: "var(--top_nav_text)" }}>Chat</Text>
                     </div>
-
                     {/* Chat Messages Header */}
                     <div
                         className="text-center border-b py-1"
@@ -117,7 +110,6 @@ export default function RightComponent({ theme }) {
                     >
                         <Text className="font-semibold text-center text-xs" style={{ color: "var(--top_nav_text)" }}>Global Message</Text>
                     </div>
-
                     {/* Scrollable Messages */}
                     <div className="flex-1 overflow-y-auto px-2">
                         <Text className="text-xs" style={{ color: "var(--text_main)" }}>
@@ -131,7 +123,6 @@ export default function RightComponent({ theme }) {
                             Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
                         </Text>
                     </div>
-
                     {/* Input Box (always bottom) */}
                     <div
                         className="flex border-t"

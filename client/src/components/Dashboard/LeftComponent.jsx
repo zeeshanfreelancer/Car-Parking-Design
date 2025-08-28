@@ -19,24 +19,24 @@ export default function LeftComponent() {
 
     return (
         <div
-            className="px-1 py-1 rounded-lg shadow-md h-[100%]"
+            className="px-1 py-1 rounded-lg shadow-md h-[80vh]"
             style={{
                 background: "var(--main_field_back)",
                 color: "var(--text_main)",
             }}
         >
             {/* Image */}
-            <div>
+            <div className="w-[100%] h-[50%]">
                 <img
                     src="/assets/car.PNG"
                     alt="Car"
-                    className="w-[60%] h-[50%] mx-auto"
+                    className="mx-auto"
                 />
             </div>
 
             {/* Announcements */}
             <div
-                className="text-center mt-2 overflow-y-scroll h-[15%]"
+                className="text-center overflow-y-scroll h-[15%]"
                 style={{
                     background: "var(--button_note_back)",
                     color: "var(--button_note_text)",
@@ -72,7 +72,7 @@ export default function LeftComponent() {
 
             {/* Vehicle Details */}
             <div
-                className="drop-shadow-lg h-[43%]"
+                className="drop-shadow-lg h-[35%]"
                 style={{
                     background: "var(--main_field_inner, transparent)",
                     color: "var(--table_head_text)",

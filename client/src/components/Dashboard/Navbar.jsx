@@ -16,7 +16,7 @@ export default function Navbar({ theme, onThemeChange }) {
     };
 
     return (
-        <div className="w-full px-14 pt-1">
+        <div className="w-full px-14">
             <header
                 className="flex flex-wrap items-center justify-between rounded-lg"
                 style={{
