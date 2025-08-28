@@ -184,7 +184,7 @@ export default function CenterComponent({ theme }) {
                     }}
                     aria-label="Expand Price Grid"
                 >
-                    <RiExpandUpDownFill />
+                    <RiExpandUpDownFill style={{color:"var(--top_nav_text)"}} />
                 </button>
             </div>
 
