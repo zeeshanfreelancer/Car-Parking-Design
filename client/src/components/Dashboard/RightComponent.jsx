@@ -16,6 +16,9 @@ export default function RightComponent({ theme }) {
         { id: "Q9", model: "2018 Explorer", color: "Silver", miles: "130,614" },
         { id: "Q10", model: "2017 Grand Cherokee", color: "Black", miles: "129,331" },
         { id: "Q11", model: "2018 F-150", color: "White", miles: "148,193" },
+        { id: "Q11", model: "2018 F-150", color: "White", miles: "148,193" },
+        { id: "Q11", model: "2018 F-150", color: "White", miles: "148,193" },
+        { id: "Q11", model: "2018 F-150", color: "White", miles: "148,193" },
     ];
     return (
         <div
@@ -26,7 +29,7 @@ export default function RightComponent({ theme }) {
             }}
         >
             {/* Cars List */}
-            <div className="overflow-y-auto h-70 rounded-t-2xl">
+            <div className="overflow-y-auto h-[60%] rounded-t-2xl">
                 {cars.map((car, index) => {
                     const isSelected = selectedCarId === car.id;
                     return (
@@ -55,17 +58,17 @@ export default function RightComponent({ theme }) {
             </div>
             {/* History + Chat */}
             <div
-                className="grid grid-cols-2 divide-x h-49 rounded-b-2xl"
+                className="grid grid-cols-2 divide-x h-[40%] rounded-b-2xl"
                 style={{
                     background: "var(--main_field_back)",
                     borderColor: "var(--top_nav_border)",
                 }}
             >
                 {/* History */}
-                <div className="flex flex-col h-[50%]">
+                <div className="flex flex-col h-[50%] ">
                     {/* History Header */}
                     <div
-                        className="flex items-center justify-center gap-2 py-1"
+                        className="flex items-center justify-center gap-2 py-1 h-[10%]"
                         style={{
                             background: "var(--button_disabled)",
                         }}
@@ -74,7 +77,7 @@ export default function RightComponent({ theme }) {
                         <Text className="uppercase text-xs" style={{ color: "var(--top_nav_text)" }}>History</Text>
                     </div>
                     {/* Scrollable Content */}
-                    <div className="flex-1 overflow-y-scroll px-2">
+                    <div className="overflow-y-scroll px-2 h-[100%]">
                         <Text className="text-xs" style={{ color: "var(--text_main)" }}>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Ut, voluptatum? Excepturi temporibus eveniet, minima commodi id neque?
@@ -93,7 +96,7 @@ export default function RightComponent({ theme }) {
                 <div className="flex flex-col h-[50%]">
                     {/* Chat Header */}
                     <div
-                        className="flex items-center justify-center gap-2 py-1"
+                        className="flex items-center justify-center gap-2 py-1 h-[10%]"
                         style={{
                             background: "var(--button_disabled)",
                         }}
@@ -103,7 +106,7 @@ export default function RightComponent({ theme }) {
                     </div>
                     {/* Chat Messages Header */}
                     <div
-                        className="text-center border-b py-1"
+                        className="text-center border-b py-1 h-[10%]"
                         style={{
                             borderColor: "var(--top_nav_border)",
                         }}
@@ -111,7 +114,7 @@ export default function RightComponent({ theme }) {
                         <Text className="font-semibold text-center text-xs" style={{ color: "var(--top_nav_text)" }}>Global Message</Text>
                     </div>
                     {/* Scrollable Messages */}
-                    <div className="flex-1 overflow-y-auto px-2">
+                    <div className="flex-1 overflow-y-auto px-2 h-[30%]">
                         <Text className="text-xs" style={{ color: "var(--text_main)" }}>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Facilis a reprehenderit, dolores quibusdam veniam possimus officiis.
@@ -125,7 +128,7 @@ export default function RightComponent({ theme }) {
                     </div>
                     {/* Input Box (always bottom) */}
                     <div
-                        className="flex border-t"
+                        className="flex border-t h-[10%]"
                         style={{
                             borderColor: "var(--top_nav_border)",
                         }}

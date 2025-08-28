@@ -42,7 +42,7 @@ export default function CenterComponent({ theme }) {
             }}
         >
             {/* Lot Header */}
-            <div className="grid grid-cols-4 gap-1 text-center items-stretch">
+            <div className="grid grid-cols-4 gap-1 text-center h-[8%]">
                 <Text
                     className="rounded-l-lg text-sm flex items-center justify-center"
                     style={{
@@ -86,32 +86,32 @@ export default function CenterComponent({ theme }) {
                 </Text>
             </div>
 
+            <div className="h-[20%] px-4 flex flex-col gap-1 py-1">
+                {/* Car Details */}
+                <div className="flex flex-col gap-1 text-center">
+                    <Text variant="h5" className="font-bold" style={{ color: "var(--text_main)" }}>
+                        {carInfo.model}
+                    </Text>
+                    <Text className="text-xs" style={{ color: "var(--text_main)" }}>
+                        {carInfo.vin}
+                    </Text>
+                </div>
 
-            {/* Car Details */}
-            <div className="items-center justify-center text-center">
-                <Text variant="h5" className="font-bold" style={{ color: "var(--text_main)" }}>
-                    {carInfo.model}
-                </Text>
-                <Text className="text-xs" style={{ color: "var(--text_main)" }}>
-                    {carInfo.vin}
-                </Text>
+                {/* Summary */}
+                <div className="grid grid-cols-4 gap-1 text-center">
+                    {summary.map((item, i) => (
+                        <div key={i} style={{ border: "var(--button_border)" }}>
+                            <Text className="text-xs" style={{ color: "var(--text_main)" }}>{item.label}</Text>
+                            {item.value && <Text className="text-xs font-bold" style={{ color: "var(--top_nav_text)" }}>{item.value}</Text>}
+                        </div>
+                    ))}
+                </div>
             </div>
-
-            {/* Summary */}
-            <div className="grid grid-cols-4 gap-1 text-center p-2">
-                {summary.map((item, i) => (
-                    <div key={i} style={{ border: "var(--button_border)" }}>
-                        <Text className="text-xs" style={{ color: "var(--text_main)" }}>{item.label}</Text>
-                        {item.value && <Text className="text-xs font-bold" style={{ color: "var(--top_nav_text)" }}>{item.value}</Text>}
-                    </div>
-                ))}
-            </div>
-
             {/* Colored bars as buttons */}
-            <div className="grid grid-cols-4 gap-2 px-2 py-2 mb-2">
+            <div className="grid grid-cols-4 gap-2 px-4 py-1 h-[8%]">
                 <button
                     style={{
-                        height: "2.25rem",
+                        // height: "2.25rem",
                         border: "2px solid var(--good_color)",
                         // background: "var(--bar_green_back)",
                         width: "100%",
@@ -121,7 +121,7 @@ export default function CenterComponent({ theme }) {
                 />
                 <button
                     style={{
-                        height: "2.25rem",
+                        // height: "2.25rem",
                         // border: "2px solid var(--bar_red)",
                         background: "var(--bad_color)",
                         width: "100%",
@@ -131,7 +131,7 @@ export default function CenterComponent({ theme }) {
                 />
                 <button
                     style={{
-                        height: "2.25rem",
+                        // height: "2.25rem",
                         border: "2px solid var(--conditional_color)",
                         background: "var(--black_color)",
                         width: "100%",
@@ -141,7 +141,7 @@ export default function CenterComponent({ theme }) {
                 />
                 <button
                     style={{
-                        height: "2.25rem",
+                        // height: "2.25rem",
                         // border: "2px solid var(--bar_blue)",
                         background: "var(--dark_blue)",
                         width: "100%",
@@ -152,12 +152,12 @@ export default function CenterComponent({ theme }) {
             </div>
 
             {/* Price Grid with Expand Icon */}
-            <div className="flex items-center px-2">
+            <div className="flex px-2 py-1 h-[15%]">
                 <div className="grid grid-cols-6 text-center flex-1">
                     {priceSteps.map((price, i) => (
                         <div
                             key={i}
-                            className="px-2 py-0.5 border text-xs"
+                            className="px-1 border text-xs"
                             style={{
                                 borderColor: "var(--button_note_border)",
                                 background: price === selectedPrice
@@ -184,7 +184,7 @@ export default function CenterComponent({ theme }) {
                     }}
                     aria-label="Expand Price Grid"
                 >
-                    <RiExpandUpDownFill style={{color:"var(--top_nav_text)"}} />
+                    <RiExpandUpDownFill style={{ color: "var(--top_nav_text)" }} />
                 </button>
             </div>
 
@@ -192,11 +192,11 @@ export default function CenterComponent({ theme }) {
             <IncrementModel open={open} onClose={() => setOpen(false)} />
 
             {/* Increments Grid */}
-            <div className="grid grid-cols-6 mt-1 px-3">
+            <div className="grid grid-cols-6 px-2 h-[5%] ">
                 {bidIncrements.map((inc, i) => (
                     <button
                         key={i}
-                        className="text-xs bg-transparent py-1 w-full"
+                        className="text-xs bg-transparent"
                         style={{
                             border: inc === "$100" ? "var(--button_note_border)" : "none",
                             color: "var(--top_nav_text)",
@@ -206,116 +206,119 @@ export default function CenterComponent({ theme }) {
                     </button>
                 ))}
             </div>
-
-            {/* Current Price + Lot */}
-            <div className="grid grid-cols-2 gap-1 items-center text-center py-1 px-2 rounded mt-1">
-                <Text
-                    variant="p"
-                    className="font-bold p-1"
-                    style={{
-                        color: "var(--button_text)",
-                        background: "var(--button_back)",
-                    }}
-                >
-                    {selectedPrice}
-                </Text>
-                <Text
-                    variant="p"
-                    className="p-1 font-bold flex justify-center items-center gap-2"
-                    style={{
-                        color: "var(--button_text)",
-                        background: "var(--button_back)",
-                    }}
-                >
-                    <span className="text-xl"><FaAngleDoubleLeft /></span>
-                    {carInfo.lot}
-                    <span className="text-xl"><FaAngleDoubleRight /></span>
-                </Text>
-            </div>
-
-            {/* Start Vehicle + Controls */}
-            <div className="grid grid-cols-2 gap-1 px-2 py-1">
-                <div
-                    className="text-center p-4 font-bold text-sm"
-                    style={{
-                        background: "var(--button2_back)",
-                        color: "var(--button2_text)",
-                    }}
-                >
-                    Start Vehicle
-                    <span className="block font-extrabold">{selectedPrice}</span>
-                </div>
-                <div className="grid grid-cols-3 gap-1">
-                    <div className="col-span-3 grid grid-cols-2 gap-1">
-                        <button
-                            className="py-2 w-full text-xs cursor-pointer"
-                            style={{
-                                color: "var(--top_nav_text)",
-                                background: "var(--button_disabled)",
-                            }}
-                        >
-                            Reset
-                        </button>
-                        <button
-                            className="py-2 w-full text-xs cursor-pointer"
-                            style={{
-                                color: "var(--top_nav_text)",
-                                background: "var(--button_disabled)",
-                            }}
-                        >
-                            Undo
-                        </button>
-                    </div>
-                    <button
-                        className="py-1 text-xs col-span-2 cursor-pointer"
+            <div className="h-[40%] flex flex-col gap-2 mt-1"
+            >
+                {/* Current Price + Lot */}
+                <div className="grid grid-cols-2 gap-1 text-center px-2 rounded h-[20%]">
+                    <Text
+                        variant="p"
+                        className="font-bold py-1 flex justify-center items-center"
                         style={{
-                        color: "var(--button_text)",
-                        background: "var(--button_back)",
-                    }}
-                    >
-                        Online <span className="block">Override</span>
-                    </button>
-                    <button
-                        className="py-1 text-xs font-bold cursor-pointer"
-                        style={{
-                            background: "var(--bad_color)",
-                            color: "var(--button3_text)",
+                            color: "var(--button_text)",
+                            background: "var(--button_back)",
                         }}
                     >
-                        X
+                        {selectedPrice}
+                    </Text>
+                    <Text
+                        variant="p"
+                        className="py-1 font-bold flex justify-center items-center gap-2"
+                        style={{
+                            color: "var(--button_text)",
+                            background: "var(--button_back)",
+                        }}
+                    >
+                        <span className="text-xl"><FaAngleDoubleLeft /></span>
+                        {carInfo.lot}
+                        <span className="text-xl"><FaAngleDoubleRight /></span>
+                    </Text>
+                </div>
+
+                {/* Start Vehicle + Controls */}
+                <div className="grid grid-cols-2 gap-1 px-2 h-[50%]">
+                    <div
+                        className="font-bold text-sm flex flex-col justify-center items-center"
+                        style={{
+                            background: "var(--button2_back)",
+                            color: "var(--button2_text)",
+                        }}
+                    >
+                        <span>Start Vehicle</span>
+                        <span className="font-extrabold">{selectedPrice}</span>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-1">
+                        <div className="col-span-3 grid grid-cols-2 gap-1">
+                            <button
+                                className="py-2 w-full text-xs cursor-pointer"
+                                style={{
+                                    color: "var(--top_nav_text)",
+                                    background: "var(--button_disabled)",
+                                }}
+                            >
+                                Reset
+                            </button>
+                            <button
+                                className="py-2 w-full text-xs cursor-pointer"
+                                style={{
+                                    color: "var(--top_nav_text)",
+                                    background: "var(--button_disabled)",
+                                }}
+                            >
+                                Undo
+                            </button>
+                        </div>
+                        <button
+                            className="py-1 text-xs col-span-2 cursor-pointer"
+                            style={{
+                                color: "var(--button_text)",
+                                background: "var(--button_back)",
+                            }}
+                        >
+                            Online <span className="block">Override</span>
+                        </button>
+                        <button
+                            className="py-1 text-xs font-bold cursor-pointer"
+                            style={{
+                                background: "var(--bad_color)",
+                                color: "var(--button3_text)",
+                            }}
+                        >
+                            X
+                        </button>
+                    </div>
+                </div>
+
+                {/* Final Actions */}
+                <div className="grid grid-cols-3 gap-1 text-center px-2 h-[30%]">
+                    <button
+                        className="text-xs"
+                        style={{
+                            color: "var(--button_text)",
+                            background: "var(--button_back)",
+                        }}
+                    >
+                        NO <span className="block">SALE</span>
+                    </button>
+                    <button
+                        className="text-xs "
+                        style={{
+                            color: "var(--button_text)",
+                            background: "var(--button_back)",
+                        }}
+                    >
+                        OFFER
+                    </button>
+                    <button
+                        className="text-xs "
+                        style={{
+                            color: "var(--button_text)",
+                            background: "var(--button_back)",
+                        }}
+                    >
+                        SOLD
                     </button>
                 </div>
-            </div>
-
-            {/* Final Actions */}
-            <div className="grid grid-cols-3 gap-1 text-center px-2 py-1">
-                <button
-                    className="py-2 text-xs"
-                    style={{
-                        color: "var(--button_text)",
-                        background: "var(--button_back)",
-                    }}
-                >
-                    NO <span className="block">SALE</span>
-                </button>
-                <button
-                    className="text-xs"
-                    style={{
-                        color: "var(--button_text)",
-                        background: "var(--button_back)",
-                    }}
-                >
-                    OFFER
-                </button>
-                <button
-                    className="text-xs"
-                    style={{
-                        color: "var(--button_text)",
-                        background: "var(--button_back)",
-                    }}
-                >
-                    SOLD
-                </button>
             </div>
         </div>
     );
