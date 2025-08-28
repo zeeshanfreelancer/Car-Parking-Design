@@ -72,7 +72,7 @@ export default function AuctionLayout() {
               className="px-4"
               style={{
                 background: "var(--button_secondary_back)",
-                color: "var(--button_secondary_text)",
+                color: "var(--main_field_text)",
                 border: "var(--button_secondary_border)",
               }}
             >
@@ -82,7 +82,7 @@ export default function AuctionLayout() {
               className="px-4 py-2"
               style={{
                 background: "var(--button_secondary_back)",
-                color: "var(--button_secondary_text)",
+                color: "var(--main_field_textt)",
                 border: "var(--button_secondary_border)",
               }}
             >
@@ -92,7 +92,7 @@ export default function AuctionLayout() {
               className="px-4 py-2"
               style={{
                 background: "var(--button_secondary_back)",
-                color: "var(--button_secondary_text)",
+                color: "var(--main_field_text)",
                 border: "var(--button_secondary_border)",
               }}
             >
@@ -102,7 +102,7 @@ export default function AuctionLayout() {
               className="px-4 py-2"
               style={{
                 background: "var(--button_secondary_back)",
-                color: "var(--button_secondary_text)",
+                color: "var(--main_field_text)",
                 border: "var(--button_secondary_border)",
               }}
             >
@@ -121,7 +121,7 @@ export default function AuctionLayout() {
           >
             <Text
               className="text-xs p-2"
-              style={{ color: "var(--text_secondary)" }}
+              style={{ color: "var(--main_field_text)" }}
             >
               REP CHAT
             </Text>
@@ -196,16 +196,17 @@ export default function AuctionLayout() {
           {/* Right Column (Announcements at bottom) */}
           <div className="flex flex-col w-2/3">
             <div
-              className="flex-2 rounded"
-              style={{
-                background: "var(--main_field_back)",
-                color: "var(--main_field_text)",
-              }}
-            ></div>
+                className="flex-2 rounded"
+                style={{
+                  background: "var(--main_field_back)",
+                  color: "var(--main_field_text)",
+                  boxShadow: "var(--main_field_shadow)",
+                }}
+              ></div>
             <div
               className="flex-1 h-28 rounded p-2 text-xs font-bold mt-1"
               style={{
-                background: "var(--button_note_back)",
+                background: "var(--button_disabled)",
                 color: "var(--button_note_text)",
                 border: "1px solid var(--button_note_border)",
               }}
