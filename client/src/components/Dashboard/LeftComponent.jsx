@@ -19,7 +19,7 @@ export default function LeftComponent() {
 
     return (
         <div
-            className="px-1 py-1 rounded-lg shadow-md h-[95%]"
+            className="px-1 py-1 rounded-lg shadow-md h-[100%]"
             style={{
                 background: "var(--main_field_back)",
                 color: "var(--text_main)",
@@ -72,7 +72,7 @@ export default function LeftComponent() {
 
             {/* Vehicle Details */}
             <div
-                className="drop-shadow-lg"
+                className="drop-shadow-lg h-[43%]"
                 style={{
                     background: "var(--main_field_inner, transparent)",
                     color: "var(--table_head_text)",
