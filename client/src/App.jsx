@@ -4,10 +4,12 @@ import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
 import Header from './components/Header';
 import AuctionLayout from './components/Dashboard/AuctionLayout';
+import AuctionLayoutTwo from './components/Dashboard/AuctionLayoutTwo';
+
 
 function AppContent({ theme, handleThemeChange }) {
   const location = useLocation();
-  const hideHeader = location.pathname === "/auction";
+  const hideHeader = location.pathname === "/auction" || location.pathname === "/auction2";
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
@@ -16,6 +18,7 @@ function AppContent({ theme, handleThemeChange }) {
         <Routes>
           <Route path="/" element={<Dashboard theme={theme} handleThemeChange={handleThemeChange} />} />
           <Route path="/auction" element={<AuctionLayout theme={theme} handleThemeChange={handleThemeChange} />} />
+          <Route path="/auction2" element={<AuctionLayoutTwo theme={theme} handleThemeChange={handleThemeChange} />} />
         </Routes>
       </div>
     </div>
