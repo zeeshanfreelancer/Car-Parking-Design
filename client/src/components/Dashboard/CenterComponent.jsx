@@ -43,72 +43,73 @@ export default function CenterComponent({ theme }) {
         >
             {/* Lot Header */}
             <div className="grid grid-cols-4 gap-1 text-center h-[8%]">
-                <Text
-                    className="rounded-l-lg text-sm flex items-center justify-center"
-                    style={{
-                        background: "var(--menu_back)",
-                        color: "var(--menu_text)",
-                    }}
-                >
-                    {carInfo.lot}
-                </Text>
-
-                <Text
-                    className="text-sm flex items-center justify-center"
-                    style={{
-                        background: "var(--menu_back)",
-                        color: "var(--menu_text)",
-                    }}
-                >
-                    {carInfo.grade}
-                </Text>
-
                 <div
-                    className="flex flex-col items-center justify-center"
+                    className="flex justify-center rounded-l-lg"
                     style={{
                         background: "var(--menu_back)",
                         color: "var(--menu_text)",
                     }}
                 >
-                    <Text variant="small" style={{ color: "var(----menu_text)" }}>Mileage</Text>
-                    <span className="text-sm" style={{ color: "var(----menu_text)" }}>{carInfo.mileage}</span>
+                    <Text className="sm:text-xs lg:text-sm xl:text-lg 2xl:text-xl">{carInfo.lot}</Text>
                 </div>
 
-                <Text
-                    variant="small"
-                    className="rounded-r-lg flex items-center justify-center"
+                <div
+                    className="flex justify-center"
                     style={{
                         background: "var(--menu_back)",
                         color: "var(--menu_text)",
                     }}
                 >
-                    {carInfo.status}
-                </Text>
+                    <Text className="sm:text-xs lg:text-lg xl:text-lg 2xl:text-xl">{carInfo.grade}</Text>
+                </div>
+
+                <div
+                    className="flex flex-col h-full"
+                    style={{
+                        background: "var(--menu_back)",
+                        color: "var(--menu_text)",
+                    }}
+                >
+                    <Text className="text-sm 2xl:text-lg">Mileage</Text>
+                    <span className="sm:text-xs lg:text-sm xl:text-sm 2xl:text-xl">{carInfo.mileage}</span>
+                </div>
+
+                <div
+                    className="rounded-r-lg flex justify-center h-full"
+                    style={{
+                        background: "var(--menu_back)",
+                        color: "var(--menu_text)",
+                    }}
+                >
+                    <Text className="sm:text-sm lg:text-lg xl:text-lg 2xl:text-xl">{carInfo.status}</Text>
+                </div>
             </div>
 
-            <div className="h-[20%] px-4 flex flex-col gap-1 py-1">
+
+
+            <div className="h-[22%] px-2 flex flex-col">
                 {/* Car Details */}
-                <div className="flex flex-col gap-1 text-center">
-                    <Text variant="h5" className="font-bold" style={{ color: "var(--text_main)" }}>
+                <div className="flex flex-col items-center h-[50%] py-1 2xl:pt-3">
+                    <Text className="font-bold text-lg lg:text-lg xl:text-lg 2xl:text-2xl" style={{ color: "var(--text_main)" }}>
                         {carInfo.model}
                     </Text>
-                    <Text className="text-xs" style={{ color: "var(--text_main)" }}>
+                    <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-xl" style={{ color: "var(--text_main)" }}>
                         {carInfo.vin}
                     </Text>
                 </div>
 
                 {/* Summary */}
-                <div className="grid grid-cols-4 gap-1 text-center">
+                <div className="flex justify-between gap-2 h-[50%] py-2">
                     {summary.map((item, i) => (
-                        <div key={i} style={{ border: "var(--button_border)" }}>
-                            <Text className="text-xs" style={{ color: "var(--text_main)" }}>{item.label}</Text>
-                            {item.value && <Text className="text-xs font-bold" style={{ color: "var(--top_nav_text)" }}>{item.value}</Text>}
+                        <div className="w-full flex flex-col items-center justify-center" key={i} style={{ border: "var(--button_border)" }}>
+                            <Text className="text-xs lg:text-sm xl:text-sm 2xl:text-xl" style={{ color: "var(--text_main)" }}>{item.label}</Text>
+                            {item.value && <Text className="text-xs lg:text-sm xl:text-sm 2xl:text-xl font-bold" style={{ color: "var(--top_nav_text)" }}>{item.value}</Text>}
                         </div>
                     ))}
                 </div>
             </div>
             {/* Colored bars as buttons */}
-            <div className="grid grid-cols-4 gap-2 px-4 py-1 h-[8%]">
+            <div className="grid grid-cols-4 gap-2 px-2 py-1 h-[8%]">
                 <button
                     style={{
                         // height: "2.25rem",
@@ -157,7 +158,7 @@ export default function CenterComponent({ theme }) {
                     {priceSteps.map((price, i) => (
                         <div
                             key={i}
-                            className="px-1 border text-xs"
+                            className="px-1 border text-xs lg:text-xs xl:text-sm 2xl:text-lg"
                             style={{
                                 borderColor: "var(--button_note_border)",
                                 background: price === selectedPrice
@@ -166,7 +167,6 @@ export default function CenterComponent({ theme }) {
                                 color: price === selectedPrice
                                     ? "var(--button_update_text)"
                                     : "var(--text_main)",
-                                fontWeight: price === selectedPrice ? "bold" : "normal",
                             }}
                         >
                             {price}
@@ -176,7 +176,7 @@ export default function CenterComponent({ theme }) {
 
                 {/* Expand Icon styled as a button */}
                 <button
-                    className="text-lg cursor-pointer"
+                    className="lg:text-sm xl:text-sm 2xl:text-3xl cursor-pointer"
                     onClick={() => setOpen(true)}
                     style={{
                         color: "var(--text_main_highlight)",
@@ -196,7 +196,7 @@ export default function CenterComponent({ theme }) {
                 {bidIncrements.map((inc, i) => (
                     <button
                         key={i}
-                        className="text-xs bg-transparent"
+                        className="text-xs lg:text-xs xl:text-sm 2xl:text-lg bg-transparent"
                         style={{
                             border: inc === "$100" ? "var(--button_note_border)" : "none",
                             color: "var(--top_nav_text)",
@@ -211,8 +211,7 @@ export default function CenterComponent({ theme }) {
                 {/* Current Price + Lot */}
                 <div className="grid grid-cols-2 gap-1 text-center px-2 rounded h-[20%]">
                     <Text
-                        variant="p"
-                        className="font-bold py-1 flex justify-center items-center"
+                        className="font-semibold py-1 flex justify-center items-center text-xs lg:text-lg xl:text-xl 2xl:text-2xl"
                         style={{
                             color: "var(--button_text)",
                             background: "var(--button_back)",
@@ -221,36 +220,37 @@ export default function CenterComponent({ theme }) {
                         {selectedPrice}
                     </Text>
                     <Text
-                        variant="p"
-                        className="py-1 font-bold flex justify-center items-center gap-2"
+                        className="py-1 font-bold flex justify-center items-center gap-2 text-xs lg:text-lg xl:text-xl 2xl:text-2xl"
                         style={{
                             color: "var(--button_text)",
                             background: "var(--button_back)",
                         }}
                     >
-                        <span className="text-xl"><FaAngleDoubleLeft /></span>
+                        <span className="text-xs lg:text-xl xl:text-2xl 2xl:text-3xl"><FaAngleDoubleLeft /></span>
                         {carInfo.lot}
-                        <span className="text-xl"><FaAngleDoubleRight /></span>
+                        <span className="text-xs lg:text-xl xl:text-2xl 2xl:text-3xl"><FaAngleDoubleRight /></span>
                     </Text>
                 </div>
 
                 {/* Start Vehicle + Controls */}
                 <div className="grid grid-cols-2 gap-1 px-2 h-[50%]">
                     <div
-                        className="font-bold text-sm flex flex-col justify-center items-center"
+                        className="flex flex-col justify-center items-center"
                         style={{
                             background: "var(--button2_back)",
                             color: "var(--button2_text)",
                         }}
                     >
-                        <span>Start Vehicle</span>
-                        <span className="font-extrabold">{selectedPrice}</span>
+                        <Text className="text-lg xl:text-lg 2xl:text-3xl text-center font-bold">
+                            Start Vehicle
+                        <span className="font-bold 2xl:font-extrabold block">{selectedPrice}</span>
+                        </Text>
                     </div>
 
                     <div className="grid grid-cols-3 gap-1">
                         <div className="col-span-3 grid grid-cols-2 gap-1">
                             <button
-                                className="py-2 w-full text-xs cursor-pointer"
+                                className="py-2 w-full text-sm lg:text-sm xl:text-sm 2xl:text-2xl cursor-pointer"
                                 style={{
                                     color: "var(--top_nav_text)",
                                     background: "var(--button_disabled)",
@@ -259,7 +259,7 @@ export default function CenterComponent({ theme }) {
                                 Reset
                             </button>
                             <button
-                                className="py-2 w-full text-xs cursor-pointer"
+                                className="py-2 w-full text-sm lg:text-sm xl:text-sm 2xl:text-2xl cursor-pointer"
                                 style={{
                                     color: "var(--top_nav_text)",
                                     background: "var(--button_disabled)",
@@ -269,7 +269,7 @@ export default function CenterComponent({ theme }) {
                             </button>
                         </div>
                         <button
-                            className="py-1 text-xs col-span-2 cursor-pointer"
+                            className="py-1 text-sm lg:text-sm xl:text-sm 2xl:text-2xl col-span-2 cursor-pointer"
                             style={{
                                 color: "var(--button_text)",
                                 background: "var(--button_back)",
@@ -278,7 +278,7 @@ export default function CenterComponent({ theme }) {
                             Online <span className="block">Override</span>
                         </button>
                         <button
-                            className="py-1 text-xs font-bold cursor-pointer"
+                            className="py-1 text-sm lg:text-sm xl:text-sm 2xl:text-2xl font-bold cursor-pointer"
                             style={{
                                 background: "var(--bad_color)",
                                 color: "var(--button3_text)",
@@ -292,7 +292,7 @@ export default function CenterComponent({ theme }) {
                 {/* Final Actions */}
                 <div className="grid grid-cols-3 gap-1 text-center px-2 h-[30%]">
                     <button
-                        className="text-xs"
+                        className="text-sm lg:text-sm xl:text-sm 2xl:text-2xl"
                         style={{
                             color: "var(--button_text)",
                             background: "var(--button_back)",
@@ -301,7 +301,7 @@ export default function CenterComponent({ theme }) {
                         NO <span className="block">SALE</span>
                     </button>
                     <button
-                        className="text-xs "
+                        className="text-sm lg:text-sm xl:text-sm 2xl:text-2xl"
                         style={{
                             color: "var(--button_text)",
                             background: "var(--button_back)",
@@ -310,7 +310,7 @@ export default function CenterComponent({ theme }) {
                         OFFER
                     </button>
                     <button
-                        className="text-xs "
+                        className="text-sm lg:text-sm xl:text-sm 2xl:text-2xl"
                         style={{
                             color: "var(--button_text)",
                             background: "var(--button_back)",

@@ -17,11 +17,10 @@ export default function Header({ theme }) {
             {/* Left side */}
             <div className="flex items-center gap-6">
                 <div className="flex items-center gap-1">
-                    <FaCarAlt className="text-2xl" style={{ color: "var(--icon_main, var(--top_nav_text))" }} />
+                    <FaCarAlt className="text-2xl xl:text-3xl 2xl:text-4xl" style={{ color: "var(--icon_main, var(--top_nav_text))" }} />
                     <div className="flex flex-col leading-tight">
                         <Text
-                            variant="h5"
-                            className="font-semibold"
+                            className="font-semibold text-lg xl:text-xl 2xl:text-2xl"
                         // style={{ color: "var(--top_nav_text)" }}
                         >
                             AUCTIONS
@@ -29,8 +28,7 @@ export default function Header({ theme }) {
                     </div>
                 </div>
                 <Text
-                    variant="p"
-                    className="text-sm"
+                    className="text-sm lg:text-sm xl:text-lg 2xl:text-2xl"
                     style={{ color: "var(--top_nav_text)" }}
                 >
                     Statewide Auto Auction
@@ -47,7 +45,7 @@ export default function Header({ theme }) {
                         color: "var(--button_secondary_text)",
                     }}
                 >
-                    <FaSearch className="text-lg" />
+                    <FaSearch className="text-lg lg:text-lg xl:text-xl 2xl:text-3xl" />
                 </button>
 
                 {/* Add button */}
@@ -58,7 +56,7 @@ export default function Header({ theme }) {
                         color: "var(--button_secondary_text)",
                     }}
                 >
-                    <FaPlus className="text-lg" />
+                    <FaPlus className="text-lg lg:text-lg xl:text-xl 2xl:text-3xl" />
                 </button>
 
                 {/* Notification + User dropdown */}
@@ -70,24 +68,23 @@ export default function Header({ theme }) {
                     }}
                 >
                     <button className="p-2">
-                        <FaBell />
+                        <FaBell className="text-lg lg:text-lg xl:text-xl 2xl:text-3xl" />
                     </button>
 
                     {/* User dropdown */}
                     <div className="relative">
                         <button
                             onClick={() => setOpen(!open)}
-                            className="flex items-center gap-1 text-sm hover:opacity-80"
+                            className="flex items-center gap-1 text-sm"
                             style={{ color: "var(--top_nav_text)" }}
                         >
                             <Text
-                                variant="small"
-                                className="text-xs"
+                                className="text-xs lg:text-sm xl:text-sm 2xl:text-2xl"
                                 style={{ color: "var(--top_nav_text)" }}
                             >
                                 Tim Innocente
                             </Text>
-                            <FaAngleDown />
+                            <FaAngleDown className="text-xs lg:text-sm xl:text-sm 2xl:text-2xl" />
                         </button>
 
                         {open && (
@@ -98,7 +95,7 @@ export default function Header({ theme }) {
                                     color: "var(--text_main)",
                                 }}
                             >
-                                <ul className="text-sm">
+                                <ul className="text-xs lg:text-sm xl:text-sm 2xl:text-2xl">
                                     <li className="px-4 py-1 hover:opacity-80 cursor-pointer">
                                         Profile
                                     </li>

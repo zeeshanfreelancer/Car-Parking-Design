@@ -31,8 +31,7 @@ export default function Navbar({ theme, onThemeChange }) {
                     <div className="flex items-center gap-1">
                         {/* Lane Label */}
                         <Text
-                            variant="small"
-                            className="py-2 px-3 rounded-l font-semibold"
+                            className="py-2 px-3 rounded-l font-semibold text-sm lg:text-sm xl-text-lg 2xl:text-xl"
                             style={{
                                 background: "var(--main_field_back)",
                                 color: "var(--top_nav_text)",
@@ -41,13 +40,13 @@ export default function Navbar({ theme, onThemeChange }) {
                             LANE Q
                         </Text>
                         {/* Auction Info */}
-                        <Text className="text-sm" style={{ color: "var(--text_main)" }}>
+                        <Text className="text-sm lg:text-sm xl:text-sm 2xl:text-xl" style={{ color: "var(--text_main)" }}>
                             Statewide Auto Auction:{" "}
-                            <span className="font-bold">August 19, 2025</span>
+                            <span className="font-bold text-sm lg:text-sm xl:text-sm 2xl:text-xl">August 19, 2025</span>
                         </Text>
                         {/* Stack Icon */}
                         <button onClick={handleClick} className="p-1 cursor-pointer">
-                            <CgStack style={{ color: "var(--top_nav_text)" }} className="text-sm" />
+                            <CgStack style={{ color: "var(--top_nav_text)" }} className="text-sm lg:text-sm xl:text-sm 2xl:text-xl" />
                         </button>
                     </div>
                     {/* Auctioneer Input */}
@@ -55,7 +54,7 @@ export default function Navbar({ theme, onThemeChange }) {
                         <input
                             type="text"
                             placeholder="Auctioneer Name"
-                            className="px-3 py-0.5 text-xs focus:outline-none"
+                            className="px-3 py-0.5 text-xs lg:text-xs xl-text-sm 2xl:text-xl focus:outline-none"
                             style={{
                                 background: "var(--input_background)",
                                 // color: "var(--text_inverted)",
@@ -68,27 +67,27 @@ export default function Navbar({ theme, onThemeChange }) {
                 <div className="flex sm:mt-0 items-center gap-3">
                     {/* Simulcast Users */}
                     <div className="flex items-center gap-2">
-                        <Text className="font-semibold text-xs" style={{ color: "var(--text_nav_text)" }}>
-                            SIMULCAST <span className="block text-center">USERS</span>
+                        <Text className="font-semibold text-xs lg:text-xs xl:text-sm 2xl:text-xl" style={{ color: "var(--text_nav_text)" }}>
+                            SIMULCAST <span className="block text-center text-xs lg:text-xs xl:text-sm 2xl:text-xl">USERS</span>
                         </Text>
-                        <Text variant="h3" style={{ color: "var(--text_nav_text)" }}>
+                        <Text className="text-lg lg:text-lg xl:text-2xl 2xl:text-3xl" style={{ color: "var(--text_nav_text)" }}>
                             14
                         </Text>
                     </div>
                     {/* Settings Icon */}
-                    <button className="ps-5">
-                        <IoSettingsSharp style={{ color: "var(--top_nav_text)" }} className="text-xl" />
+                    <button className="ps-2">
+                        <IoSettingsSharp style={{ color: "var(--top_nav_text)" }} className="text-lg lg:text-xl xl:text-2xl 2xl:text-4xl" />
                     </button>
                     {/* Switch Lane */}
                     <div className="flex flex-col items-center ms-2 px-2"
                         style={{ background: "var(--main_field_back)" }}>
-                        <Text className="text-xs" style={{ color: "var(--text_nav_text)" }}>Switch Lane</Text>
+                        <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-lg" style={{ color: "var(--text_nav_text)" }}>Switch Lane</Text>
                         <div className="flex">
                             {lanes.map((lane) => (
                                 <button
                                     key={lane}
                                     onClick={() => setSelectedLane(lane)}
-                                    className={`px-0.5 text-xs transition`}
+                                    className={`px-0.5 text-xs lg:text-xs xl:text-sm 2xl:text-lg transition`}
                                     style={{
                                         border: selectedLane === lane
                                             ? "1px solid var(--tab_underline)"
@@ -112,7 +111,7 @@ export default function Navbar({ theme, onThemeChange }) {
                         <select
                             value={theme}
                             onChange={onThemeChange}
-                            className="text-xs px-2 py-2 outline-none border-none"
+                            className="text-xs lg:text-xs xl:text-sm 2xl:text-lg px-2 py-2 outline-none border-none"
                             style={{
                                 background: "var(--input_background)",
                                 color: "var(--top_nav_text)",
@@ -129,7 +128,7 @@ export default function Navbar({ theme, onThemeChange }) {
                     {/* Lane Countdown */}
                     <div className="flex gap-1 pe-1">
                         <Text
-                            className="px-2 text-xs font-bold"
+                            className="px-2 text-xs lg:text-xs xl:text-sm 2xl:text-lg font-bold"
                             style={{
                                 background: "var(--conditional_color)",
                                 color: "var(--text_inverted)",
@@ -140,7 +139,7 @@ export default function Navbar({ theme, onThemeChange }) {
                         </Text>
                         {/* Start Button */}
                         <Text
-                            className="px-3 text-xs font-bold"
+                            className="px-3 text-xs lg:text-xs xl:text-sm 2xl:text-lg font-bold"
                             style={{
                                 background: "var(--good_color)",
                                 color: "var(--text_inverted)",
