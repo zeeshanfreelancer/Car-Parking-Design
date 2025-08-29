@@ -26,7 +26,7 @@ export default function LeftComponent() {
             }}
         >
             {/* Image */}
-            <div className="mx-auto w-[90%] h-[45%]">
+            <div className="mx-auto w-[100%] h-[40%]">
                 <img
                     src="/assets/car.PNG"
                     alt="Car"
@@ -36,52 +36,59 @@ export default function LeftComponent() {
 
             {/* Announcements */}
             <div
-                className="text-center overflow-y-scroll h-[15%]"
+                className="text-center h-[20%] flex flex-col"
                 style={{
                     background: "var(--button_note_back)",
                     color: "var(--button_note_text)",
                     border: "1px solid var(--button_note_border)",
                 }}
             >
+                {/* Header */}
                 <div
-                    className="flex justify-center gap-2 sticky top-0 p-1"
+                    className="flex justify-center items-center gap-2 sticky top-0 py-1"
                     style={{
-                        background: "var(--main_field_hr)"
+                        background: "var(--main_field_hr)",
                     }}
                 >
-                    <TfiAnnouncement style={{ color: "var(--button_update_text)" }} />
-                    <Text className="text-xs" style={{ color: "var(--text_main_highlight)" }}>
+                    <TfiAnnouncement style={{ color: "var(--button_update_text)" }} className="text-xs lg:text-xs xl:text-sm 2xl:text-xl" />
+                    <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-lg font-semibold uppercase" style={{ color: "var(--text_main_highlight)" }}>
                         ANNOUNCEMENTS
                     </Text>
                 </div>
-                <Text className="text-xs text-left px-2" style={{ color: "var(--button_note_text)" }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
-                    laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
-                    perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
-                    laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
-                    perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
-                    laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
-                    perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
-                    laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
-                    perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
-                </Text>
+
+                {/* Body (scrollable) */}
+                <div className="overflow-y-auto text-left px-2">
+                    <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-lg" style={{ color: "var(--button_note_text)" }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
+                        laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
+                        perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
+                        <br />
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
+                        laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
+                        perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
+                        <br />
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
+                        laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
+                        perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
+                        <br />
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quibusdam, cum
+                        laboriosam voluptate, aut vitae facere veniam autem, quae quaerat quis
+                        perspiciatis! Natus, cumque officia. Temporibus inventore esse facere expedita.
+                    </Text>
+                </div>
             </div>
 
+
             {/* Vehicle Details */}
+
+
             <div
-                className="drop-shadow-lg h-[35%]"
+                className="drop-shadow-lg h-[40%]"
                 style={{
                     background: "var(--main_field_inner, transparent)",
                     color: "var(--table_head_text)",
-                    border: "1px solid var(--main_field_hr)",
                 }}
             >
-
-                <div 
-                    className="h-full">
                 {/* Header */}
                 <div
                     className="flex justify-center gap-2 items-center py-1"
@@ -89,9 +96,9 @@ export default function LeftComponent() {
                         background: "var(--main_field_hr)"
                     }}
                 >
-                    <IoMdInformationCircleOutline style={{ color: "var(--button_update_text)" }} />
+                    <IoMdInformationCircleOutline className="text-xs lg:text-xs xl:text-sm 2xl:text-xl" style={{ color: "var(--button_update_text)" }} />
                     <Text
-                        className="text-xs font-semibold uppercase"
+                        className="text-xs lg:text-xs xl:text-sm 2xl:text-lg font-semibold uppercase"
                         style={{ color: "var(--text_main_highlight)" }}
                     >
                         Vehicle Details
@@ -99,26 +106,26 @@ export default function LeftComponent() {
                 </div>
 
                 {/* Details Grid */}
-                <div className="py-3">
+                <div className="pt-2">
                     {/* Seller row (full width) */}
                     <div
                         className="flex justify-between px-4 border-b"
-                        style={{ borderColor: "var(--top_nav_border)" }}
+                        style={{ borderColor: "2px var(--top_nav_border)" }}
                     >
-                        <Text className="text-xs font-semibold" style={{ color: "var(--table_head_text)" }}>
+                        <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-2xl" style={{ color: "var(--table_head_text)" }}>
                             {carDetails[0].label}:  {carDetails[0].value}
                         </Text>
                     </div>
 
                     {/* Title / Color */}
-                    <div className="grid grid-cols-2 text-xs">
+                    <div className="grid grid-cols-2">
                         {carDetails.slice(1, 3).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b"
-                                style={{ borderColor: "var(--top_nav_border)" }}
+                                className="flex justify-between px-4 border-b"
+                                style={{ borderColor: "2px var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
+                                <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-2xl" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -126,14 +133,14 @@ export default function LeftComponent() {
                     </div>
 
                     {/* Drivetrain / Interior */}
-                    <div className="grid grid-cols-2 text-xs">
+                    <div className="grid grid-cols-2 ">
                         {carDetails.slice(3, 5).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b"
-                                style={{ borderColor: "var(--top_nav_border)" }}
+                                className="flex justify-between px-4 border-b"
+                                style={{ borderColor: "2px var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
+                                <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-2xl" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -141,14 +148,14 @@ export default function LeftComponent() {
                     </div>
 
                     {/* Fuel / Sunroof */}
-                    <div className="grid grid-cols-2 text-xs">
+                    <div className="grid grid-cols-2">
                         {carDetails.slice(5, 7).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b"
-                                style={{ borderColor: "var(--top_nav_border)" }}
+                                className="flex justify-between px-4 border-b"
+                                style={{ borderColor: "2px var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
+                                <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-2xl" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -156,14 +163,14 @@ export default function LeftComponent() {
                     </div>
 
                     {/* Engine / Trans / Trim */}
-                    <div className="grid grid-cols-1 text-xs">
+                    <div className="grid grid-cols-1">
                         {carDetails.slice(7).map((detail, index) => (
                             <div
                                 key={index}
-                                className="flex justify-between px-4 py-1 border-b"
-                                style={{ borderColor: "var(--top_nav_border)" }}
+                                className="flex justify-between px-4 border-b"
+                                style={{ borderColor: "2px var(--top_nav_border)" }}
                             >
-                                <Text className="font-semibold text-xs" style={{ color: "var(--table_head_text)" }}>
+                                <Text className="text-xs lg:text-xs xl:text-sm 2xl:text-2xl" style={{ color: "var(--table_head_text)" }}>
                                     {detail.label}:  {detail.value}
                                 </Text>
                             </div>
@@ -171,7 +178,7 @@ export default function LeftComponent() {
                     </div>
                 </div>
             </div>
-            </div>
         </div>
+
     );
 }
